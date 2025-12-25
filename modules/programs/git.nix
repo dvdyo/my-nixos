@@ -27,7 +27,7 @@ in
     environment.systemPackages = [ pkgs.git ];
 
     # 2. User Config (Managed via Hjem Rum)
-    custom.hjem.cfg.rum.programs.git = {
+    custom.core.hjem.cfg.rum.programs.git = {
       enable = true;
       package = null; # Prevent double installation in user profile
       settings = {

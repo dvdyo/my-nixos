@@ -21,7 +21,7 @@
   
   # Standard QEMU/KVM modules
   boot.initrd.availableKernelModules = [ "xhci_pci" "virtio_pci" "virtio_blk" "ahci" "sd_mod" ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelModules = [ "kvm-amd" ];
 
   # --- Host Identity ---
   networking.hostName = "vm";
