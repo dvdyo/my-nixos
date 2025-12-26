@@ -9,7 +9,7 @@
     ./fish.nix
     ./zoxide.nix
     ./microfetch.nix
-    ./starship.nix
+    ./starship
     ./direnv.nix
   ];
 }
