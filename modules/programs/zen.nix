@@ -32,7 +32,7 @@ in
   config = lib.mkIf cfg.enable {
     # 1. Install the vanilla browser package
     environment.systemPackages = [
-      inputs.zen-browser.packages."${pkgs.system}".default
+      inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
     ];
 
     # 2. Deploy policies to /etc/firefox (standard location)
