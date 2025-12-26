@@ -14,7 +14,7 @@ in
   config = lib.mkIf cfg.enable {
     environment.systemPackages = [
       (inputs.zen-browser.packages."${pkgs.system}".default.override {
-        policies = {
+        extraPolicies = {
           AutofillAddressEnabled = true;
           AutofillCreditCardEnabled = false;
           DisableAppUpdate = true;
