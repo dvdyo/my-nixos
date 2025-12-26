@@ -24,6 +24,10 @@
 
     # Zen Browser
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+
+    # nvf -- Neovim configuration framework
+    nvf.url = "github:notashelf/nvf";
+    nvf.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =

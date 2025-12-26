@@ -41,7 +41,6 @@ in
         ll = "ls -l";
         la = "ls -a";
         lla = "ls -la";
-        vi = "nvim";
 	ez = "eza --icons --group-directories-first -1";
       };
 
