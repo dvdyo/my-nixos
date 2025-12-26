@@ -15,9 +15,8 @@ in
       enable = true;
       settings = {
         theme = "gruvbox-dark";
-        italic-text = true;
+        italic-text = "always";
       };
     };
-
   };
 }
