@@ -17,5 +17,7 @@
     fish.enable = true;
     zoxide.enable = true;
     microfetch.enable = true;
+    starship.enable = true;
+    direnv.enable = true;
   };
 }
