@@ -11,5 +11,7 @@
     ./microfetch.nix
     ./starship
     ./direnv.nix
+    ./eza.nix
+    ./ripgrep.nix
   ];
 }

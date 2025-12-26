@@ -19,5 +19,7 @@
     microfetch.enable = true;
     starship.enable = true;
     direnv.enable = true;
+    eza.enable = true;
+    ripgrep.enable = true;
   };
 }
