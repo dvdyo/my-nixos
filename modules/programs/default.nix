@@ -14,5 +14,6 @@
     ./eza.nix
     ./ripgrep.nix
     ./fd.nix
+    ./bat.nix
   ];
 }
