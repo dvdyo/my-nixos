@@ -23,7 +23,7 @@ in
         "audio"
         "docker"
       ];
-      # initialPassword = "password"; # Set in host file or manually
+      shell = pkgs.fish;
     };
   };
 }
