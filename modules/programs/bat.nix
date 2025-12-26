@@ -19,9 +19,6 @@ in
       };
     };
 
-    # Register alias in fish
-    programs.fish.shellAliases = {
-      cat = "bat";
     };
   };
 }
