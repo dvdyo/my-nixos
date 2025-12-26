@@ -42,10 +42,6 @@ in
         la = "ls -a";
         lla = "ls -la";
         vi = "nvim";
-      };
-
-      # 2. Aliases
-      aliases = {
         ls = "eza --icons --group-directories-first -1";
       };
 
