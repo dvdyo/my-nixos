@@ -75,6 +75,15 @@
                         "noatime"
                       ];
                     };
+                    "/libvirt" = {
+                      mountpoint = "/var/lib/libvirt/images";
+                      mountOptions = [
+                        "subvol=libvirt"
+                        "compress=zstd"
+                        "noatime"
+                        "nodatacow"
+                      ];
+                    };
                     "/swap" = {
                       mountpoint = "/swap";
                       swap.swapfile.size = "2G";
