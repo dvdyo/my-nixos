@@ -11,6 +11,10 @@
   };
 
   # Minimum Tools
-  custom.programs.git.enable = true;
-  custom.programs.nh.enable = true;
+  custom.programs = {
+    git.enable = true;
+    nh.enable = true;
+    fish.enable = true;
+    zoxide.enable = true;
+  };
 }
