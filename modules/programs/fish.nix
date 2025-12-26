@@ -42,12 +42,16 @@ in
         la = "ls -a";
         lla = "ls -la";
         vi = "nvim";
-        ls = "eza --icons --group-directories-first -1";
+      };
+
+      # 2. Aliases
+      aliases = {
       };
 
       # 3. Custom Functions & Config
       functions = {
         fish_greeting = ""; # Disable greeting
+        ls = "eza --icons --group-directories-first -1 $argv";
       };
 
       config = ''
