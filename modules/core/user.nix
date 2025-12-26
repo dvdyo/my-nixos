@@ -23,6 +23,7 @@ in
         "audio"
         "docker"
       ];
+      shell = pkgs.fish;
     };
   };
 }
