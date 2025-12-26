@@ -40,9 +40,5 @@ in
       inherit policies;
     };
 
-    # 3. Deploy policies to /etc/zen (Zen-specific location, just in case)
-    environment.etc."zen/policies/policies.json".text = builtins.toJSON {
-      inherit policies;
-    };
   };
 }
