@@ -35,10 +35,9 @@ in
       inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
     ];
 
-    # 2. Deploy policies to /etc/firefox (standard location)
-    environment.etc."firefox/policies/policies.json".text = builtins.toJSON {
+    # 2. Deploy to proper location
+    environment.etc."zen/policies/policies.json".text = builtins.toJSON {
       inherit policies;
     };
-
   };
 }
