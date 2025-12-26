@@ -21,5 +21,6 @@
     direnv.enable = true;
     eza.enable = true;
     ripgrep.enable = true;
+    fd.enable = true;
   };
 }

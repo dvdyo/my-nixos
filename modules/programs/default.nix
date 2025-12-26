@@ -13,5 +13,6 @@
     ./direnv.nix
     ./eza.nix
     ./ripgrep.nix
+    ./fd.nix
   ];
 }
