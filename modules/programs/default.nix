@@ -8,6 +8,6 @@
     ./nh.nix
     ./fish.nix
     ./zoxide.nix
-    # ./ripgrep.nix
+    ./microfetch.nix
   ];
 }

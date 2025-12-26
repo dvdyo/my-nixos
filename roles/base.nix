@@ -16,5 +16,6 @@
     nh.enable = true;
     fish.enable = true;
     zoxide.enable = true;
+    microfetch.enable = true;
   };
 }
