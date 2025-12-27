@@ -15,6 +15,5 @@
     ./ripgrep.nix
     ./fd.nix
     ./bat.nix
-    ./nvf
   ];
 }
