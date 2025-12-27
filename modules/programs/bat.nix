@@ -6,11 +6,12 @@
 }:
 let
   cfg = config.custom.programs.bat;
+  inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.programs.bat.enable = lib.mkEnableOption "Enable bat (cat replacement)";
+  options.custom.programs.bat.enable = mkEnableOption "Enable bat (cat replacement)";
 
-  config = lib.mkIf cfg.enable {
+  config = mkIf cfg.enable {
     programs.bat = {
       enable = true;
       settings = {

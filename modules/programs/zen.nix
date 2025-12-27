@@ -7,6 +7,7 @@
 }:
 let
   cfg = config.custom.programs.zen;
+  inherit (lib) mkEnableOption mkIf;
   policies = {
     AutofillAddressEnabled = true;
     AutofillCreditCardEnabled = false;
@@ -27,9 +28,9 @@ let
   };
 in
 {
-  options.custom.programs.zen.enable = lib.mkEnableOption "Enable Zen Browser";
+  options.custom.programs.zen.enable = mkEnableOption "Enable Zen Browser";
 
-  config = lib.mkIf cfg.enable {
+  config = mkIf cfg.enable {
     # 1. Install the vanilla browser package
     environment.systemPackages = [
       inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default

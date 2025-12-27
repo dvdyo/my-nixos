@@ -6,13 +6,14 @@
 }:
 let
   cfg = config.custom.core.user;
+  inherit (lib) mkEnableOption mkIf;
 in
 {
   options.custom.core.user = {
-    enable = lib.mkEnableOption "Enable main user 'dvd'";
+    enable = mkEnableOption "Enable main user 'dvd'";
   };
 
-  config = lib.mkIf cfg.enable {
+  config = mkIf cfg.enable {
     users.users.dvd = {
       isNormalUser = true;
       description = "DVD";

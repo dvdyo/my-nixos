@@ -6,16 +6,18 @@
 }:
 let
   cfg = config.custom.desktop.xfce;
-in {
-  options.custom.desktop.xfce.enable = lib.mkEnableOption "Enable XFCE Desktop";
+  inherit (lib) mkEnableOption mkIf;
+in
+{
+  options.custom.desktop.xfce.enable = mkEnableOption "Enable XFCE Desktop";
 
-  config = lib.mkIf cfg.enable {
+  config = mkIf cfg.enable {
     services.xserver = {
       enable = true;
       desktopManager.xfce.enable = true;
       displayManager.lightdm.enable = true;
     };
-    
+
     # Optional: Install standard XFCE plugins/tools
     environment.systemPackages = with pkgs; [
       xfce.xfce4-whiskermenu-plugin

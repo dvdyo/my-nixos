@@ -6,11 +6,12 @@
 }:
 let
   cfg = config.custom.programs.fish;
+  inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.programs.fish.enable = lib.mkEnableOption "Enable Fish shell";
+  options.custom.programs.fish.enable = mkEnableOption "Enable Fish shell";
 
-  config = lib.mkIf cfg.enable {
+  config = mkIf cfg.enable {
     # System-wide activation (required for login shell)
     programs.fish.enable = true;
 

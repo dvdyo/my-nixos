@@ -5,11 +5,12 @@
 }:
 let
   cfg = config.custom.programs.starship;
+  inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.programs.starship.enable = lib.mkEnableOption "Enable starship prompt";
+  options.custom.programs.starship.enable = mkEnableOption "Enable starship prompt";
 
-  config = lib.mkIf cfg.enable {
+  config = mkIf cfg.enable {
     custom.core.hjem.cfg.rum.programs.starship = {
       enable = true;
       integrations.fish.enable = true;

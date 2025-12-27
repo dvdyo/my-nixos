@@ -6,23 +6,25 @@
 }:
 let
   cfg = config.custom.programs.git;
+  inherit (lib) mkEnableOption mkOption mkIf;
+  inherit (lib.types) str;
 in
 {
   options.custom.programs.git = {
-    enable = lib.mkEnableOption "Enable Git";
-    userName = lib.mkOption {
-      type = lib.types.str;
+    enable = mkEnableOption "Enable Git";
+    userName = mkOption {
+      type = str;
       default = "dvd";
       description = "Git user name";
     };
-    userEmail = lib.mkOption {
-      type = lib.types.str;
+    userEmail = mkOption {
+      type = str;
       default = "dvd@example.com";
       description = "Git user email";
     };
   };
 
-  config = lib.mkIf cfg.enable {
+  config = mkIf cfg.enable {
     # 1. System-wide Install (Available to root and all users)
     environment.systemPackages = [ pkgs.git ];
 

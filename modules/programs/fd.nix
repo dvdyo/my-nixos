@@ -6,11 +6,12 @@
 }:
 let
   cfg = config.custom.programs.fd;
+  inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.programs.fd.enable = lib.mkEnableOption "Enable fd (find replacement)";
+  options.custom.programs.fd.enable = mkEnableOption "Enable fd (find replacement)";
 
-  config = lib.mkIf cfg.enable {
+  config = mkIf cfg.enable {
     environment.systemPackages = [ pkgs.fd ];
   };
 }

@@ -6,11 +6,12 @@
 }:
 let
   cfg = config.custom.desktop.fonts;
+  inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.desktop.fonts.enable = lib.mkEnableOption "Enable desktop fonts";
+  options.custom.desktop.fonts.enable = mkEnableOption "Enable desktop fonts";
 
-  config = lib.mkIf cfg.enable {
+  config = mkIf cfg.enable {
     fonts = {
       packages = with pkgs; [
         corefonts # Microsoft free fonts

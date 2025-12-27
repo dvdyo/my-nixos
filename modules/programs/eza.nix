@@ -6,11 +6,12 @@
 }:
 let
   cfg = config.custom.programs.eza;
+  inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.programs.eza.enable = lib.mkEnableOption "Enable eza (better ls)";
+  options.custom.programs.eza.enable = mkEnableOption "Enable eza (better ls)";
 
-  config = lib.mkIf cfg.enable {
+  config = mkIf cfg.enable {
     environment.systemPackages = [ pkgs.eza ];
   };
 }

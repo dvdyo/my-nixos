@@ -5,11 +5,12 @@
 }:
 let
   cfg = config.custom.programs.direnv;
+  inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.programs.direnv.enable = lib.mkEnableOption "Enable direnv (with nix-direnv)";
+  options.custom.programs.direnv.enable = mkEnableOption "Enable direnv (with nix-direnv)";
 
-  config = lib.mkIf cfg.enable {
+  config = mkIf cfg.enable {
     custom.core.hjem.cfg.rum.programs.direnv = {
       enable = true;
       integrations = {
