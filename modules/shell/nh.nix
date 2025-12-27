@@ -4,11 +4,11 @@
   ...
 }:
 let
-  cfg = config.custom.programs.nh;
+  cfg = config.custom.shell.nh;
   inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.programs.nh.enable = mkEnableOption "Enable nh (Nix Helper)";
+  options.custom.shell.nh.enable = mkEnableOption "Enable nh (Nix Helper)";
 
   config = mkIf cfg.enable {
     programs.nh = {

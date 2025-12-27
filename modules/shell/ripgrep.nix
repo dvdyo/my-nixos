@@ -5,11 +5,11 @@
   ...
 }:
 let
-  cfg = config.custom.programs.ripgrep;
+  cfg = config.custom.shell.ripgrep;
   inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.programs.ripgrep.enable = mkEnableOption "Enable ripgrep";
+  options.custom.shell.ripgrep.enable = mkEnableOption "Enable ripgrep";
 
   config = mkIf cfg.enable {
     environment.systemPackages = [ pkgs.ripgrep ];

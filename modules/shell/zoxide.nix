@@ -4,11 +4,11 @@
   ...
 }:
 let
-  cfg = config.custom.programs.zoxide;
+  cfg = config.custom.shell.zoxide;
   inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.programs.zoxide.enable = mkEnableOption "Enable zoxide";
+  options.custom.shell.zoxide.enable = mkEnableOption "Enable zoxide";
 
   config = mkIf cfg.enable {
     custom.core.hjem.cfg.rum.programs.zoxide = {

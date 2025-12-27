@@ -4,11 +4,11 @@
   ...
 }:
 let
-  cfg = config.custom.programs.direnv;
+  cfg = config.custom.shell.direnv;
   inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.programs.direnv.enable = mkEnableOption "Enable direnv (with nix-direnv)";
+  options.custom.shell.direnv.enable = mkEnableOption "Enable direnv (with nix-direnv)";
 
   config = mkIf cfg.enable {
     custom.core.hjem.cfg.rum.programs.direnv = {
