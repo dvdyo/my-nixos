@@ -5,13 +5,16 @@
   ...
 }:
 let
-  cfg = config.custom.desktop.xfce;
+  cfg = config.custom.desktop.environments.xfce;
   inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.desktop.xfce.enable = mkEnableOption "Enable XFCE Desktop";
+  options.custom.desktop.environments.xfce.enable = mkEnableOption "Enable XFCE Desktop";
 
   config = mkIf cfg.enable {
+    # Dependencies
+    custom.desktop.components.fonts.enable = lib.mkDefault true;
+
     services.xserver = {
       enable = true;
       desktopManager.xfce.enable = true;

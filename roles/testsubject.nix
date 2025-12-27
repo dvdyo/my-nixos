@@ -5,8 +5,7 @@
   ];
 
   # Enable Desktop
-  custom.desktop.xfce.enable = true;
-  custom.desktop.fonts.enable = true;
+  custom.desktop.environments.xfce.enable = true;
 
   # Enable programs
   custom.programs.zen.enable = true;

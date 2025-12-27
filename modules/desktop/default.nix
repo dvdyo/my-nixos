@@ -3,7 +3,7 @@
 }:
 {
   imports = [
-    ./xfce.nix
-    ./fonts.nix
+    ./environments
+    ./components
   ];
 }
