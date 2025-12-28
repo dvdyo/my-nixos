@@ -20,9 +20,9 @@ in
       enable = true;
       package = null; # Use system package
       settings = {
-        theme = mkDefault "gruvbox-dark";
+        theme = mkDefault "Gruvbox Dark";
         font-size = mkDefault 12;
-        window-decoration = false;
+        window-decoration = true;
       };
     };
   };
