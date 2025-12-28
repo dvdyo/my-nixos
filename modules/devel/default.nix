@@ -4,5 +4,6 @@
 {
   imports = [
     # ./nvf
+    ./android.nix
   ];
 }
