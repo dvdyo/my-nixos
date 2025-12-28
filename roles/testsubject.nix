@@ -8,7 +8,7 @@
   custom.desktop.environments.xfce.enable = true;
 
   # Enable programs
-  custom.programs.zen.enable = true;
+  custom.browsers.zen.enable = true;
 
   # Enable VM guest services for convenience
   custom.virtualization.qemu-guest.enable = true;

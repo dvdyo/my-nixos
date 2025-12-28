@@ -6,7 +6,7 @@
   ...
 }:
 let
-  cfg = config.custom.programs.zen;
+  cfg = config.custom.browsers.zen;
   inherit (lib) mkEnableOption mkIf;
   policies = {
     AutofillAddressEnabled = true;
@@ -28,7 +28,7 @@ let
   };
 in
 {
-  options.custom.programs.zen.enable = mkEnableOption "Enable Zen Browser";
+  options.custom.browsers.zen.enable = mkEnableOption "Enable Zen Browser";
 
   config = mkIf cfg.enable {
     # 1. Install the vanilla browser package
