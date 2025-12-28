@@ -1,7 +1,6 @@
 {
   lib,
   config,
-  pkgs,
   ...
 }:
 let
@@ -9,24 +8,16 @@ let
   inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.devel.android.enable = mkEnableOption "Enable Android Dev Environment";
+  options.custom.devel.android.enable = mkEnableOption "Enable Android System Prerequisites (KVM + ADB)";
 
   config = mkIf cfg.enable {
-    # 1. Enable ADB (Daemon + udev rules)
+    # Prerequisite 1: ADB Daemon and Udev rules
     programs.adb.enable = true;
+
+    # Prerequisite 2: User groups for Hardware Acceleration and ADB
     users.users.dvd.extraGroups = [
       "adbusers"
       "kvm"
     ];
-
-    # 2. Install Android Studio (Manages its own SDK)
-    environment.systemPackages = [
-      pkgs.android-studio
-      pkgs.android-tools # Global adb/fastboot
-    ];
-
-    # Note: We do NOT set ANDROID_HOME here.
-    # We let Android Studio install the SDK to ~/Android/Sdk imperatively.
-    # This avoids read-only filesystem issues with the Device Manager.
   };
 }
