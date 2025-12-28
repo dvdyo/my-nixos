@@ -25,9 +25,9 @@
 
         androidComposition = androidEnv.composeAndroidPackages {
           cmdLineToolsVersion = "8.0";
-          platformToolsVersion = "34.0.4";
-          buildToolsVersions = [ "34.0.0" ];
-          platformVersions = [ "34" ];
+          platformToolsVersion = "36.0.";
+          buildToolsVersions = [ "36.0.0" ];
+          platformVersions = [ "36" ];
           abiVersions = [ "x86_64" ];
           includeNDK = false;
           includeSystemImages = true;

@@ -19,6 +19,7 @@ in
     ./ripgrep.nix
     ./starship
     ./zoxide.nix
+    ./tealdeer.nix
   ];
 
   options.custom.shell = {
@@ -37,6 +38,7 @@ in
       direnv.enable = mkDefault true;
       microfetch.enable = mkDefault true;
       nh.enable = mkDefault true;
+      tealdeer.enable = mkDefault true;
     };
   };
 }

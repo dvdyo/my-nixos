@@ -10,6 +10,6 @@
     ./git
     ./virtualization
     ./browsers
-    ./devel
+    ./editors
   ];
 }

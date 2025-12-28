@@ -3,7 +3,6 @@
 }:
 {
   imports = [
-    ./adb.nix
-    # ./ssh.nix
+    # ./nvf
   ];
 }
