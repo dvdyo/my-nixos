@@ -23,6 +23,7 @@ in
         "video"
         "audio"
         "docker"
+        "libvirtd"
       ];
       shell = pkgs.fish;
     };

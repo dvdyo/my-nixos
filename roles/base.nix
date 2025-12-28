@@ -14,5 +14,5 @@
   custom.shell.enable = true;
 
   # Essential Tools (Not part of shell suite)
-  custom.programs.git.enable = true;
+  custom.git.enable = true;
 }

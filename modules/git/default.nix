@@ -5,12 +5,12 @@
   ...
 }:
 let
-  cfg = config.custom.programs.git;
+  cfg = config.custom.git;
   inherit (lib) mkEnableOption mkOption mkIf;
   inherit (lib.types) str;
 in
 {
-  options.custom.programs.git = {
+  options.custom.git = {
     enable = mkEnableOption "Enable Git";
     userName = mkOption {
       type = str;

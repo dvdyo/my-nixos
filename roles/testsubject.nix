@@ -11,5 +11,8 @@
   custom.programs.zen.enable = true;
 
   # Enable VM guest services for convenience
-  custom.services.qemu-guest.enable = true;
+  custom.virtualization.qemu-guest.enable = true;
+
+  # Enable Libvirt Host (Nested Virtualization test)
+  custom.virtualization.libvirt.enable = true;
 }

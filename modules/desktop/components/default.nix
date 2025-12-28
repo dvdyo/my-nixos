@@ -3,6 +3,6 @@
 }:
 {
   imports = [
-    ./fonts
+    ./fonts.nix
   ];
 }

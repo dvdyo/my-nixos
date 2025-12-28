@@ -8,5 +8,7 @@
     ./programs
     ./services
     ./shell
+    ./git
+    ./virtualization
   ];
 }
