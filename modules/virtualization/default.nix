@@ -3,7 +3,7 @@
 }:
 {
   imports = [
-    ./guest-agent.nix
+    ./qemu-guest.nix
     ./libvirt.nix
   ];
 }
