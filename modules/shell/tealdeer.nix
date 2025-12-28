@@ -12,6 +12,7 @@ in
   options.custom.shell.tealdeer.enable = mkEnableOption "Enable tealdeer (tl;dr man)";
 
   config = mkIf cfg.enable {
- 	programs.tealdeer.enable = true;
+      programs.tealdeer.enable = true;
   };
+;
 }
