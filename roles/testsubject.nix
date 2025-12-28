@@ -9,6 +9,7 @@
 
   # Enable programs
   custom.browsers.zen.enable = true;
+  custom.terminals.ghostty.enable = true;
 
   # Enable VM guest services for convenience
   custom.virtualization.qemu-guest.enable = true;

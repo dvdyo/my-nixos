@@ -11,5 +11,6 @@
     ./virtualization
     ./browsers
     ./editors
+    ./terminals
   ];
 }
