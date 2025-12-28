@@ -5,7 +5,9 @@
   ];
 
   # Enable Desktop
-  custom.desktop.environments.xfce.enable = true;
+  custom.desktop.environments.xfce.enable = false;
+  custom.desktop.components.compositors.niri.enable = true;
+  custom.desktop.components.fonts.enable = true;
 
   # Enable programs
   custom.browsers.zen.enable = true;
