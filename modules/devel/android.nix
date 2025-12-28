@@ -2,27 +2,11 @@
   lib,
   config,
   pkgs,
-  inputs,
   ...
 }:
 let
   cfg = config.custom.devel.android;
   inherit (lib) mkEnableOption mkIf;
-
-  # Define the immutable Android SDK with specific packages
-  androidSdk = inputs.android-nixpkgs.sdk.x86_64-linux (sdkPkgs: with sdkPkgs; [
-    # Tools
-    cmdline-tools-latest
-    build-tools-34-0-0
-    platform-tools
-    emulator
-
-    # Platforms
-    platforms-android-34
-
-    # System Images (for Emulator)
-    system-images-android-34-google-apis-x86-64
-  ]);
 in
 {
   options.custom.devel.android.enable = mkEnableOption "Enable Android Dev Environment";
@@ -35,16 +19,14 @@ in
       "kvm"
     ];
 
-    # 2. Install Tools
+    # 2. Install Android Studio (Manages its own SDK)
     environment.systemPackages = [
-      androidSdk
       pkgs.android-studio
+      pkgs.android-tools # Global adb/fastboot
     ];
 
-    # 3. Environment Variables
-    environment.sessionVariables = {
-      ANDROID_HOME = "${androidSdk}/share/android-sdk";
-      ANDROID_SDK_ROOT = "${androidSdk}/share/android-sdk";
-    };
+    # Note: We do NOT set ANDROID_HOME here.
+    # We let Android Studio install the SDK to ~/Android/Sdk imperatively.
+    # This avoids read-only filesystem issues with the Device Manager.
   };
 }
