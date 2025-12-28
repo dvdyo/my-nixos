@@ -16,6 +16,6 @@
   # Enable Libvirt Host (Nested Virtualization test)
   custom.virtualization.libvirt.enable = true;
 
-  # Enable Android Dev (SDK + Studio)
-  custom.devel.android.enable = true;
+  # Enable Android Debugger Bridge
+  custom.services.adb.enable = true;
 }
