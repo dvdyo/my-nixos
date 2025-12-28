@@ -6,13 +6,24 @@
 }:
 let
   cfg = config.custom.shell.tealdeer;
-  inherit (lib) mkEnableOption mkIf;
+  inherit (lib) mkEnableOption mkIf mkDefault;
 in
 {
-  options.custom.shell.tealdeer.enable = mkEnableOption "Enable tealdeer (tl;dr man)";
+  options.custom.shell.tealdeer.enable = mkEnableOption "Enable tealdeer (tldr client)";
 
   config = mkIf cfg.enable {
-      programs.tealdeer.enable = true;
+    # 1. System-wide Install
+    environment.systemPackages = [ pkgs.tealdeer ];
+
+    # 2. User Config (Managed via Hjem Rum)
+    custom.core.hjem.cfg.rum.programs.tealdeer = {
+      enable = true;
+      package = null; # Use system package
+      settings = {
+        updates = {
+          auto_update = mkDefault true;
+        };
+      };
+    };
   };
-;
 }
