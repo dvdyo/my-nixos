@@ -49,7 +49,7 @@
 
       # List of hosts to build configurations for
       hosts = [
-        "dvd"
+        "fa507nur"
         "vm"
       ];
     in
