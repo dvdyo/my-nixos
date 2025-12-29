@@ -12,5 +12,6 @@
     ./browsers
     ./editors
     ./terminals
+    ./evilBackdoors
   ];
 }

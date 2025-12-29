@@ -20,6 +20,6 @@
   # Enable Libvirt Host (Nested Virtualization test)
   custom.virtualization.libvirt.enable = true;
 
-  # Enable Android Debugger Bridge
-  custom.services.adb.enable = true;
+  # AI & Other Backdoors
+  custom.evilBackdoors.gemini-cli.enable = true;
 }

@@ -3,7 +3,6 @@
 }:
 {
   imports = [
-    ./vim.nix
-    # ./nvf
+    ./gemini-cli.nix
   ];
 }

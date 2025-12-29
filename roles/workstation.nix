@@ -20,4 +20,7 @@
 
   # Enable Audio
   custom.services.audio.enable = true;
+
+  # AI & Other Backdoors
+  custom.evilBackdoors.gemini-cli.enable = true;
 }
