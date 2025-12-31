@@ -5,7 +5,7 @@
   ];
 
   # Enable Desktop (Safe Fallback)
-  custom.desktop.environments.xfce.enable = true;
+  custom.desktop.environments.xfce.enable = false;
   # custom.desktop.components.compositors.niri.enable = true; # Enable later
 
   # Enable programs
