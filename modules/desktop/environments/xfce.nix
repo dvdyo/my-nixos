@@ -23,8 +23,8 @@ in
 
     # Optional: Install standard XFCE plugins/tools
     environment.systemPackages = with pkgs; [
-      xfce.xfce4-whiskermenu-plugin
-      xfce.xfce4-pulseaudio-plugin
+      xfce4-whiskermenu-plugin
+      xfce4-pulseaudio-plugin
     ];
   };
 }
