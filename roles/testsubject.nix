@@ -22,4 +22,7 @@
 
   # AI & Other Backdoors
   custom.evilBackdoors.gemini-cli.enable = true;
+
+  # Advanced Editors
+  custom.editors.helix.enable = true;
 }
