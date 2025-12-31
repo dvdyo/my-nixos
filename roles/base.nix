@@ -5,10 +5,7 @@
   ];
 
   # --- Base Policy ---
-  custom.core = {
-    user.enable = true;
-    hjem.enable = true;
-  };
+  custom.core.enable = true;
 
   # Enable full shell suite (fish, starship, bat, eza, etc.)
   custom.shell.enable = true;
