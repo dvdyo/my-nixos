@@ -4,6 +4,7 @@
 {
   imports = [
     ./core
+    ./hjem
     ./desktop
     ./services
     ./shell

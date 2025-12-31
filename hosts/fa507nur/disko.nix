@@ -9,7 +9,7 @@
           partitions = {
             ESP = {
               label = "boot";
-              size = "512M";
+              size = "2G";
               type = "EF00";
               content = {
                 type = "filesystem";
@@ -26,7 +26,7 @@
                 name = "crypted";
                 settings = {
                   bypassWorkqueues = true;
-                  allowDiscards = true; # SSD optimization
+                  allowDiscards = true; # required for SSD optimization
                 };
                 content = {
                   type = "btrfs";
@@ -87,7 +87,7 @@
                     };
                     "/swap" = {
                       mountpoint = "/swap";
-                      swap.swapfile.size = "16G"; # Match RAM for hibernation support
+                      swap.swapfile.size = "40G"; # Match RAM for hibernation support
                     };
                   };
                 };

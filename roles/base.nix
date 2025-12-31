@@ -6,6 +6,7 @@
 
   # --- Base Policy ---
   custom.core.enable = true;
+  custom.hjem.enable = true;
 
   # Enable full shell suite (fish, starship, bat, eza, etc.)
   custom.shell.enable = true;

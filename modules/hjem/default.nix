@@ -6,7 +6,7 @@
   ...
 }:
 let
-  cfg = config.custom.core.hjem;
+  cfg = config.custom.hjem;
   inherit (lib)
     mkEnableOption
     mkOption
@@ -24,7 +24,7 @@ in
     inputs.hjem.nixosModules.default
   ];
 
-  options.custom.core.hjem = {
+  options.custom.hjem = {
     enable = mkEnableOption "Enable hjem for home management";
     user = mkOption {
       type = nullOr str;
@@ -45,11 +45,11 @@ in
       ];
       clobberByDefault = true;
       # The "Magic" alias: maps our custom.hjem.cfg to the actual hjem user path
-      users.${cfg.user} = mkAliasDefinitions options.custom.core.hjem.cfg;
+      users.${cfg.user} = mkAliasDefinitions options.custom.hjem.cfg;
     };
 
     # Baseline settings for the user
-    custom.core.hjem.cfg = {
+    custom.hjem.cfg = {
       user = cfg.user;
       directory = "/home/${cfg.user}";
     };

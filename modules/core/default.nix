@@ -10,20 +10,18 @@ in
 {
   imports = [
     ./boot.nix
-    ./hjem.nix
     ./locale.nix
     ./nix.nix
     ./user.nix
   ];
 
   options.custom.core = {
-    enable = mkEnableOption "Enable Core System Configuration (User, Nix, Boot, Locale, Hjem)";
+    enable = mkEnableOption "Enable Core System Configuration (User, Nix, Boot, Locale)";
   };
 
   config = mkIf cfg.enable {
     custom.core = {
       boot.enable = mkDefault true;
-      hjem.enable = mkDefault true;
       locale.enable = mkDefault true;
       nix.enable = mkDefault true;
       user.enable = mkDefault true;

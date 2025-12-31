@@ -16,7 +16,7 @@ in
     environment.systemPackages = [ pkgs.tealdeer ];
 
     # 2. User Config (Managed via Hjem Rum)
-    custom.core.hjem.cfg.rum.programs.tealdeer = {
+    custom.hjem.cfg.rum.programs.tealdeer = {
       enable = true;
       package = null; # Use system package
       settings = {

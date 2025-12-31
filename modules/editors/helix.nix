@@ -16,7 +16,7 @@ in
     environment.systemPackages = [ pkgs.helix ];
 
     # 2. User Config (Managed via Hjem Rum)
-    custom.core.hjem.cfg.rum.programs.helix = {
+    custom.hjem.cfg.rum.programs.helix = {
       enable = true;
       package = null; # Use system package
       settings = {

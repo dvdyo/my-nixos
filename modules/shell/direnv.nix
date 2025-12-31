@@ -11,7 +11,7 @@ in
   options.custom.shell.direnv.enable = mkEnableOption "Enable direnv (with nix-direnv)";
 
   config = mkIf cfg.enable {
-    custom.core.hjem.cfg.rum.programs.direnv = {
+    custom.hjem.cfg.rum.programs.direnv = {
       enable = true;
       integrations = {
         fish.enable = true;

@@ -16,7 +16,7 @@ in
     environment.systemPackages = [ pkgs.ghostty ];
 
     # 2. User Config (Managed via Hjem Rum)
-    custom.core.hjem.cfg.rum.programs.ghostty = {
+    custom.hjem.cfg.rum.programs.ghostty = {
       enable = true;
       package = null; # Use system package
       settings = {

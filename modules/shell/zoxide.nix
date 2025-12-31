@@ -11,7 +11,7 @@ in
   options.custom.shell.zoxide.enable = mkEnableOption "Enable zoxide";
 
   config = mkIf cfg.enable {
-    custom.core.hjem.cfg.rum.programs.zoxide = {
+    custom.hjem.cfg.rum.programs.zoxide = {
       enable = true;
       integrations.fish.enable = true;
     };

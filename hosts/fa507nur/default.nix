@@ -11,7 +11,6 @@
 
   networking.hostName = "fa507nur";
 
-  # User Password (Initial)
-  # Change this with `passwd` after first login!
+  # Change this after first login
   users.users.dvd.initialPassword = "password";
 }
