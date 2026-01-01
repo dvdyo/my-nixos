@@ -21,5 +21,4 @@ in
       package = null; # Use system package
       };
     };
-  };
 }
