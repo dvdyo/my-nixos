@@ -5,7 +5,7 @@
   ];
 
   # Enable Desktop (Safe Fallback)
-  custom.desktop.enviroments.niri-dms.enable = true;
+  custom.desktop.environments.niri-dms.enable = true;
   # custom.desktop.components.compositors.niri.enable = true; # Enable later
 
   # Enable programs
