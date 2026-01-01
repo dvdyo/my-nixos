@@ -42,7 +42,7 @@ in
         ll = "ls -l";
         la = "ls -a";
         lla = "ls -la";
-	ez = "eza --icons --group-directories-first -1";
+        ez = "eza --icons --group-directories-first -1";
       };
 
       # 2. Aliases (don't work?)

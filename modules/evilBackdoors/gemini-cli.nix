@@ -6,7 +6,12 @@
 }:
 let
   cfg = config.custom.evilBackdoors.gemini-cli;
-  inherit (lib) mkEnableOption mkIf mkOption types;
+  inherit (lib)
+    mkEnableOption
+    mkIf
+    mkOption
+    types
+    ;
 in
 {
   options.custom.evilBackdoors.gemini-cli = {

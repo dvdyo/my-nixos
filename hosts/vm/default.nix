@@ -16,9 +16,15 @@
   ];
 
   # --- Hardware / Boot ---
-  
+  system.stateVersion = "26.05";
   # Standard QEMU/KVM modules
-  boot.initrd.availableKernelModules = [ "xhci_pci" "virtio_pci" "virtio_blk" "ahci" "sd_mod" ];
+  boot.initrd.availableKernelModules = [
+    "xhci_pci"
+    "virtio_pci"
+    "virtio_blk"
+    "ahci"
+    "sd_mod"
+  ];
   boot.kernelModules = [ "kvm-amd" ];
 
   # --- Host Identity ---
