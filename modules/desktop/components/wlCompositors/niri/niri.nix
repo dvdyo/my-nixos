@@ -19,7 +19,7 @@ in
     custom.hjem.cfg.rum.desktops.niri = {
       enable = true;
       package = null; # Use system package
-      config = builtins.readFile ./config.kdl;
+      config = builtins.readFile ./binds.kdl;
       };
     };
 }
