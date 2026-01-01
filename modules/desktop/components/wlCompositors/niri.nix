@@ -16,7 +16,7 @@ in
     environment.systemPackages = [ pkgs.niri ];
 
     # 2. User Config (Managed via Hjem Rum)
-    custom.hjem.cfg.rum.desktop.niri = {
+    custom.hjem.cfg.rum.desktops.niri = {
       enable = true;
       package = null; # Use system package
       };
