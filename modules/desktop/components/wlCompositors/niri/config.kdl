@@ -1,0 +1,55 @@
+
+environment {
+  XCURSOR_SIZE "24"
+  MOZ_ENABLE_WAYLAND "1"
+}
+
+input {
+  keyboard {
+    xkb {
+      layout "us"
+      options "caps:escape"
+    }
+  }
+}
+
+output {
+  "*" {
+    scale 1.0
+  }
+}
+
+layout {
+  gaps 6
+  focus-ring {
+    width 2
+    active-color "#88c0d0"
+    inactive-color "#4c566a"
+  }
+}
+
+binds {
+  # launch terminal
+  Mod+T{
+    spawn "ghostty";
+  }
+
+  # close window
+  Mod+Q {
+    action close-window;
+  }
+
+  # navigation
+  Mod+H { action focus-column-left; }
+  Mod+L { action focus-column-right; }
+  Mod+J { action focus-window-down; }
+  Mod+K { action focus-window-up; }
+
+  # move windows
+  Mod+Shift+H { action move-column-left; }
+  Mod+Shift+L { action move-column-right; }
+
+  # reload config
+  Mod+Shift+R { action reload-config; }
+}
+
