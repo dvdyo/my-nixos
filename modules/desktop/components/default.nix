@@ -3,7 +3,8 @@
 }:
 {
   imports = [
-    ./fonts.nix
+    ./fonts
     ./wlCompositors
+    ./shells
   ];
 }

@@ -25,9 +25,9 @@
     # Zen Browser
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
-    # Android SDK
-    android-nixpkgs = {
-      url = "github:tadfisher/android-nixpkgs";
+    # Quickshell (Required for DMS)
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/quickshell/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
