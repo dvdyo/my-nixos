@@ -38,22 +38,16 @@ in
     xdg.portal = {
       enable = true;
       extraPortals = [
-        pkgs.xdg-desktop-portal-gnome
+        pkgs.xdg-desktop-portal-wlr
         pkgs.xdg-desktop-portal-gtk
       ];
       config = {
         common.default = [ "gtk" ];
         niri = {
-          "org.freedesktop.impl.portal.ScreenCast" = [ "gnome" ];
-          "org.freedesktop.impl.portal.Screenshot" = [ "gnome" ];
+          "org.freedesktop.impl.portal.ScreenCast" = [ "wlr" ];
+          "org.freedesktop.impl.portal.Screenshot" = [ "wlr" ];
         };
       };
-    };
-
-    # Fix for Nvidia+Niri: Force GNOME Portal to use OpenGL instead of Vulkan
-    # Prevents VK_ERROR_OUT_OF_DATE_KHR crashes
-    systemd.user.services.xdg-desktop-portal-gnome.environment = {
-      GSK_RENDERER = "gl";
     };
 
     # 4. User Config (Managed via Hjem Rum)
