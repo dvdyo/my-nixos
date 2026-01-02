@@ -39,12 +39,10 @@ in
       enable = true;
       package = null; # Use system package
       config = lib.concatStringsSep "\n" [
-        ''
 	(builtins.readFile ./input.kdl)
         (builtins.readFile ./monitors.kdl)
         (builtins.readFile ./layout.kdl)
         (builtins.readFile ./dms-integration.kdl)
-        ''
         ''
           // Dynamic Includes from DMS
           include "dms/binds.kdl"
