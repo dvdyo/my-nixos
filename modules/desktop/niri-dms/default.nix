@@ -34,7 +34,16 @@ in
     # 2. Hardware / Graphics
     hardware.graphics.enable = true;
 
-    # 3. User Config (Managed via Hjem Rum)
+    # 3. Portals (Required for screencasting and file dialogs)
+    xdg.portal = {
+      enable = true;
+      extraPortals = [
+        pkgs.xdg-desktop-portal-gnome
+        pkgs.xdg-desktop-portal-gtk
+      ];
+    };
+
+    # 4. User Config (Managed via Hjem Rum)
     custom.hjem.cfg.rum.desktops.niri = {
       enable = true;
       package = null; # Use system package
