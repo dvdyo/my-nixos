@@ -50,6 +50,12 @@ in
       };
     };
 
+    # Fix for Nvidia+Niri: Force GNOME Portal to use OpenGL instead of Vulkan
+    # Prevents VK_ERROR_OUT_OF_DATE_KHR crashes
+    systemd.user.services.xdg-desktop-portal-gnome.environment = {
+      GSK_RENDERER = "gl";
+    };
+
     # 4. User Config (Managed via Hjem Rum)
     custom.hjem.cfg.rum.desktops.niri = {
       enable = true;
