@@ -10,7 +10,6 @@ layout {
         top 0
         bottom 0
         }
-    gaps 4
     default-column-width
     center-focused-column "never"
     focus-ring {
