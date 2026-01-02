@@ -41,7 +41,13 @@ in
         pkgs.xdg-desktop-portal-gnome
         pkgs.xdg-desktop-portal-gtk
       ];
-      config.common.default = [ "gtk" ];
+      config = {
+        common.default = [ "gtk" ];
+        niri = {
+          "org.freedesktop.impl.portal.ScreenCast" = [ "gnome" ];
+          "org.freedesktop.impl.portal.Screenshot" = [ "gnome" ];
+        };
+      };
     };
 
     # 4. User Config (Managed via Hjem Rum)
