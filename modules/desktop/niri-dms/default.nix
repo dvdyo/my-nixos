@@ -41,6 +41,7 @@ in
         pkgs.xdg-desktop-portal-gnome
         pkgs.xdg-desktop-portal-gtk
       ];
+      config.common.default = [ "gtk" ];
     };
 
     # 4. User Config (Managed via Hjem Rum)
