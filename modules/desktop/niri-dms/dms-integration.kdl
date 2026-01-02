@@ -26,17 +26,6 @@ layer-rule {
   match namespace="^quickshell$"
   place-within-backdrop true
 }
-layout {
-  struts {
-    left 0
-    right 0
-    top 0
-    bottom 0
-  }
-  gaps 4
-  default-column-width
-  center-focused-column "never"
-}
 switch-events {
   lid-close { spawn "dms" "ipc" "call" "lock" "lock"; }
 }
