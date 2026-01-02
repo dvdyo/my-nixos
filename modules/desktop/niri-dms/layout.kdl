@@ -2,13 +2,14 @@ layout {
     gaps 4
 
     border {
-        width 2
+        width 0
     }
 
     focus-ring {
-        width 2
+        width 1
     }
 }
+
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true

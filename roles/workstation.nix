@@ -4,9 +4,10 @@
     ./base.nix
   ];
 
-  # Enable Desktop (Safe Fallback)
-  custom.desktop.environments.niri-dms.enable = true;
-  # custom.desktop.components.compositors.niri.enable = true; # Enable later
+  # Enable Desktop
+  custom.desktop.xfce.enable = false;
+  custom.desktop.niri-dms.enable = true;
+  custom.desktop.fonts.enable = true;
 
   # Enable programs
   custom.browsers.zen.enable = true;

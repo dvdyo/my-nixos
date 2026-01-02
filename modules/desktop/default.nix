@@ -3,7 +3,8 @@
 }:
 {
   imports = [
-    ./environments
-    ./components
+    ./niri-dms
+    ./xfce
+    ./fonts.nix
   ];
 }

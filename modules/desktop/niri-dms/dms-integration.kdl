@@ -1,0 +1,46 @@
+// DMS Specific Integration Rules
+window-rule {
+    match app-id=r#"^org\.gnome\."#
+    draw-border-with-background false
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    match app-id="Alacritty"
+    match app-id="zen"
+    match app-id="com.mitchellh.ghostty"
+    match app-id="kitty"
+    draw-border-with-background false
+}
+window-rule {
+  geometry-corner-radius 12
+  clip-to-geometry true
+}
+// Open DMS windows as floating by default
+window-rule {
+  match app-id=r#"org.quickshell$"#
+  open-floating true
+}
+layer-rule {
+  match namespace="^quickshell$"
+  place-within-backdrop true
+}
+layout {
+  struts {
+    left 0
+    right 0
+    top 0
+    bottom 0
+  }
+  gaps 4
+  default-column-width
+  center-focused-column "never"
+}
+switch-events {
+  lid-close { spawn "dms" "ipc" "call" "lock" "lock"; }
+}
+debug {
+  // Allows notification actions and window activation
+  honor-xdg-activation-with-invalid-serial
+}
