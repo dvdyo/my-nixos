@@ -1,0 +1,10 @@
+{
+  ...
+}:
+{
+  imports = [
+  ./fonts
+  ./compositors
+  ./lauchers
+  ];
+}

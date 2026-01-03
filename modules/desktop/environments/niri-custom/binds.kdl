@@ -1,0 +1,30 @@
+binds {
+    // Session
+    "Mod+Shift+E" { quit; }
+    "Mod+Q" { close-window; }
+
+    // Applications
+    "Mod+T" { spawn "footclient"; }
+    "Mod+Space" repeat=false { spawn "vicinae" "toggle"; }
+
+    // Window Focus
+    "Mod+Left"  { focus-column-left; }
+    "Mod+Right" { focus-column-right; }
+    "Mod+Up"    { focus-window-up; }
+    "Mod+Down"  { focus-window-down; }
+
+    // Window Movement
+    "Mod+Shift+Left"  { move-column-left; }
+    "Mod+Shift+Right" { move-column-right; }
+    "Mod+Shift+Up"    { move-window-up; }
+    "Mod+Shift+Down"  { move-window-down; }
+
+    // Layout
+    "Mod+R" { switch-preset-column-width; }
+    "Mod+F" { maximize-column; }
+    "Mod+Shift+F" { fullscreen-window; }
+    "Mod+C" { center-column; }
+
+    // Monitoring / Debug
+    "Mod+Shift+Slash" { show-hotkey-overlay; }
+}

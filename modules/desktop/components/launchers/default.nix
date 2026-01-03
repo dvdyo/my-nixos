@@ -3,7 +3,6 @@
 }:
 {
   imports = [
-  ./components
-  ./environments  
+  ./vicinae.nix
   ];
 }

@@ -1,0 +1,25 @@
+layout {
+    gaps 4
+
+    border {
+        width 0
+    }
+    struts {
+        left 0
+        right 0
+        top 0
+        bottom 0
+        }
+    default-column-width
+    center-focused-column "never"
+    focus-ring {
+        width 1
+    }
+}
+
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+    tiled-state true
+    draw-border-with-background false
+}
