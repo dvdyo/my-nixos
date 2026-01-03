@@ -5,6 +5,6 @@
   imports = [
     ./niri-custom
     ./niri-dms
-    ./xfce-basic
+    # ./xfce-basic
   ];
 }

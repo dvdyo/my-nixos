@@ -5,7 +5,7 @@
   ];
 
   # Enable Desktop
-  custom.desktop.environments.xfce.enable = true;
+  # custom.desktop.environments.xfce.enable = true;
 
   # Enable programs
   custom.browsers.zen.enable = true;
