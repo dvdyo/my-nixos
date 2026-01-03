@@ -30,6 +30,9 @@
       url = "git+https://git.outfoxxed.me/quickshell/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Wallpaper Daemon
+    awww.url = "git+https://codeberg.org/LGFae/awww";
   };
 
   outputs =

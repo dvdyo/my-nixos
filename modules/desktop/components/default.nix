@@ -6,5 +6,6 @@
   ./fonts
   ./compositors
   ./launchers
+  ./wallpapers
   ];
 }

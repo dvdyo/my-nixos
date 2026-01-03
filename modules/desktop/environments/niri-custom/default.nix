@@ -12,9 +12,12 @@ in
 
   config = mkIf cfg.enable {
     # 1. Enable Infrastructure & Components
-    custom.desktop.components.compositors.niri.enable = true;
-    custom.desktop.components.launchers.vicinae.enable = true;
-    custom.desktop.components.fonts.enable = true;
+    custom.desktop.components = {
+      compositors.niri.enable = true;
+      launchers.vicinae.enable = true;
+      wallpapers.awww.enable = true;
+      fonts.enable = true;
+    };
 
     # 2. Environment Configuration
     custom.hjem.cfg.rum.desktops.niri = {
