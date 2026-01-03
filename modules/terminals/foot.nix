@@ -12,8 +12,8 @@ in
   options.custom.terminals.foot.enable = mkEnableOption "Enable Foot Terminal";
 
   config = mkIf cfg.enable {
-    # 1. Enable System-level Foot (Provides Shell Integration automatically)
-    programs.foot.enable = true;
+    # 1. System Packages (Manual install since we aren't using programs.foot system module)
+    environment.systemPackages = [ pkgs.foot ];
 
     # 2. Enable Hjem Rum Foot module (Provides User Config)
     custom.hjem.cfg.rum.programs.foot = {
@@ -25,6 +25,9 @@ in
           term = "xterm-256color";
           pad = "12x12";
           shell = "${pkgs.fish}/bin/fish";
+        };
+        csd = {
+          preferred = "none";
         };
         mouse = {
           hide-when-typing = "yes";
