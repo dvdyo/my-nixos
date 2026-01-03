@@ -14,7 +14,7 @@ in
 
   config = mkIf cfg.enable {
     environment.systemPackages = [
-      inputs.awww.packages.${pkgs.system}.awww
+      inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
     ];
   };
 }
