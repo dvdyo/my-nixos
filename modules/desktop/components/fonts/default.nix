@@ -5,12 +5,12 @@
   ...
 }:
 let
-  cfg = config.custom.graphical;
-  inherit (lib)
-    mkIf
-    ;
+  cfg = config.custom.desktop.components.fonts;
+  inherit (lib) mkIf mkEnableOption;
 in
 {
+  options.custom.desktop.components.fonts.enable = mkEnableOption "Enable Desktop Fonts";
+
   config = mkIf cfg.enable {
     # Font packages and fontconfig
     fonts = {
@@ -20,7 +20,6 @@ in
         cascadia-code
         noto-fonts-color-emoji
         nerd-fonts.jetbrains-mono
-
       ];
       fontconfig.useEmbeddedBitmaps = true;
       fontconfig.defaultFonts = {
