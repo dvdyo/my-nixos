@@ -39,16 +39,5 @@ in
         };
       };
     };
-
-    # 3. Manually define foot-server service (Since Hjem/NixOS don't provide it)
-    systemd.user.services.foot-server = {
-      description = "Foot Terminal Server";
-      wantedBy = [ "graphical-session.target" ];
-      partOf = [ "graphical-session.target" ];
-      serviceConfig = {
-        ExecStart = "${pkgs.foot}/bin/foot --server";
-        Restart = "always";
-      };
-    };
   };
 }
