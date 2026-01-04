@@ -13,12 +13,11 @@ in
 
   config = mkIf cfg.enable {
     # 1. System-wide Install
-    environment.systemPackages = [ pkgs.ghostty ];
 
     # 2. User Config (Managed via Hjem Rum)
     custom.hjem.cfg.rum.programs.ghostty = {
       enable = true;
-      package = null; # Use system package
+      package = true; # Use system package
       settings = {
         theme = mkDefault "Gruvbox Dark";
         font-size = mkDefault 12;
