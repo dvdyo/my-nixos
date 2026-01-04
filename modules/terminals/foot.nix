@@ -24,7 +24,6 @@ in
           font = "JetBrainsMono Nerd Font:size=11";
           term = "xterm-256color";
           pad = "12x12";
-          shell = "${pkgs.fish}/bin/fish";
         };
         csd = {
           preferred = "none";
