@@ -16,5 +16,19 @@ in
     environment.systemPackages = [
       inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
     ];
+
+    # Systemd User Service for awww-daemon
+    systemd.user.services.awww-daemon = {
+      description = "Awww Wallpaper Daemon";
+      wantedBy = [ "graphical-session.target" ];
+      partOf = [ "graphical-session.target" ];
+      after = [ "graphical-session.target" ];
+
+      serviceConfig = {
+        ExecStart = "${inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww}/bin/awww-daemon";
+        Restart = "always";
+        RestartSec = 5;
+      };
+    };
   };
 }
