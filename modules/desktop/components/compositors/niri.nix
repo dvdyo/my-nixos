@@ -25,5 +25,8 @@ in
 
     # 3. Hardware / Graphics
     hardware.graphics.enable = true;
+
+    # 4. Ensure Greetd can find the session file
+    environment.pathsToLink = [ "/share/wayland-sessions" ];
   };
 }
