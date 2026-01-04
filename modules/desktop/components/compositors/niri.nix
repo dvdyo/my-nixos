@@ -13,7 +13,10 @@ in
 
   config = mkIf cfg.enable {
     # 1. System Packages
-    environment.systemPackages = [ pkgs.niri ];
+    environment.systemPackages = [ 
+      pkgs.niri 
+      pkgs.brightnessctl
+    ];
 
     # 2. Portals (Required for Niri basics)
     xdg.portal = {
