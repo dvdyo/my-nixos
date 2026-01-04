@@ -39,5 +39,16 @@ in
         };
       };
     };
+
+    # 3. Systemd User Service for foot-server
+    systemd.user.services.foot-server = {
+      description = "Foot Terminal Server";
+      wantedBy = [ "graphical-session.target" ];
+      partOf = [ "graphical-session.target" ];
+      serviceConfig = {
+        ExecStart = "${pkgs.foot}/bin/foot --server";
+        Restart = "always";
+      };
+    };
   };
 }
