@@ -26,8 +26,10 @@ in
 
       serviceConfig = {
         ExecStart = "${inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww}/bin/awww-daemon";
-        # Ensure wallpaper is restored after the daemon starts
-        ExecStartPost = "${inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww}/bin/awww restore";
+        
+        # Wait until the daemon detects wayland outputs before restoring
+        ExecStartPost = "${pkgs.bash}/bin/sh -c 'while ! ${inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww}/bin/awww query | ${pkgs.gnugrep}/bin/grep -q \":\"; do ${pkgs.coreutils}/bin/sleep 0.2; done; ${inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww}/bin/awww restore'";
+
         Restart = "always";
         RestartSec = 5;
       };
