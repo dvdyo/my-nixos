@@ -23,6 +23,9 @@
   # Enable Audio
   custom.services.audio.enable = true;
 
+  # Enable Display Manager
+  custom.services.greetd.enable = true;
+
   # AI & Other Backdoors
   custom.evilBackdoors.gemini-cli.enable = true;
 }
