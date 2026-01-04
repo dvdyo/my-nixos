@@ -26,6 +26,8 @@ in
 
       serviceConfig = {
         ExecStart = "${inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww}/bin/awww-daemon";
+        # Ensure wallpaper is restored after the daemon starts
+        ExecStartPost = "${inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww}/bin/awww restore";
         Restart = "always";
         RestartSec = 5;
       };
