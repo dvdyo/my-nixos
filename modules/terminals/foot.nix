@@ -45,6 +45,13 @@ in
       description = "Foot Terminal Server";
       wantedBy = [ "graphical-session.target" ];
       partOf = [ "graphical-session.target" ];
+
+      # NOTE: We explicitly force the PATH here because NixOS's systemd.user.services
+      # logic automatically injects a minimal PATH (coreutils only) into the unit file.
+      # Since foot-server's purpose is to spawn user shells, it must have access to 
+      # the full system and user binary paths to avoid breaking shell initialization.
+      environment.PATH = lib.mkForce "/run/wrappers/bin:/etc/profiles/per-user/%u/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin";
+
       serviceConfig = {
         ExecStart = "${pkgs.foot}/bin/foot --server";
         Restart = "always";
