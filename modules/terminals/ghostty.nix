@@ -17,7 +17,6 @@ in
     # 2. User Config (Managed via Hjem Rum)
     custom.hjem.cfg.rum.programs.ghostty = {
       enable = true;
-      package = true; # Use system package
       settings = {
         theme = mkDefault "Gruvbox Dark";
         font-size = mkDefault 12;
