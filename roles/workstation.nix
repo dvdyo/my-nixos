@@ -11,7 +11,7 @@
 
   # Enable programs
   custom.browsers.zen.enable = true;
-  custom.terminals.ghostty.enable = false;
+  custom.terminals.ghostty.enable = true;
   custom.terminals.foot.enable = true;
 
   # Enable Libvirt Host
