@@ -1,25 +1,53 @@
 layout {
-    gaps 4
+    // Set gaps around windows in logical pixels.
+    gaps 16
+
+    // When to center a column when changing focus.
+    center-focused-column "never"
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    // Fix: Terminals and new windows start at 1/2 width
+    default-column-width { proportion 0.5; }
+
+    // Styling (Matches DMS "Clean" look)
+    focus-ring {
+        width 2
+        active-color   "#cba6f7" // Catppuccin Mauve
+        inactive-color "#585b70" // Surface 2
+        urgent-color   "#f38ba8" // Red
+    }
 
     border {
-        width 0
+        off
     }
-    struts {
-        left 0
-        right 0
-        top 0
-        bottom 0
-        }
-    default-column-width
-    center-focused-column "never"
-    focus-ring {
-        width 1
+
+    shadow {
+        on
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#00000040"
     }
 }
 
+// Window Rules for Aesthetics
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
-    tiled-state true
-    draw-border-with-background false
 }
+
+window-rule {
+    match is-active=false
+    opacity 0.95
+}
+
+// Disable rounding for apps that look bad with it (optional, but good practice)
+// window-rule {
+//     match app-id="firefox"
+//     geometry-corner-radius 0
+// }

@@ -1,39 +1,76 @@
 binds {
-    // Session
+    // === System & Session ===
     "Mod+Shift+E" { quit; }
-    "Mod+Q" { close-window; }
+    "Mod+Shift+P" { power-off-monitors; }
+    "Mod+Shift+Slash" { show-hotkey-overlay; }
 
-    // Applications
+    // === Applications ===
     "Mod+T" { spawn "footclient"; }
     "Mod+Space" repeat=false { spawn "vicinae" "toggle"; }
+    // "Mod+B" { spawn "firefox"; } // Optional: Add browser bind
 
-    // Window Focus
-    "Mod+Left"  { focus-column-left; }
-    "Mod+Right" { focus-column-right; }
-    "Mod+Up"    { focus-window-up; }
-    "Mod+Down"  { focus-window-down; }
-
-    // Window Movement
-    "Mod+Shift+Left"  { move-column-left; }
-    "Mod+Shift+Right" { move-column-right; }
-    "Mod+Shift+Up"    { move-window-up; }
-    "Mod+Shift+Down"  { move-window-down; }
-
-    // Layout
-    "Mod+R" { switch-preset-column-width; }
+    // === Window Management ===
+    "Mod+Q" { close-window; }
     "Mod+F" { maximize-column; }
     "Mod+Shift+F" { fullscreen-window; }
     "Mod+C" { center-column; }
+    "Mod+R" { switch-preset-column-width; }
+    "Mod+W" { toggle-column-tabbed-display; }
 
-    // Monitoring / Debug
-    "Mod+Shift+Slash" { show-hotkey-overlay; }
+    // === Focus Navigation (Vim + Arrows) ===
+    "Mod+Left"  { focus-column-left; }
+    "Mod+Down"  { focus-window-down; }
+    "Mod+Up"    { focus-window-up; }
+    "Mod+Right" { focus-column-right; }
+    
+    "Mod+H"     { focus-column-left; }
+    "Mod+J"     { focus-window-down; }
+    "Mod+K"     { focus-window-up; }
+    "Mod+L"     { focus-column-right; }
 
-    // Hardware Controls (Volume / Brightness)
+    "Mod+Home" { focus-column-first; }
+    "Mod+End"  { focus-column-last; }
+
+    // === Window Movement (Shift + Vim/Arrows) ===
+    "Mod+Shift+Left"  { move-column-left; }
+    "Mod+Shift+Down"  { move-window-down; }
+    "Mod+Shift+Up"    { move-window-up; }
+    "Mod+Shift+Right" { move-column-right; }
+
+    "Mod+Shift+H"     { move-column-left; }
+    "Mod+Shift+J"     { move-window-down; }
+    "Mod+Shift+K"     { move-window-up; }
+    "Mod+Shift+L"     { move-column-right; }
+
+    // === Workspace Navigation ===
+    "Mod+Page_Down" { focus-workspace-down; }
+    "Mod+Page_Up"   { focus-workspace-up; }
+    "Mod+U"         { focus-workspace-down; }
+    "Mod+I"         { focus-workspace-up; }
+
+    "Mod+Shift+Page_Down" { move-workspace-down; }
+    "Mod+Shift+Page_Up"   { move-workspace-up; }
+    "Mod+Shift+U"         { move-column-to-workspace-down; }
+    "Mod+Shift+I"         { move-column-to-workspace-up; }
+
+    // === Mouse Wheel Navigation ===
+    "Mod+WheelScrollDown"      cooldown-ms=150 { focus-workspace-down; }
+    "Mod+WheelScrollUp"        cooldown-ms=150 { focus-workspace-up; }
+    "Mod+Ctrl+WheelScrollDown" cooldown-ms=150 { move-column-to-workspace-down; }
+    "Mod+Ctrl+WheelScrollUp"   cooldown-ms=150 { move-column-to-workspace-up; }
+
+    // === Hardware Controls ===
+    // Audio (Using wpctl via Wireplumber)
     "XF86AudioRaiseVolume" allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+"; }
     "XF86AudioLowerVolume" allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-"; }
     "XF86AudioMute"        allow-when-locked=true { spawn "wpctl" "set-mute"   "@DEFAULT_AUDIO_SINK@" "toggle"; }
     "XF86AudioMicMute"     allow-when-locked=true { spawn "wpctl" "set-mute"   "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
+    // Brightness (Using brightnessctl)
     "XF86MonBrightnessUp"   allow-when-locked=true { spawn "brightnessctl" "set" "5%+"; }
     "XF86MonBrightnessDown" allow-when-locked=true { spawn "brightnessctl" "set" "5%-"; }
+    
+    // Screenshots
+    "Mod+Shift+S" { screenshot; }
+    "Print" { screenshot; }
 }
