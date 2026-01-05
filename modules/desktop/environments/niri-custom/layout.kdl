@@ -11,12 +11,11 @@ layout {
         proportion 0.66667
     }
 
-    // Fix: Terminals and new windows start at 1/2 width
+    // Terminals and new windows start at 1/2 width
     default-column-width { proportion 0.5; }
 
-    // Styling (Matches DMS "Clean" look)
     focus-ring {
-        width 2
+        width 0.5 
         active-color   "#cba6f7" // Catppuccin Mauve
         inactive-color "#585b70" // Surface 2
         urgent-color   "#f38ba8" // Red
