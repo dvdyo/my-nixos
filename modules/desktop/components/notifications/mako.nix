@@ -55,14 +55,14 @@ in
       height=150
       margin=20
       padding=15
-      border-size=0
+      border-size=1
       border-radius=2
 
       # Style (Default)
       font=JetBrainsMono Nerd Font 10
       background-color=${colors.background}f0
       text-color=${colors.text}
-      border-color=${colors.border}
+      border-color=${colors.background}
       progress-color=over ${colors.border}
 
       # Icons
