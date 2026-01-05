@@ -1,7 +1,7 @@
 layout {
     // Set gaps around windows in logical pixels.
     gaps 16
-
+    background-color "trnasparent"
     // When to center a column when changing focus.
     center-focused-column "never"
 
