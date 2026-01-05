@@ -8,5 +8,6 @@
   ./launchers
   ./wallpapers
   ./polkitAgents
+  ./notifications
   ];
 }

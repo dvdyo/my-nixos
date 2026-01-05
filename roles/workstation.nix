@@ -17,6 +17,10 @@
 
   # Enable Polkit Agent (Authentication Dialogs)
   custom.desktop.components.polkitAgents.gnome.enable = true;
+
+  # Enable Notifications
+  custom.desktop.components.notifications.mako.enable = true;
+
   # Editors
   custom.editors.helix.enable = true;
   
