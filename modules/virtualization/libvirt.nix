@@ -26,5 +26,11 @@ in
 
     # Optional GUI
     programs.virt-manager.enable = cfg.gui.enable;
+
+    # Add user to virtualization groups
+    users.users.${config.custom.core.user.name}.extraGroups = [ 
+      "libvirtd" 
+      "kvm"
+    ];
   };
 }

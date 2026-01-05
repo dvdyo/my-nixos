@@ -15,10 +15,9 @@ in
     # Prerequisite 1: ADB Daemon and Udev rules
     programs.adb.enable = true;
 
-    # Prerequisite 2: User groups for Hardware Acceleration and ADB
-    users.users.dvd.extraGroups = [
+    # Prerequisite 2: User groups for ADB
+    users.users.${config.custom.core.user.name}.extraGroups = [
       "adbusers"
-      "kvm"
     ];
   };
 }

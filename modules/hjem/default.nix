@@ -29,7 +29,7 @@ in
     user = mkOption {
       type = nullOr str;
       description = "User to manage via hjem";
-      default = "dvd";
+      default = config.custom.core.user.name;
     };
     cfg = mkOption {
       type = attrs;

@@ -10,20 +10,21 @@ let
 in
 {
   options.custom.core.user = {
-    enable = mkEnableOption "Enable main user 'dvd'";
+    enable = mkEnableOption "Enable main user";
+    name = lib.mkOption {
+      type = lib.types.str;
+      default = "dvd";
+      description = "The username of the main user";
+    };
   };
 
   config = mkIf cfg.enable {
-    users.users.dvd = {
+    users.users.${cfg.name} = {
       isNormalUser = true;
       description = "DVD";
       extraGroups = [
         "wheel"
         "networkmanager"
-        "video"
-        "audio"
-        "docker"
-        "libvirtd"
       ];
       shell = pkgs.fish;
     };
