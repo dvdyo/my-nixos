@@ -43,7 +43,6 @@ in
         la = "ls -a";
         lla = "ls -la";
         ez = "eza --icons --group-directories-first -1";
-      	zd = "zoxide";
       };
 
       # 2. Aliases (don't work?)
