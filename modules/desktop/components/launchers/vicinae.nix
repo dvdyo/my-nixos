@@ -30,7 +30,7 @@ in
         # Using the absolute path to the binary
         ExecStart = "${pkgs.vicinae}/bin/vicinae server --replace";
         Restart = "always";
-        RestartSec = 5;
+        RestartSec = "1s";
       };
     };
   };

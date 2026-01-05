@@ -45,6 +45,7 @@ in
       description = "Foot Terminal Server";
       wantedBy = [ "graphical-session.target" ];
       partOf = [ "graphical-session.target" ];
+      after = [ "graphical-session.target" ];
 
       # NOTE: We explicitly force the PATH here because NixOS's systemd.user.services
       # logic automatically injects a minimal PATH (coreutils only) into the unit file.
@@ -55,6 +56,7 @@ in
       serviceConfig = {
         ExecStart = "${pkgs.foot}/bin/foot --server";
         Restart = "always";
+        RestartSec = "1s";
       };
     };
   };
