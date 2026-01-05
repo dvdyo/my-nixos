@@ -55,8 +55,8 @@ in
       height=150
       margin=20
       padding=15
-      border-size=2
-      border-radius=12
+      border-size=0
+      border-radius=2
 
       # Style (Default)
       font=JetBrainsMono Nerd Font 10
