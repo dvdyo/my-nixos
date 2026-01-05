@@ -15,7 +15,7 @@ layout {
     default-column-width { proportion 0.5; }
 
     focus-ring {
-        width 0.5 
+        width 0
         active-color   "#cba6f7" // Catppuccin Mauve
         inactive-color "#585b70" // Surface 2
         urgent-color   "#f38ba8" // Red
