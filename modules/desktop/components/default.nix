@@ -7,5 +7,6 @@
   ./compositors
   ./launchers
   ./wallpapers
+  ./polkitAgents
   ];
 }

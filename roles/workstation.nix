@@ -12,6 +12,13 @@
   # Enable programs
   custom.browsers.zen.enable = true;
   custom.terminals.ghostty.enable = true;
+  # Enable Awww (Wallpaper Daemon)
+  custom.desktop.components.wallpapers.awww.enable = true;
+
+  # Enable Polkit Agent (Authentication Dialogs)
+  custom.desktop.components.polkitAgents.gnome.enable = true;
+
+  # Enable Foot Terminal
   custom.terminals.foot.enable = true;
 
   # Enable Libvirt Host
