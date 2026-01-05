@@ -21,9 +21,10 @@ in
 
   config = mkIf cfg.enable {
     # Core Services
-    virtualisation.libvirtd.enable = true;
-    virtualisation.spiceUSBRedirection.enable = true;
-
+    virtualisation.libvirtd = {
+			enable = true;
+			qemu.swtpm.enable = true;
+			};
     # Optional GUI
     programs.virt-manager.enable = cfg.gui.enable;
 
