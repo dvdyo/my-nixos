@@ -46,6 +46,12 @@ window-rule {
     opacity 0.95
 }
 
+// Ensure the wallpaper stays static behind workspace transitions
+layer-rule {
+    match namespace="^awww$"
+    place-within-backdrop true
+}
+
 // Disable rounding for apps that look bad with it (optional, but good practice)
 // window-rule {
 //     match app-id="firefox"

@@ -11,6 +11,7 @@ binds {
 
     // === Window Management ===
     "Mod+Q" { close-window; }
+    "Mod+D" { toggle-overview; }
     "Mod+F" { maximize-column; }
     "Mod+Shift+F" { fullscreen-window; }
     "Mod+C" { center-column; }
