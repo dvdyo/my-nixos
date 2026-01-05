@@ -17,6 +17,5 @@
   # Basic Editor
   custom.editors.vim = {
     enable = true;
-    defaultEditor = true;
   };
 }

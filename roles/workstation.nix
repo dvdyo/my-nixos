@@ -17,10 +17,12 @@
 
   # Enable Polkit Agent (Authentication Dialogs)
   custom.desktop.components.polkitAgents.gnome.enable = true;
-
+  # Editors
+  custom.editors.helix.enable = true;
+  
   # Enable Foot Terminal
   custom.terminals.foot.enable = true;
-
+  
   # Enable Libvirt Host
   custom.virtualization.libvirt.enable = true;
 
