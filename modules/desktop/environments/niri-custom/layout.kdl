@@ -48,7 +48,7 @@ window-rule {
 
 // Ensure the wallpaper stays static behind workspace transitions
 layer-rule {
-    match namespace="^awww$"
+    match namespace="awww-daemon"
     place-within-backdrop true
 }
 
