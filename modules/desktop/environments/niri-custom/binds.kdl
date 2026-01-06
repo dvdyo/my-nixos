@@ -6,13 +6,13 @@ binds {
 
     // === Applications ===
     "Mod+T" { spawn "footclient"; }
-    "Mod" repeat=false { spawn "vicinae" "toggle"; }
-    "Mod+W" { spawn "zen"; }
+    "Modi+D" repeat=false { spawn "vicinae" "toggle"; }
+    "Mod+B" { spawn "zen"; }
     // "Mod+B" { spawn "firefox"; } // Optional: Add browser bind
 
     // === Window Management ===
     "Mod+Q" { close-window; }
-    "Mod+D" { toggle-overview; }
+    "Mod+Space" { toggle-overview; }
     "Mod+F" { maximize-column; }
     "Mod+Shift+F" { fullscreen-window; }
     "Mod+C" { center-column; }
