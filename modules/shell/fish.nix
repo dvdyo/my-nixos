@@ -83,6 +83,7 @@ in
         set -g fish_color_status red
         set -g fish_color_user brgreen
         set -g fish_color_valid_path --underline
+	set -g fish_vi_key_bindings
       '';
     };
   };
