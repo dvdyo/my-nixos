@@ -3,7 +3,8 @@
 }:
 {
   imports = [
-  ./components
-  ./environments  
+    ./environments
+    ./components
+    ./style
   ];
 }
