@@ -14,8 +14,7 @@ in
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = [ 
-      pkgs.vesktop
-    ];
+   programs.vesktop.enable = true;
+	 ];
   };
 }
