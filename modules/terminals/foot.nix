@@ -24,7 +24,7 @@ in
           font = "JetBrainsMono Nerd Font:size=11";
           term = "xterm-256color";
           pad = "12x12";
-	  shell = "${pkgs.foot}/bin/fish";
+	  shell = "${pkgs.fish}/bin/fish";
           # login-shell = "yes";
         };
         csd = {
