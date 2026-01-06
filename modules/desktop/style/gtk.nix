@@ -31,7 +31,7 @@ in
     custom.hjem.cfg.rum.misc.gtk = {
       enable = true;
       settings = {
-        theme-name = "Catppuccin-Mocha-Standard-Blue-Dark";
+        theme-name = "catppuccin-mocha-blue-standard";
         icon-theme-name = "Papirus-Dark";
         cursor-theme-name = "Bibata-Modern-Classic";
         font-name = "JetBrainsMono Nerd Font 11";
