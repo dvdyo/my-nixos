@@ -5,7 +5,7 @@
   ...
 }:
 let
-  cfg = config.custom.socials.euqibop;
+  cfg = config.custom.socials.equibop;
   inherit (lib) mkEnableOption mkIf;
 in
 {
