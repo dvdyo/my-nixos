@@ -3,7 +3,8 @@
 }:
 {
   imports = [
-    ./vesktop.nix
-    ./telegram.nix
+    # ./vesktop.nix
+    ./ayugram.nix
+    ./equibop.nix
   ];
 }

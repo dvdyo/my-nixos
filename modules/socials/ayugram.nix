@@ -5,11 +5,11 @@
   ...
 }:
 let
-  cfg = config.custom.socials.telegram;
+  cfg = config.custom.socials.ayugram;
   inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.socials.telegram = {
+  options.custom.socials.ayugram = {
     enable = mkEnableOption "Enable Telegram (Ayugram Client)";
   };
 

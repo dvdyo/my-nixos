@@ -14,6 +14,6 @@ in
   };
 
   config = mkIf cfg.enable {
-   programs.vesktop.enable = true;
+  envo
   };
 }

@@ -37,8 +37,8 @@
   custom.office.libreoffice.enable = true;
 
   # Enable Socials
-  custom.socials.vesktop.enable = true;
-  custom.socials.telegram.enable = true;
+  custom.socials.equibop.enable = true;
+  custom.socials.ayugram.enable = true;
 
   # Enable Security
   custom.security.keepassxc.enable = true;
