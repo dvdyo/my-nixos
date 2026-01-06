@@ -59,8 +59,9 @@ in
         function mark_prompt_start --on-event fish_prompt
             echo -en "\\e]133;A\\e\\\\"
         end
-
-        # Colors
+	fish_vi_key_bindings
+        
+	# Colors
         set -g fish_color_autosuggestion brblack
         set -g fish_color_cancel -r
         set -g fish_color_command normal
@@ -83,7 +84,6 @@ in
         set -g fish_color_status red
         set -g fish_color_user brgreen
         set -g fish_color_valid_path --underline
-	set -g fish_vi_key_bindings
       '';
     };
   };
