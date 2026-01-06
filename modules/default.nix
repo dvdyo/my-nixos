@@ -13,6 +13,9 @@
     ./browsers
     ./editors
     ./terminals
+    ./office
+    ./socials
+    ./security
     ./evilBackdoors
   ];
 }

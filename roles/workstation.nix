@@ -33,6 +33,16 @@
   # Enable Android Debugger Bridge
   custom.services.adb.enable = true;
 
+  # Enable Office
+  custom.office.libreoffice.enable = true;
+
+  # Enable Socials
+  custom.socials.vesktop.enable = true;
+  custom.socials.telegram.enable = true;
+
+  # Enable Security
+  custom.security.keepassxc.enable = true;
+
   # Enable Audio
   custom.services.audio.enable = true;
 
