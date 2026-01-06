@@ -6,7 +6,7 @@ binds {
 
     // === Applications ===
     "Mod+T" { spawn "footclient"; }
-    "Modi+D" repeat=false { spawn "vicinae" "toggle"; }
+    "Mod+D" repeat=false { spawn "vicinae" "toggle"; }
     "Mod+B" { spawn "zen"; }
     // "Mod+B" { spawn "firefox"; } // Optional: Add browser bind
 
