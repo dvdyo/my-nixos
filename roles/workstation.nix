@@ -44,6 +44,9 @@
   # Enable Security
   custom.security.keepassxc.enable = true;
 
+  # Enable P2P
+  custom.p2p.qbittorrent.enable = true;
+
   # Enable Audio
   custom.services.audio.enable = true;
 
