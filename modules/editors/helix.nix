@@ -20,7 +20,7 @@ in
       enable = true;
       package = null; # Use system package
       settings = {
-        theme = mkDefault "gruvbox";
+        theme = mkDefault "catpuccin";
         editor = {
           line-number = "relative";
           cursorline = true;

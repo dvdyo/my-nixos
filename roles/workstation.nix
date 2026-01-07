@@ -23,7 +23,7 @@
   custom.desktop.components.notifications.mako.enable = true;
 
   # Editors
-  custom.editors.helix.enable = false;
+  custom.editors.helix.enable = true;
   
   # Enable Foot Terminal
   custom.terminals.foot.enable = true;
