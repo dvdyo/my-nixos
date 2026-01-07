@@ -20,7 +20,7 @@ in
       enable = true;
       package = null; # Use system package
       settings = {
-       theme = mkDefault "catpuccin_mocha";
+       theme = mkDefault "catppuccin_mocha";
         editor = {
           line-number = "relative";
           cursorline = true;
