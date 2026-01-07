@@ -10,10 +10,12 @@ let
 in
 {
   options.custom.socials.vesktop = {
-    enable = mkEnableOption "Enable Vesktop (Discord Client)";
+    enable = mkEnableOption "Enable Vesktop (a client for Discord)";
   };
 
   config = mkIf cfg.enable {
-  envo
+    environment.systemPackages = [ 
+      pkgs.vesktop
+	];
   };
 }

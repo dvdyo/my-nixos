@@ -38,7 +38,7 @@
   custom.office.libreoffice.enable = true;
 
   # Enable Socials
-  custom.socials.equibop.enable = true;
+  custom.socials.vesktop.enable = true;
   custom.socials.ayugram.enable = true;
 
   # Enable Security

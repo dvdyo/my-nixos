@@ -3,7 +3,7 @@
 }:
 {
   imports = [
-    # ./vesktop.nix
+    ./vesktop.nix
     ./ayugram.nix
     ./equibop.nix
   ];
