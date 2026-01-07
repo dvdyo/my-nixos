@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }:
 let
@@ -12,10 +13,11 @@ in
     mkEnableOption "Enable Android System Prerequisites (KVM + ADB)";
 
   config = mkIf cfg.enable {
-    # Prerequisite 1: ADB Daemon and Udev rules
-    programs.adb.enable = true;
+    # Systemd 258+ handles uaccess rules automatically. 
+    # We just need the tools and the group for some legacy software.
+    environment.systemPackages = [ pkgs.android-tools ];
 
-    # Prerequisite 2: User groups for ADB
+    # User groups for ADB
     users.users.${config.custom.core.user.name}.extraGroups = [
       "adbusers"
     ];
