@@ -12,7 +12,7 @@
 
   # Enable programs
   custom.browsers.zen.enable = true;
-  custom.terminals.ghostty.enable = true;
+  custom.terminals.ghostty.enable = false;
   # Enable Awww (Wallpaper Daemon)
   custom.desktop.components.wallpapers.awww.enable = true;
 
