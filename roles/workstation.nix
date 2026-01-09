@@ -10,6 +10,11 @@
   custom.desktop.style.enable = true;
   custom.desktop.components.fonts.enable = true;
 
+  # Enable Screenshot Stack
+  custom.desktop.screencap.grim.enable = true;
+  custom.desktop.screencap.slurp.enable = true;
+  custom.desktop.screencap.satty.enable = true;
+
   # Enable programs
   custom.browsers.zen.enable = true;
   custom.terminals.ghostty.enable = false;

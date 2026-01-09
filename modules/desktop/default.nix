@@ -6,5 +6,6 @@
     ./environments
     ./components
     ./style
+    ./screencap
   ];
 }
