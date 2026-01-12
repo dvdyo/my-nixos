@@ -55,6 +55,9 @@
   # Enable Audio
   custom.services.audio.enable = true;
 
+  # Enable Networking
+  custom.services.networkManager.enable = true;
+
   # Enable Display Manager
   custom.services.greetd.enable = true;
 

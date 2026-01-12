@@ -19,12 +19,13 @@ in
   };
 
   config = mkIf cfg.enable {
+    _module.args.username = cfg.name;
+
     users.users.${cfg.name} = {
       isNormalUser = true;
       description = "DVD";
       extraGroups = [
         "wheel"
-        "networkmanager"
       ];
       shell = pkgs.fish;
     };
