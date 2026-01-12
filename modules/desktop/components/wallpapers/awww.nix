@@ -35,7 +35,7 @@ in
         ExecStart = awww-daemon;
         
         # Wait until the daemon detects wayland outputs before restoring
-        ExecStartPost = ''${sh} -c 'while ! ${awww} query | ${grep} -q ":"; do ${sleep} 0.2; done; ${awww} restore''';
+        ExecStartPost = "${sh} -c 'while ! ${awww} query | ${grep} -q \":\": do ${sleep} 0.2; done; ${awww} restore'";
 
         Restart = "always";
         RestartSec = "1s";
