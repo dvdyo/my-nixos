@@ -17,6 +17,7 @@ in
     networking.networkmanager = {
       enable = true;
       dns = "systemd-resolved";
+      wifi.backend = "iwd";
     };
 
     # Enable systemd-resolved for DNS caching and better integration
