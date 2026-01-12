@@ -27,8 +27,8 @@ in
       environment.PATH = lib.mkForce "/run/wrappers/bin:/etc/profiles/per-user/%u/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin";
 
       serviceConfig = {
-        # Using the absolute path to the binary
-        ExecStart = "${pkgs.vicinae}/bin/vicinae server --replace";
+        # Using the absolute path to the binary via lib.getExe
+        ExecStart = "${lib.getExe pkgs.vicinae} server --replace";
         Restart = "always";
         RestartSec = "1s";
       };

@@ -32,7 +32,7 @@ in
       after = [ "graphical-session.target" ];
 
       serviceConfig = {
-        ExecStart = "${pkgs.mako}/bin/mako";
+        ExecStart = "${lib.getExe pkgs.mako}";
         Restart = "always";
         RestartSec = "1s";
       };

@@ -23,7 +23,7 @@ in
           # --remember: remembers last user
           # --remember-session: remembers last session (niri vs bash)
           # --sessions: Path to session desktop files
-          command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --remember-session --sessions /run/current-system/sw/share/wayland-sessions";
+          command = "${lib.getExe pkgs.tuigreet} --time --remember --remember-session --sessions /run/current-system/sw/share/wayland-sessions";
           user = "greeter";
         };
       };
