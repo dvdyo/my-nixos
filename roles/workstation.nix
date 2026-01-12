@@ -3,7 +3,7 @@
   imports = [
     ./base.nix
   ];
-
+  # TODO - refactor this slop and group shit with sensible defaults
   # Enable Desktop
   # custom.desktop.xfce.enable = false;
   custom.desktop.environments.niri-custom.enable = true;
