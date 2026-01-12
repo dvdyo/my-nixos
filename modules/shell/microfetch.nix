@@ -16,7 +16,7 @@ in
 
     # Optional: run on fish start
     programs.fish.interactiveShellInit = mkIf config.custom.shell.fish.enable ''
-      ${lib.getExe microfetch}
+      ${lib.getExe pkgs.microfetch}
     '';
   };
 }
