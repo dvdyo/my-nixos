@@ -12,8 +12,11 @@
     };
 
     # Impermanence -- persistent root storage
-    impermanence.url = "github:nix-community/impermanence";
-
+    impermanence = {
+      url =  "github:nix-community/impermanence";
+      inputs.nixpkgs.follows = "nixpkgs";
+      };
+      
     # Hjem -- home file management
     hjem.url = "github:feel-co/hjem";
     hjem-rum = {
@@ -23,7 +26,10 @@
     };
 
     # Zen Browser
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+      };
 
     # Quickshell (Required for DMS)
     quickshell = {
@@ -32,7 +38,9 @@
     };
 
     # Wallpaper Daemon
-    awww.url = "git+https://codeberg.org/LGFae/awww";
+    awww = {
+        url = "git+https://codeberg.org/LGFae/awww";
+        inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
