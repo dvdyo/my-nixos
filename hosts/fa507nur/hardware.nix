@@ -19,6 +19,7 @@
     "sd_mod"
   ];
   boot.initrd.kernelModules = [ ];
+  boot.blacklistedKernelModules = [ "nova_core"  ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
