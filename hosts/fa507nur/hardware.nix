@@ -23,6 +23,7 @@
   boot.extraModulePackages = [ ];
   hardware.graphics.enable = true;
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  boot.blacklistedKernelModules = [ "nova_core" ];
 # # 2. Graphics (Nvidia Only - No iGPU)
 #  hardware.graphics = {
 #    enable = true;
