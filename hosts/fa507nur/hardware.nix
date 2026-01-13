@@ -23,15 +23,15 @@
   boot.extraModulePackages = [ ];
 
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-
+  hardware.graphics.enable = true;
   # 2. Graphics (Nvidia Only - No iGPU)
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
+#  hardware.graphics = {
+#    enable = true;
+#    enable32Bit = true;
 #   extraPackages = with pkgs; [
 #     nvidia-vaapi-driver
 #   ];
-  };
+#  };
 
 # environment.sessionVariables = {
 #   LIBVA_DRIVER_NAME = "nvidia";
@@ -64,4 +64,5 @@
     enable = true;
     enableUserService = true;
   };
+  services.supergfxd.enable = false;
 }
