@@ -30,6 +30,7 @@ in
         (builtins.readFile ./binds.kdl)
         (builtins.readFile ./spawns.kdl)
         (builtins.readFile ./animations.kdl)
+        (builtins.readFile ./overview.kdl)
       ];
     };
   };
