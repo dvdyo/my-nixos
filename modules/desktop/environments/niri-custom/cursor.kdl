@@ -1,0 +1,7 @@
+cursor {
+    xcursor-theme "breeze_cursors"
+    xcursor-size 30
+
+    hide-when-typing
+    hide-after-inactive-ms 250
+}
