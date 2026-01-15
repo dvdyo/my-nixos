@@ -3,5 +3,5 @@ cursor {
     xcursor-size 30
 
     hide-when-typing
-    hide-after-inactive-ms 250
+    hide-after-inactive-ms 1000
 }
