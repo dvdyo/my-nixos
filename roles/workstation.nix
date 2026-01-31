@@ -52,6 +52,9 @@
   # Enable P2P
   custom.p2p.qbittorrent.enable = true;
 
+  # Enable Gaming
+  custom.gaming.steam.enable = true;
+
   # Enable Audio
   custom.services.audio.enable = true;
 

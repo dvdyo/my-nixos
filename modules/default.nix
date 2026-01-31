@@ -16,6 +16,7 @@
     ./office
     ./socials
     ./security
+    ./gaming
     ./p2p
     ./evilBackdoors
   ];
