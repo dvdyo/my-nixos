@@ -23,9 +23,11 @@ in
     # Enable systemd-resolved for DNS caching and better integration
     services.resolved = {
       enable = true;
-      dnssec = "true";
-      domains = [ "~." ];
-      fallbackDns = [ "1.1.1.1" "8.8.8.8" ];
+      settings.Resolve = {
+        DNSSEC = "true";
+        Domains = [ "~." ];
+        FallbackDNS = [ "1.1.1.1" "8.8.8.8" ];
+      };
     };
 
     # Add user to the group automatically using the global username arg

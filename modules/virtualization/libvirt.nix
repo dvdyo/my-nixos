@@ -2,6 +2,7 @@
   lib,
   config,
   pkgs,
+  username,
   ...
 }:
 let
@@ -29,7 +30,7 @@ in
     programs.virt-manager.enable = cfg.gui.enable;
 
     # Add user to virtualization groups
-    users.users.${config.custom.core.user.name}.extraGroups = [ 
+    users.users.${username}.extraGroups = [ 
       "libvirtd" 
       "kvm"
     ];

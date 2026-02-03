@@ -2,6 +2,7 @@
   lib,
   config,
   pkgs,
+  username,
   ...
 }:
 let
@@ -18,7 +19,7 @@ in
     environment.systemPackages = [ pkgs.android-tools ];
 
     # User groups for ADB
-    users.users.${config.custom.core.user.name}.extraGroups = [
+    users.users.${username}.extraGroups = [
       "adbusers"
     ];
   };
