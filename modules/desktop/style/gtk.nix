@@ -72,5 +72,10 @@ in
       XCURSOR_THEME = "Bibata-Modern-Classic";
       XCURSOR_SIZE = "24";
     };
+
+    # 4. Link Cursor to ~/.icons for XWayland/Steam compatibility
+    custom.hjem.cfg.files = {
+      ".icons/default".source = "${pkgs.bibata-cursors}/share/icons/Bibata-Modern-Classic";
+    };
   };
 }
