@@ -5,11 +5,11 @@
   ...
 }:
 let
-  cfg = config.custom.desktop.style;
+  cfg = config.custom.desktop.style.gtk;
   inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.desktop.style = {
+  options.custom.desktop.style.gtk = {
     enable = mkEnableOption "Enable centralized desktop styling (Catppuccin)";
   };
 
