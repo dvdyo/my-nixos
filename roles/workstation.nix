@@ -3,22 +3,21 @@
   imports = [
     ./base.nix
   ];
-  # TODO - refactor this slop and group shit with sensible defaults
+
   # Enable Desktop
-  # custom.desktop.xfce.enable = false;
   custom.desktop.environments.niri-custom.enable = true;
   custom.desktop.components.compositors.xwayland-satellite.enable = true;
   custom.desktop.style.enable = true;
   custom.desktop.components.fonts.enable = true;
 
   # Enable Screenshot Stack
-  custom.desktop.screencap.grim.enable = true;
-  custom.desktop.screencap.slurp.enable = true;
-  custom.desktop.screencap.satty.enable = true;
+  custom.desktop.screencap.enable = true;
 
   # Enable programs
-  custom.browsers.zen.enable = true;
+  custom.browsers.enable = true;
+  custom.terminals.enable = true;
   custom.terminals.ghostty.enable = false;
+
   # Enable Awww (Wallpaper Daemon)
   custom.desktop.components.wallpapers.awww.enable = true;
 
@@ -29,42 +28,30 @@
   custom.desktop.components.notifications.mako.enable = true;
 
   # Editors
-  custom.editors.helix.enable = true;
+  custom.editors.enable = true;
   
-  # Enable Foot Terminal
-  custom.terminals.foot.enable = true;
-  
-  # Enable Libvirt Host
-  custom.virtualization.libvirt.enable = true;
+  # Enable Virtualization
+  custom.virtualization.enable = true;
+  custom.virtualization.qemu-guest.enable = false;
 
-  # Enable Android Debugger Bridge
-  custom.services.adb.enable = true;
+  # Enable Services
+  custom.services.enable = true;
 
   # Enable Office
-  custom.office.libreoffice.enable = true;
+  custom.office.enable = true;
 
   # Enable Socials
-  custom.socials.vesktop.enable = true;
-  custom.socials.ayugram.enable = true;
+  custom.socials.enable = true;
 
   # Enable Security
-  custom.security.keepassxc.enable = true;
+  custom.security.enable = true;
 
   # Enable P2P
-  custom.p2p.qbittorrent.enable = true;
+  custom.p2p.enable = true;
 
   # Enable Gaming
-  custom.gaming.steam.enable = true;
-
-  # Enable Audio
-  custom.services.audio.enable = true;
-
-  # Enable Networking
-  custom.services.networkManager.enable = true;
-
-  # Enable Display Manager
-  custom.services.greetd.enable = true;
+  custom.gaming.enable = true;
 
   # AI & Other Backdoors
-  custom.evilBackdoors.gemini-cli.enable = true;
+  custom.evilBackdoors.enable = true;
 }
