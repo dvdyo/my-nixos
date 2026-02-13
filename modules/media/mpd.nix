@@ -18,10 +18,10 @@ in
     services.mpd = {
       enable = true;
       user = username;
-      musicDirectory = "/home/${username}/Music";
       
       # Use the new structured settings option
       settings = {
+        music_directory = "/home/${username}/Music";
         # Audio Outputs
         audio_output = [
           {
