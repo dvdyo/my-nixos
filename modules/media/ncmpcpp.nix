@@ -27,7 +27,6 @@ in
         autocenter_mode = "yes";
         centered_cursor = "yes";
         user_interface = "alternative";
-        follow_now_playing_iterates = "yes";
         cyclic_scrolling = "yes";
         mouse_support = "yes";
         mouse_list_scroll_whole_page = "yes";
