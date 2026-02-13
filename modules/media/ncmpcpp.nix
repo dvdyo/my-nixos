@@ -46,7 +46,6 @@ in
         song_status_format = "$7%t";
         song_list_format = "$1%n$9 $1%a$9 - $5%t$9 $R$1%l$9";
         song_columns_list_format = "(20) [red]{a} (30) [green]{f} (30) [white]{t|f} (5) [blue]{l}";
-        active_column_color = "red";
         visualizer_data_source = "/tmp/mpd.fifo";
         visualizer_output_name = "my_fifo";
         visualizer_in_stereo = "yes";
