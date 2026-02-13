@@ -26,6 +26,7 @@ in
       ];
       config = {
         # Video quality & hardware acceleration
+        ytdl-format = "bestvideo+bestaudio";
         hwdec = "auto-safe";
         vo = "gpu-next";
         profile = "gpu-hq";

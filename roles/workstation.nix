@@ -21,6 +21,7 @@
 
   custom.desktop.components.notifications.mako.enable = true;
 
+  custom.editors.enable = true;
   
   custom.virtualization.enable = true;
   custom.virtualization.qemu-guest.enable = false;
@@ -33,14 +34,9 @@
 
   custom.security.enable = true;
 
-  # Enable P2P
   custom.p2p.enable = true;
 
-  # Enable Media
   custom.media.enable = true;
-
-  # Enable Gaming
-
 
   custom.sysmons.enable = true;
   
