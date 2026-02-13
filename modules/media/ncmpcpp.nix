@@ -16,6 +16,7 @@ in
   config = mkIf cfg.enable {
     custom.hjem.cfg.rum.programs.ncmpcpp = {
       enable = true;
+      package = pkgs.ncmpcpp.override { visualizerSupport = true; };
       settings = {
         ncmpcpp_directory = "~/.config/ncmpcpp";
         external_editor = "hx";
