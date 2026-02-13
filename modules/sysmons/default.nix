@@ -4,7 +4,7 @@
   ...
 }:
 let
-  cfg = config.custom.sysmon;
+  cfg = config.custom.sysmons;
   inherit (lib) mkEnableOption mkIf mkDefault;
 in
 {
@@ -12,7 +12,7 @@ in
     ./bottom.nix
   ];
 
-  options.custom.sysmon = {
+  options.custom.sysmons = {
     enable = mkEnableOption "Enable default sysmon ";
   };
 
