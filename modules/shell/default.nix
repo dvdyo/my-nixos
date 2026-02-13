@@ -20,6 +20,7 @@ in
     ./starship
     ./zoxide.nix
     ./tealdeer.nix
+    ./tree.nix
   ];
 
   options.custom.shell = {
@@ -39,6 +40,7 @@ in
       microfetch.enable = mkDefault true;
       nh.enable = mkDefault true;
       tealdeer.enable = mkDefault true;
+      tree.enable = mkDefault true;
     };
   };
 }

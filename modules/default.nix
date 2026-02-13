@@ -19,5 +19,6 @@
     ./gaming
     ./p2p
     ./evilBackdoors
+    ./sysmons
   ];
 }

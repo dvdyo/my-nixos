@@ -10,6 +10,7 @@ in
 {
   imports = [
     ./zen
+    ./ungoogled-chromium
   ];
 
   options.custom.browsers = {
@@ -19,6 +20,7 @@ in
   config = mkIf cfg.enable {
     custom.browsers = {
       zen.enable = mkDefault true;
+      ungoogled-chromium.enable = true;
     };
   };
 }
