@@ -38,13 +38,30 @@ in
       };
     };
 
-    # Ensure the music directory exists or at least the path is valid
-    # Since we are running as the user, we don't strictly need ProtectHome = read-only modification
-    # if the user matches, but standard MPD service usually runs as 'mpd' user.
-    # However, setting user = username means it runs as YOU.
-    # The default systemd service might restrict home access, so we keep this to be safe,
-    # but strictly speaking if User=username, systemd usually allows access to that user's home.
-    # We will relax it just in case.
-    systemd.services.mpd.serviceConfig.ProtectHome = "read-only"; 
-  };
-}
+        # Ensure the music directory exists or at least the path is valid
+
+        # Since we are running as the user, we don't strictly need ProtectHome = read-only modification
+
+        # but strictly speaking if User=username, systemd usually allows access to that user's home.
+
+        # We will relax it just in case.
+
+        systemd.services.mpd = {
+
+          serviceConfig.ProtectHome = "read-only";
+
+          environment = {
+
+            # Required for MPD (system service) to find the user's PipeWire socket
+
+            XDG_RUNTIME_DIR = "/run/user/${toString config.users.users.${username}.uid}";
+
+          };
+
+        };
+
+      };
+
+    }
+
+    
