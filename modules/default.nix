@@ -18,6 +18,7 @@
     ./security
     ./gaming
     ./p2p
+    ./media
     ./evilBackdoors
     ./sysmons
   ];

@@ -33,9 +33,14 @@
 
   custom.security.enable = true;
 
+  # Enable P2P
   custom.p2p.enable = true;
 
-  custom.gaming.enable = true;
+  # Enable Media
+  custom.media.enable = true;
+
+  # Enable Gaming
+
 
   custom.sysmons.enable = true;
   
