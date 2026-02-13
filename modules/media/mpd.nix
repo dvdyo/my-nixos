@@ -17,7 +17,6 @@ in
   config = mkIf cfg.enable {
     services.mpd = {
       enable = true;
-      user = username;
       
       # Use the new structured settings option
       settings = {
@@ -45,7 +44,7 @@ in
     systemd.services.mpd = {
       serviceConfig.ProtectHome = "read-only";
       environment = {
-        XDG_RUNTIME_DIR = "/run/user/${toString config.users.users.userRunningPipeWire.uid}";
+        XDG_RUNTIME_DIR = "/run/user/${toString config.users.users.${username}.uid}";
       };
     };
   };
