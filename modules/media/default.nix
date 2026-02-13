@@ -10,6 +10,8 @@ in
 {
   imports = [
     ./mpv.nix
+    ./ncmpcpp.nix
+    ./mpd.nix
   ];
 
   options.custom.media = {
@@ -19,6 +21,8 @@ in
   config = mkIf cfg.enable {
     custom.media = {
       mpv.enable = mkDefault true;
+      ncmpcpp.enable = mkDefault true;
+      mpd.enable = mkDefault true;
     };
   };
 }

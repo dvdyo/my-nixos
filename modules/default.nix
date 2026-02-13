@@ -19,6 +19,7 @@
     ./gaming
     ./p2p
     ./media
+    ./fileManagers
     ./evilBackdoors
     ./sysmons
   ];

@@ -38,6 +38,8 @@
 
   custom.media.enable = true;
 
+  custom.fileManagers.enable = true;
+
   custom.sysmons.enable = true;
   
   custom.evilBackdoors.enable = true;
