@@ -38,30 +38,15 @@ in
       };
     };
 
-        # Ensure the music directory exists or at least the path is valid
-
-        # Since we are running as the user, we don't strictly need ProtectHome = read-only modification
-
-        # but strictly speaking if User=username, systemd usually allows access to that user's home.
-
-        # We will relax it just in case.
-
-        systemd.services.mpd = {
-
-          serviceConfig.ProtectHome = "read-only";
-
-          environment = {
-
-            # Required for MPD (system service) to find the user's PipeWire socket
-
-            XDG_RUNTIME_DIR = "/run/user/${toString config.users.users.${username}.uid}";
-
-          };
-
-        };
-
+    # PipeWire Workaround:
+    # Since MPD runs as a system service (even with user=username), it doesn't inherit the user's
+    # environment variables. We must explicitly point it to the user's Runtime Directory
+    # so it can find the PipeWire socket (usually at /run/user/<uid>/pipewire-0).
+    systemd.services.mpd = {
+      serviceConfig.ProtectHome = "read-only";
+      environment = {
+        XDG_RUNTIME_DIR = "/run/user/${toString config.users.users.userRunningPipeWire.uid}";
       };
-
-    }
-
-    
+    };
+  };
+}
