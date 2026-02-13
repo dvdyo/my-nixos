@@ -17,7 +17,8 @@ in
   config = mkIf cfg.enable {
     services.mpd = {
       enable = true;
-      
+      user = "${username}";
+      startWhenNeeded = true;
       # Use the new structured settings option
       settings = {
         music_directory = "/home/${username}/Music";
@@ -42,7 +43,7 @@ in
     # environment variables. We must explicitly point it to the user's Runtime Directory
     # so it can find the PipeWire socket (usually at /run/user/<uid>/pipewire-0).
     systemd.services.mpd = {
-      serviceConfig.ProtectHome = "read-only";
+      
       environment = {
         XDG_RUNTIME_DIR = "/run/user/${toString config.users.users.${username}.uid}";
       };
