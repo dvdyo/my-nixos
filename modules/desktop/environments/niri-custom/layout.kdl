@@ -13,7 +13,6 @@ layout {
 
     // Terminals and new windows start at 1/2 width
     default-column-width { proportion 0.5; }
-    default-window-height { proportion 1.0; }
 
     focus-ring {
         width 0
@@ -36,6 +35,10 @@ layout {
 }
 
 // Window Rules for Aesthetics
+window-rule {
+    default-window-height { proportion 1.0; }
+}
+
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
