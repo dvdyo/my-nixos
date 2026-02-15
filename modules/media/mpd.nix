@@ -54,7 +54,6 @@ in
       serviceConfig = {
         ExecStart = "${lib.getExe pkgs.mpd} --no-daemon /home/${username}/.config/mpd/mpd.conf";
         Restart = "on-failure";
-        ProtectHome = "read-only";
       };
     };
 
