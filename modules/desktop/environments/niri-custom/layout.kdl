@@ -34,7 +34,6 @@ layout {
     }
 }
 
-// Window Rules for Aesthetics
 window-rule {
     default-window-height { proportion 1.0; }
 }
@@ -45,7 +44,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"zen"#
+    match app-id=r#"zen-beta"#
     default-column-width { proportion 0.5; }
     default-window-height { proportion 1.0; }
     geometry-corner-radius 0
