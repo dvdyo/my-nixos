@@ -36,6 +36,10 @@ in
       inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
     ];
 
+    environment.sessionVariables = {
+      MOZ_ENABLE_WAYLAND = "1";
+    };
+
     # 2. Deploy to proper location
     environment.etc."zen/policies/policies.json".text = builtins.toJSON {
       inherit policies;

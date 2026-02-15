@@ -41,6 +41,12 @@ window-rule {
 }
 
 window-rule {
+    match app-id=r#"zen"#
+    default-column-width { proportion 0.5; }
+    geometry-corner-radius 0
+}
+
+window-rule {
     match is-active=false
     opacity 0.95
 }
