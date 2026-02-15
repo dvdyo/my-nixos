@@ -13,6 +13,7 @@ layout {
 
     // Terminals and new windows start at 1/2 width
     default-column-width { proportion 0.5; }
+    default-window-height { proportion 1.0; }
 
     focus-ring {
         width 0
@@ -43,6 +44,7 @@ window-rule {
 window-rule {
     match app-id=r#"zen"#
     default-column-width { proportion 0.5; }
+    default-window-height { proportion 1.0; }
     geometry-corner-radius 0
 }
 
