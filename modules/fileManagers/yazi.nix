@@ -14,6 +14,9 @@ in
   };
 
   config = mkIf cfg.enable {
+    # Install drag-and-drop tool
+    environment.systemPackages = [ pkgs.ripdrag ];
+
     custom.hjem.cfg.rum.programs.yazi = {
       enable = true;
       settings = {
@@ -24,6 +27,16 @@ in
           sort_reverse = false;
           sort_dir_first = true;
         };
+      };
+      
+      keymap = {
+        mgr.prepend_keymap = [
+          {
+            on = "<C-n>";
+            run = "shell '${lib.getExe pkgs.ripdrag} -a -x' --confirm";
+            desc = "Drag and drop via ripdrag";
+          }
+        ];
       };
     };
   };

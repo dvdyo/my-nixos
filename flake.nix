@@ -2,7 +2,6 @@
   description = "DVD NixOS Configuration";
 
   inputs = {
-    # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Disko -- declarative disk management
@@ -25,13 +24,11 @@
       inputs.hjem.follows = "hjem";
     };
 
-    # Zen Browser
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
       };
 
-    # Quickshell (Required for DMS)
     quickshell = {
       url = "git+https://git.outfoxxed.me/quickshell/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
