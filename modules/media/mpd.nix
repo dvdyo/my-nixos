@@ -8,6 +8,31 @@
 let
   cfg = config.custom.media.mpd;
   inherit (lib) mkEnableOption mkIf;
+
+  mpdConfig = ''
+    music_directory     "/home/${username}/Music"
+    playlist_directory  "/home/${username}/.config/mpd/playlists"
+    db_file             "/home/${username}/.config/mpd/database"
+    log_file            "syslog"
+    pid_file            "/home/${username}/.config/mpd/pid"
+    state_file          "/home/${username}/.config/mpd/state"
+    sticker_file        "/home/${username}/.config/mpd/sticker.sql"
+    bind_to_address     "127.0.0.1"
+    port                "6600"
+    auto_update         "yes"
+
+    audio_output {
+        type            "pipewire"
+        name            "PipeWire Output"
+    }
+
+    audio_output {
+        type            "fifo"
+        name            "Visualizer FIFO"
+        path            "/tmp/mpd.fifo"
+        format          "44100:16:2"
+    }
+  '';
 in
 {
   options.custom.media.mpd = {
@@ -15,38 +40,27 @@ in
   };
 
   config = mkIf cfg.enable {
-    services.mpd = {
-      enable = true;
-      user = "${username}";
-      startWhenNeeded = true;
-      # Use the new structured settings option
-      settings = {
-        music_directory = "/home/${username}/Music";
-        # Audio Outputs
-        audio_output = [
-          {
-            type = "pipewire";
-            name = "My PipeWire Output";
-          }
-          {
-            type = "fifo";
-            name = "my_fifo";
-            path = "/tmp/mpd.fifo";
-            format = "44100:16:2";
-          }
-        ];
+    environment.systemPackages = [
+      pkgs.mpd
+      pkgs.mpc-cli
+    ];
+
+    services.mpd.enable = false;
+
+    systemd.user.services.mpd = {
+      description = "Music Player Daemon";
+      after = [ "network.target" "sound.target" "pipewire.service" ];
+      wantedBy = [ "default.target" ];
+      serviceConfig = {
+        ExecStart = "${lib.getExe pkgs.mpd} --no-daemon /home/${username}/.config/mpd/mpd.conf";
+        Restart = "on-failure";
+        ProtectHome = "read-only";
       };
     };
 
-    # PipeWire Workaround:
-    # Since MPD runs as a system service (even with user=username), it doesn't inherit the user's
-    # environment variables. We must explicitly point it to the user's Runtime Directory
-    # so it can find the PipeWire socket (usually at /run/user/<uid>/pipewire-0).
-    systemd.services.mpd = {
-      
-      environment = {
-        XDG_RUNTIME_DIR = "/run/user/${toString config.users.users.${username}.uid}";
-      };
+    custom.hjem.cfg.files = {
+      ".config/mpd/mpd.conf".text = mpdConfig;
+      ".config/mpd/playlists/.keep".text = "";
     };
   };
 }
