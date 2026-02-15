@@ -42,7 +42,7 @@ in
   config = mkIf cfg.enable {
     environment.systemPackages = [
       pkgs.mpd
-      pkgs.mpc-cli
+      pkgs.mpc
     ];
 
     services.mpd.enable = false;
