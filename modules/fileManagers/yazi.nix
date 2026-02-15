@@ -33,7 +33,7 @@ in
         mgr.prepend_keymap = [
           {
             on = "<C-n>";
-            run = "shell '${lib.getExe pkgs.ripdrag} -a -x' --confirm";
+            run = "shell '${lib.getExe pkgs.ripdrag} -a -x \"$@\"' --confirm";
             desc = "Drag and drop via ripdrag";
           }
         ];
