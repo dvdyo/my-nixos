@@ -8,6 +8,8 @@ binds {
     "Mod+T" { spawn "footclient"; }
     "Mod+D" repeat=false { spawn "vicinae" "toggle"; }
     "Mod+B" { spawn "zen-beta"; }
+    "Mod+E" { spawn "footclient" "yazi"; }
+    "Mod+Shift+T" { spawn "footclient" "btm"; }
     // "Mod+B" { spawn "firefox"; } // Optional: Add browser bind
 
     // === Window Management ===
