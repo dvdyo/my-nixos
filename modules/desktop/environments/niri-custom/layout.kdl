@@ -51,6 +51,13 @@ window-rule {
 }
 
 window-rule {
+    match app-id=r#"ncmpcpp-floating"#
+    open-floating true
+    default-column-width { proportion 0.6; }
+    default-window-height { proportion 0.6; }
+}
+
+window-rule {
     match is-active=false
     opacity 0.95
 }

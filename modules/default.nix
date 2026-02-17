@@ -14,6 +14,7 @@
     ./editors
     ./terminals
     ./office
+    ./studying
     ./socials
     ./security
     ./gaming

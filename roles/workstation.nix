@@ -30,6 +30,8 @@
 
   custom.office.enable = true;
 
+  custom.studying.enable = true;
+
   custom.socials.enable = true;
 
   custom.security.enable = true;
