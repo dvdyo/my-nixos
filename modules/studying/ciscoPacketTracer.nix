@@ -5,11 +5,11 @@
   ...
 }:
 let
-  cfg = config.custom.shell.ciscoPacketTracer;
+  cfg = config.custom.studying.ciscoPacketTracer;
   inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.shell.ciscoPacketTracer.enable = mkEnableOption "Enable ciscoPacketTracer ";
+  options.custom.studying.ciscoPacketTracer.enable = mkEnableOption "Enable ciscoPacketTracer ";
 
   config = mkIf cfg.enable {
     environment.systemPackages = [ pkgs.ciscoPacketTracer9 ];
