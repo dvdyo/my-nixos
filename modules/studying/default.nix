@@ -10,7 +10,7 @@ in
 {
   imports = [
     ./ciscoPacketTracer.nix
-    
+    ./anki.nix    
   ];
 
   options.custom.studying = {
