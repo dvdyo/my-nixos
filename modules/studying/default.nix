@@ -20,6 +20,7 @@ in
   config = mkIf cfg.enable {
     custom.studying = {
       ciscoPacketTracer.enable = mkDefault true;
+      anki.enable = mkDefault true;
     };
   };
 }
