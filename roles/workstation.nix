@@ -42,6 +42,8 @@
 
   custom.fileManagers.enable = true;
 
+  custom.recording.enable = true;
+
   custom.sysmons.enable = true;
   
   custom.evilBackdoors.enable = true;

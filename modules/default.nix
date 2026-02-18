@@ -21,6 +21,7 @@
     ./p2p
     ./media
     ./fileManagers
+    ./recording
     ./evilBackdoors
     ./sysmons
   ];
