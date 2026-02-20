@@ -10,6 +10,7 @@ in
 {
   imports = [
     ./libreoffice.nix
+    ./onlyoffice.nix
   ];
 
   options.custom.office = {
@@ -19,6 +20,7 @@ in
   config = mkIf cfg.enable {
     custom.office = {
       libreoffice.enable = mkDefault true;
+      onlyoffice.enable = mkDefault true;
     };
   };
 }
