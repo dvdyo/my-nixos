@@ -18,6 +18,7 @@ binds {
     "Mod+Space" { toggle-overview; }
     "Mod+F" { maximize-column; }
     "Mod+Shift+F" { fullscreen-window; }
+    "Mod+Alt+F" { toggle-window-floating; }
     "Mod+C" { center-column; }
     "Mod+R" { switch-preset-column-width; }
     "Mod+W" { toggle-column-tabbed-display; }
