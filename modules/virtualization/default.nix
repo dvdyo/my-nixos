@@ -11,6 +11,7 @@ in
   imports = [
     ./qemu-guest.nix
     ./libvirt.nix
+    ./virtio-win.nix
   ];
 
   options.custom.virtualization = {
@@ -19,8 +20,8 @@ in
 
   config = mkIf cfg.enable {
     custom.virtualization = {
-      qemu-guest.enable = mkDefault true;
       libvirt.enable = mkDefault true;
+      virtio-win.enable = mkDefault true;
     };
   };
 }
