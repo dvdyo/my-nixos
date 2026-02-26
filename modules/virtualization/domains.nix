@@ -63,7 +63,7 @@ in
             vcpu = { count = 4; };
             storage_vol = "/var/lib/libvirt/images/win11.qcow2";
             install_vol = "/var/lib/libvirt/iso/win11.iso";
-            nvram_path = "/var/lib/libvirt/nvram/win11.nvram";
+            nvram_path = "/var/lib/libvirt/qemu/nvram/win11.nvram";
             virtio_net = true;
             virtio_drive = true;
             install_virtio = true;
