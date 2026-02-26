@@ -13,6 +13,6 @@ in
     mkEnableOption "Enable virtio-win driver installation";
 
   config = mkIf cfg.enable {
-    environmnment.systemPackages = [ pkgs.virtio-win ];
+    environment.systemPackages = [ pkgs.virtio-win ];
   };
 }
