@@ -12,6 +12,7 @@ in
     ./qemu-guest.nix
     ./libvirt.nix
     ./virtio-win.nix
+    ./domains.nix
   ];
 
   options.custom.virtualization = {
@@ -21,7 +22,6 @@ in
   config = mkIf cfg.enable {
     custom.virtualization = {
       libvirt.enable = mkDefault true;
-      virtio-win.enable = mkDefault true;
     };
   };
 }
