@@ -39,14 +39,14 @@ in
         }
       ];
 
-     domains = [
+#     domains = [
 #       # Kali Linux
 #       {
 #         definition = domain.writeXML (domain.templates.linux {
 #           name = "kali";
 #           uuid = "cc7439ed-36af-4696-a6f2-1f0c4474d87e";
 #           memory = { count = 4; unit = "GiB"; };
-#           
+#           # Path to your Kali ISO
 #           install_vol = "/var/lib/libvirt/iso/kali-linux-latest-installer-amd64.iso";
 #           storage_vol = "/var/lib/libvirt/images/kali.qcow2";
 #         });
