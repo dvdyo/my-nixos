@@ -54,7 +54,7 @@ in
 #       }
 
         # Windows 11
-          {
+                {
           definition = domain.writeXML (lib.recursiveUpdate (domain.templates.windows {
             name = "windows11";
             uuid = "def734bb-e2ca-44ee-80f5-0ea0f2593aaa";
@@ -84,6 +84,7 @@ in
             };
           });
           active = false;
+        }
         }
       ];
     };
