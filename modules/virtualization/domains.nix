@@ -28,7 +28,7 @@ in
         {
           definition = pkgs.writeText "main-pool.xml" ''
             <pool type='dir'>
-              <name>main-pool</name>
+              <name>default</name>
               <uuid>650c5bbb-eebd-4cea-8a2f-36e1a75a8683</uuid>
               <target>
                 <path>/var/lib/libvirt/images</path>
@@ -62,7 +62,7 @@ in
             # Add VCPU count
             vcpu = { count = 4; };
             storage_vol = "/var/lib/libvirt/images/win11.qcow2";
-            install_vol = "/var/lib/libvirt/iso/win11.iso";
+            install_vol = "/var/lib/libvirt/images/win11.iso";
             nvram_path = "/var/lib/libvirt/qemu/nvram/win11.nvram";
             virtio_net = true;
             virtio_drive = true;
