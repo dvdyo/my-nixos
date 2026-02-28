@@ -20,6 +20,7 @@ in
   config = mkIf cfg.enable {
     custom.office = {
       libreoffice.enable = mkDefault true;
+      onlyoffice.enable = mkDefault true;
     };
   };
 }
