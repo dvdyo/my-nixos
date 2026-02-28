@@ -54,12 +54,11 @@ in
 #       }
 
         # Windows 11
-        {
-          definition = domain.writeXML (domain.templates.windows {
+                {
+          definition = domain.writeXML (lib.recursiveUpdate (domain.templates.windows {
             name = "windows11";
             uuid = "def734bb-e2ca-44ee-80f5-0ea0f2593aaa";
             memory = { count = 8; unit = "GiB"; };
-            # Add VCPU count
             vcpu = { count = 4; };
             storage_vol = "/var/lib/libvirt/images/win11.qcow2";
             install_vol = "/var/lib/libvirt/images/win11.iso";
@@ -67,8 +66,25 @@ in
             virtio_net = true;
             virtio_drive = true;
             install_virtio = true;
+          }) {
+            # THIS IS THE OVERRIDE SECTION
+            devices = {
+              # Disable 3D acceleration on the GPU
+              video = [{
+                model = {
+                  type = "virtio";
+                  acceleration = { accel3d = "no"; };
+                };
+              }];
+              #  Disable OpenGL on the Spice display
+              graphics = [{
+                type = "spice";
+                gl = { enable = "no"; };
+              }];
+            };
           });
           active = false;
+        }
         }
       ];
     };
