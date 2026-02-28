@@ -39,12 +39,6 @@
         url = "git+https://codeberg.org/LGFae/awww";
         inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # NixVirt -- declarative libvirt
-    NixVirt = {
-      url = "https://flakehub.com/f/AshleyYakeley/NixVirt/*.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =

@@ -3,7 +3,6 @@
   config,
   pkgs,
   username,
-  inputs,
   ...
 }:
 let
@@ -11,10 +10,6 @@ let
   inherit (lib) mkEnableOption mkIf mkOption;
 in
 {
-  imports = [
-    inputs.NixVirt.nixosModules.default
-  ];
-
   options.custom.virtualization.libvirt = {
     enable = mkEnableOption "Enable Libvirt/QEMU virtualization host";
 
@@ -26,24 +21,17 @@ in
   };
 
   config = mkIf cfg.enable {
-    # NixVirt Integration
-    virtualisation.libvirt = {
-      enable = true;
-      swtpm.enable = true;
-    };
-
     # Core Services
     virtualisation.libvirtd = {
-      enable = true;
-      qemu.swtpm.enable = true;
-    };
-
+			enable = true;
+			qemu.swtpm.enable = true;
+			};
     # Optional GUI
     programs.virt-manager.enable = cfg.gui.enable;
 
     # Add user to virtualization groups
-    users.users.${username}.extraGroups = [
-      "libvirtd"
+    users.users.${username}.extraGroups = [ 
+      "libvirtd" 
       "kvm"
     ];
   };
