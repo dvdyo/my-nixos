@@ -60,7 +60,7 @@ in
             uuid = "def734bb-e2ca-44ee-80f5-0ea0f2593aaa";
             memory = { count = 8; unit = "GiB"; };
             # Add VCPU count
-            vcpu = { count = 4; };
+            vcpu = 4;
             storage_vol = "/var/lib/libvirt/images/win11.qcow2";
             install_vol = "/var/lib/libvirt/iso/win11.iso";
             nvram_path = "/var/lib/libvirt/nvram/win11.nvram";
