@@ -73,13 +73,13 @@ in
               video = [{
                 model = {
                   type = "virtio";
-                  acceleration = { accel3d = "no"; };
+                  acceleration = { accel3d = false; };
                 };
               }];
               #  Disable OpenGL on the Spice display
               graphics = [{
                 type = "spice";
-                gl = { enable = "no"; };
+                gl = { enable = false; };
               }];
             };
           });
