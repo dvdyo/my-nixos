@@ -13,14 +13,16 @@ in
   config = mkIf cfg.enable {
     custom.hjem.cfg.rum.programs.gammastep = {
       enable = true;
-      general = {
-        location-provider = "manual";
-        temp-day = 5000;
-        temp-night = 3200;
-      };
-      manual = {
-        lat = 48.34;
-        lon = 39.19;
+      settings {
+        general = {
+          location-provider = "manual";
+          temp-day = 5000;
+          temp-night = 3200;
+        };
+        manual = {
+          lat = 48.34;
+          lon = 39.19;
+        };
       };
     };
   };
