@@ -4,19 +4,23 @@
   ...
 }:
 let
-  cfg = config.custom.services.audio;
+  cfg = config.custom.services.gammastep;
   inherit (lib) mkEnableOption mkIf;
 in
 {
   options.custom.services.gammastep.enable = mkEnableOption "Enable gammastep";
 
   config = mkIf cfg.enable {
-    services.gammastep = {
+    custom.hjem.cfg.rum.programs.gammastep = {
       enable = true;
-      provider = "geoclue2"; # for dynamic location finding
-      temperature = {
-        day = 6500;
-        night = 3200;
+      general = {
+        location-provider = "manual";
+        temp-day = 5000;
+        temp-night = 3200;
+      };
+      manual = {
+        lat = 48.34;
+        lon = 39.19;
       };
     };
   };
