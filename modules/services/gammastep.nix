@@ -13,7 +13,7 @@ in
   config = mkIf cfg.enable {
     custom.hjem.cfg.rum.programs.gammastep = {
       enable = true;
-      settings {
+      settings = {
         general = {
           location-provider = "manual";
           temp-day = 5000;
