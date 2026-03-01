@@ -8,7 +8,7 @@ let
   inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.services.audio.enable = mkEnableOption "Enable gammastep";
+  options.custom.services.gammastep.enable = mkEnableOption "Enable gammastep";
 
   config = mkIf cfg.enable {
     services.gammastep = {
