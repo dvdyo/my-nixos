@@ -13,6 +13,7 @@ in
     ./audio.nix
     ./greetd.nix
     ./networkManager.nix
+    ./gammastep.nix
   ];
 
   options.custom.services = {
@@ -25,6 +26,7 @@ in
       audio.enable = mkDefault true;
       greetd.enable = mkDefault true;
       networkManager.enable = mkDefault true;
+      gammastep.enable = mkDefault true;
     };
   };
 }
