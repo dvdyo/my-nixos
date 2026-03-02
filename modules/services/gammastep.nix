@@ -17,7 +17,7 @@ in
       settings = {
         general = {
           location-provider = "manual";
-          temp-day = 5000;
+          temp-day = 6000;
           temp-night = 3200;
         };
         manual = {
