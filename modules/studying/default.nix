@@ -9,7 +9,7 @@ let
 in
 {
   imports = [
-    ./ciscoPacketTracer.nix
+    ./ciscoPacketTracer
     ./anki.nix    
   ];
 
