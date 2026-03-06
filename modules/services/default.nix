@@ -14,6 +14,7 @@ in
     ./greetd.nix
     ./networkManager.nix
     ./gammastep.nix
+    ./printing.nix
   ];
 
   options.custom.services = {
@@ -27,6 +28,7 @@ in
       greetd.enable = mkDefault true;
       networkManager.enable = mkDefault true;
       gammastep.enable = mkDefault true;
+      printing.enable = mkDefault true;
     };
   };
 }
