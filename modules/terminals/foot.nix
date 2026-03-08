@@ -24,6 +24,7 @@ in
           font = "JetBrainsMono Nerd Font:size=11";
           term = "xterm-256color";
           pad = "12x12";
+          letter-spacing = "0.5"; 
         };
         csd = {
           preferred = "none";
@@ -33,12 +34,38 @@ in
         };
         colors = {
           alpha = 0.95;
-          foreground = "cdd6f4"; # Catppuccin Mocha-ish
-          background = "1e1e2e";
+          
+          # Gruvbox Material Dark (Medium)
+          background = "292828";
+          foreground = "d4be98";
+
+          # Normal colors
+          regular0 = "32302f";  # black
+          regular1 = "ea6962";  # red
+          regular2 = "a9b665";  # green
+          regular3 = "d8a657";  # yellow
+          regular4 = "7daea3";  # blue
+          regular5 = "d3869b";  # magenta
+          regular6 = "89b482";  # cyan
+          regular7 = "d4be98";  # white
+
+          # Bright colors
+          bright0 = "5a524c";   # bright black
+          bright1 = "ea6962";   # bright red
+          bright2 = "a9b665";   # bright green
+          bright3 = "d8a657";   # bright yellow
+          bright4 = "7daea3";   # bright blue
+          bright5 = "d3869b";   # bright magenta
+          bright6 = "89b482";   # bright cyan
+          bright7 = "e2cca9";   # bright white
+
+          # Misc UI colors (Quoted because of the hyphen)
+          "selection-foreground" = "d4be98";
+          "selection-background" = "504945";
+          urls = "d8a657";
         };
       };
-    };
-
+    };    
     # 3. Systemd User Service for foot-server
     systemd.user.services.foot-server = {
       description = "Foot Terminal Server";
