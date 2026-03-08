@@ -9,7 +9,7 @@ let
   inherit (lib) mkEnableOption mkIf;
 
   gruvbox-material-flavor = pkgs.fetchFromGitHub {
-    owner = "dangooddd";
+    owner = "bennyyip";
     repo = "gruvbox-material.yazi";
     rev = "main"; # pin to a specific commit hash for reproducibility
     hash = lib.fakeHash; 
