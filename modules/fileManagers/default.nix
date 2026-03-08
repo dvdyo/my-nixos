@@ -10,7 +10,7 @@ let
 in
 {
   imports = [
-    ./yazi.nix
+    ./yazi
   ];
 
   options.custom.fileManagers = {
