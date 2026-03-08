@@ -20,7 +20,7 @@ in
       enable = true;
       package = null; # Use system package
       settings = {
-       theme = mkDefault "catppuccin_mocha";
+       theme = mkDefault "gruvbox-material";
         editor = {
           line-number = "relative";
           cursorline = true;
