@@ -7,6 +7,13 @@
 let
   cfg = config.custom.fileManagers.yazi;
   inherit (lib) mkEnableOption mkIf;
+
+  gruvbox-material-flavor = pkgs.fetchFromGitHub {
+    owner = "dangooddd";
+    repo = "gruvbox-material.yazi";
+    rev = "main"; # pin to a specific commit hash for reproducibility
+    hash = lib.fakeHash; 
+  };
 in
 {
   options.custom.fileManagers.yazi = {
@@ -14,11 +21,11 @@ in
   };
 
   config = mkIf cfg.enable {
-    # Install drag-and-drop tool
     environment.systemPackages = [ pkgs.ripdrag ];
 
     custom.hjem.cfg.rum.programs.yazi = {
       enable = true;
+
       settings = {
         mgr = {
           show_hidden = true;
@@ -28,7 +35,7 @@ in
           sort_dir_first = true;
         };
       };
-      
+
       keymap = {
         mgr.prepend_keymap = [
           {
@@ -37,6 +44,21 @@ in
             desc = "Drag and drop via ripdrag";
           }
         ];
+      };
+
+      # Tell yazi which flavor to use
+      theme = {
+        flavor = {
+          dark = "gruvbox-material";
+          light = "gruvbox-material";
+        };
+      };
+    };
+
+    # Drop the flavor files into the flavors directory
+    custom.hjem.cfg.xdg.config.files = {
+      "yazi/flavors/gruvbox-material.yazi" = {
+        source = gruvbox-material-flavor;
       };
     };
   };
