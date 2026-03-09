@@ -35,8 +35,8 @@ in
      TranslateEnabled = true;
      PromptForDownloadLocation = false;
      PictureInPicture.Enabled = false;
-#     GenerativeAI.Enabled = false;
-#     Homepage.StartPage = "previous-session";
+     GenerativeAI.Enabled = false;
+     Homepage.StartPage = "previous-session";
 #        UserMessaging = {
 #         SkipOnboarding = true;
 #         UrlbarInterventions = false;
