@@ -14,7 +14,9 @@ in {
       platformTheme = "qt5ct";
       style = "kvantum";
     };
-
+    environment.sessionVariables = {
+      QT_QPA_PLATFORM = "wayland";  # force Qt apps onto Wayland
+    };
     # Gruvbox Kvantum theme package
     environment.systemPackages = [
       (pkgs.gruvbox-kvantum.override { variant = "Gruvbox-Dark-Blue"; })
