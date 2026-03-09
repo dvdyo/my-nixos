@@ -1,38 +1,26 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}:
+{ lib, config, pkgs, ... }:
 let
   cfg = config.custom.desktop.style.gtk;
   inherit (lib) mkEnableOption mkIf;
-in
-{
+in {
   options.custom.desktop.style.gtk = {
-    enable = mkEnableOption "Enable centralized desktop styling (Catppuccin)";
+    enable = mkEnableOption "Enable centralized desktop styling (Gruvbox)";
   };
 
   config = mkIf cfg.enable {
-    # 1. System-wide Theme Packages
+    # System-wide Theme Packages
     environment.systemPackages = [
-      (pkgs.catppuccin-gtk.override {
-        accents = [ "blue" ];
-        variant = "mocha";
-      })
-      (pkgs.catppuccin-papirus-folders.override {
-        accent = "blue";
-        flavor = "mocha";
-      })
-      pkgs.bibata-cursors
+      pkgs.gruvbox-gtk-theme          
+      pkgs.gruvbox-plus-icon-theme    
+      pkgs.bibata-cursors              
     ];
 
-    # 2. GTK Configuration via Hjem Rum
+    # GTK Configuration via Hjem Rum
     custom.hjem.cfg.rum.misc.gtk = {
       enable = true;
       settings = {
-        theme-name = "catppuccin-mocha-blue-standard";
-        icon-theme-name = "Papirus-Dark";
+        theme-name = "Gruvbox-Dark";           # or "Gruvbox-Dark-BL" (borderless)
+        icon-theme-name = "Gruvbox-Plus-Dark"; # from gruvbox-plus-icon-theme
         cursor-theme-name = "Bibata-Modern-Classic";
         font-name = "JetBrainsMono Nerd Font 11";
         application-prefer-dark-theme = true;
@@ -49,15 +37,13 @@ in
         xft-rgba = "rgb";
       };
 
-      # Custom CSS for further polish (optional)
       css.gtk3 = ''
-        /* Make scrollbars thin and clean */
         scrollbar {
             -GtkScrollbar-has-backward-stepper: 0;
             -GtkScrollbar-has-forward-stepper: 0;
         }
       '';
-      
+
       bookmarks = [
         "file:///home/${config.custom.core.user.name}/Documents Documents"
         "file:///home/${config.custom.core.user.name}/Downloads Downloads"
@@ -66,14 +52,11 @@ in
       ];
     };
 
-    # 3. Pointer/Cursor Logic (Ensure it works in Wayland)
-    # Most Wayland apps respect the GTK setting, but we can set env vars to be sure.
     environment.sessionVariables = {
       XCURSOR_THEME = "Bibata-Modern-Classic";
       XCURSOR_SIZE = "24";
     };
 
-    # 4. Link Cursor to ~/.icons for XWayland/Steam compatibility
     custom.hjem.cfg.files = {
       ".icons/default".source = "${pkgs.bibata-cursors}/share/icons/Bibata-Modern-Classic";
     };
