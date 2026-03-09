@@ -142,7 +142,7 @@ in
       };
     };
 
-    environment.sessionVariables.MOZ_ENABLE_WAYLAND = "1";
+#    environment.sessionVariables.MOZ_ENABLE_WAYLAND = "1";
 
     hjem.users.${username}.files = {
       ".mozilla/firefox/${username}/chrome/userChrome.css".source = ./userChrome.css;
