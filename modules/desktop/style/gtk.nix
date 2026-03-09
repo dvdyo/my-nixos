@@ -10,8 +10,8 @@ in {
   config = mkIf cfg.enable {
     # System-wide Theme Packages
     environment.systemPackages = [
-      pkgs.gruvbox-gtk-theme          
-      pkgs.gruvbox-plus-icon-theme    
+      pkgs.gruvbox-material-gtk-theme          
+      pkgs.gruvbox-plus-icon  
       pkgs.bibata-cursors              
     ];
 
