@@ -55,7 +55,7 @@ in {
       XCURSOR_THEME = "Bibata-Modern-Classic";
       XCURSOR_SIZE = "24";
       GTK_CSD = "0";
-      SAL_USE_VCLPLUGIN = "gtk3"
+      SAL_USE_VCLPLUGIN = "gtk3";
     };
 
     custom.hjem.cfg.files = {
