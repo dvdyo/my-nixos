@@ -11,7 +11,8 @@ in
   imports = [
     ./zen
     ./ungoogled-chromium
-  ];
+    ./firefox
+  ;
 
   options.custom.browsers = {
     enable = mkEnableOption "Enable Browsers suite";
