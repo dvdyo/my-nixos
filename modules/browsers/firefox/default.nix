@@ -9,7 +9,7 @@ let
   cfg = config.custom.browsers.firefox;
   inherit (lib) mkEnableOption mkIf;
 
-  profileName = ${username};
+  profileName = username;
 in
 {
   options.custom.browsers.firefox.enable = mkEnableOption "Enable Firefox";
