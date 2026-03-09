@@ -31,7 +31,7 @@ in
       MOZ_ENABLE_WAYLAND = "1";
     };
 
-    hjem.users.$(username).files = {
+    hjem.users.username.files = {
       ".mozilla/firefox/${profileName}/chrome/userChrome.css".source = ./userChrome.css;
       ".mozilla/firefox/${profileName}/bookmarks.html".source = ./bookmarks.html;
     };
