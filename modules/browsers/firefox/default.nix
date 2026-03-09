@@ -25,9 +25,9 @@ in
       policies = {
         # --- General ---
      DontCheckDefaultBrowser = true;
-#     DisableFirefoxScreenshots = true;
-#     DisableFirefoxStudies = true;
-#     DisableTelemetry = true;
+     DisableFirefoxScreenshots = true;
+     DisableFirefoxStudies = true;
+     DisableTelemetry = true;
 #     DisplayBookmarksToolbar = "never";
 #     DisplayMenuBar = "never";
 #     OverrideFirstRunPage = "";
