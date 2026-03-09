@@ -10,6 +10,7 @@ in
 {
   imports = [
     ./gtk.nix
+    ./qt.nix
   ];
 
   options.custom.desktop.style = {
@@ -19,6 +20,7 @@ in
   config = mkIf cfg.enable {
     custom.desktop.style = {
       gtk.enable = mkDefault true;
+      qt.enable = mkDefault true;
     };
   };
 }
