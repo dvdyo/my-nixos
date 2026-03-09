@@ -16,6 +16,7 @@ in {
     };
     environment.sessionVariables = {
       QT_QPA_PLATFORM = "wayland";  # force Qt apps onto Wayland
+      QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     };
     # Gruvbox Kvantum theme package
     environment.systemPackages = [
@@ -47,7 +48,7 @@ in {
       # Tell Kvantum which gruvbox variant to use
       ".config/Kvantum/kvantum.kvconfig".text = ''
         [General]
-        theme=Gruvbox-Dark-Brown
+        theme=Gruvbox-Dark-Blue
       '';
     };
   };
