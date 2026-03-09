@@ -21,7 +21,35 @@ in {
     environment.systemPackages = [
       (pkgs.gruvbox-kvantum.override { variant = "Gruvbox-Dark-Blue"; })
     ];
+        custom.hjem.cfg.files = {
+      # Tell qt5ct to use kvantum as its style engine
+      ".config/qt5ct/qt5ct.conf".text = ''
+        [Appearance]
+        style=kvantum
+        icon_theme=Gruvbox-Plus-Dark
 
+        [Fonts]
+        fixed="JetBrainsMono Nerd Font,11,-1,5,50,0,0,0,0,0"
+        general="JetBrainsMono Nerd Font,11,-1,5,50,0,0,0,0,0"
+      '';
+
+      # Tell qt6ct the same
+      ".config/qt6ct/qt6ct.conf".text = ''
+        [Appearance]
+        style=kvantum
+        icon_theme=Gruvbox-Plus-Dark
+
+        [Fonts]
+        fixed="JetBrainsMono Nerd Font,11,-1,5,50,0,0,0,0,0"
+        general="JetBrainsMono Nerd Font,11,-1,5,50,0,0,0,0,0"
+      '';
+
+      # Tell Kvantum which gruvbox variant to use
+      ".config/Kvantum/kvantum.kvconfig".text = ''
+        [General]
+        theme=Gruvbox-Dark-Brown
+      '';
+    };
     # Tell Kvantum which theme to use
     custom.hjem.cfg.files = {
       ".config/Kvantum/kvantum.kvconfig".text = ''
