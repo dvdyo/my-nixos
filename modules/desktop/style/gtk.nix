@@ -11,7 +11,7 @@ in {
     # System-wide Theme Packages
     environment.systemPackages = [
       pkgs.gruvbox-material-gtk-theme          
-      pkgs.gruvbox-plus-icon  
+      pkgs.gruvbox-plus-icons  
       pkgs.bibata-cursors              
     ];
 
