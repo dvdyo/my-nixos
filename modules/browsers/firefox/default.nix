@@ -40,7 +40,7 @@ in
 #        UserMessaging = {
 #         SkipOnboarding = true;
 #         UrlbarInterventions = false;
-        };
+#        };
 
         FirefoxSuggest = {
 #         ImproveSuggest = false;
