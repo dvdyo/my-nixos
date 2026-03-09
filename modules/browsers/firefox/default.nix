@@ -17,79 +17,79 @@ in
       enable = true;
 
       preferences = {
-        "services.sync.declinedEngines" = "";
-        "sidebar.verticalTabs" = true;
-        "sidebar.main.tools" = "";
+#        "services.sync.declinedEngines" = "";
+#        "sidebar.verticalTabs" = true;
+#        "sidebar.main.tools" = "";
       };
 
       policies = {
         # --- General ---
-        DontCheckDefaultBrowser = true;
-        DisableFirefoxScreenshots = true;
-        DisableFirefoxStudies = true;
-        DisableTelemetry = true;
-        DisplayBookmarksToolbar = "never";
-        DisplayMenuBar = "never";
-        OverrideFirstRunPage = "";
-        HardwareAcceleration = true;
-        TranslateEnabled = true;
-        PromptForDownloadLocation = false;
-        PictureInPicture.Enabled = false;
-        GenerativeAI.Enabled = false;
-        Homepage.StartPage = "previous-session";
+#       DontCheckDefaultBrowser = true;
+#       DisableFirefoxScreenshots = true;
+#       DisableFirefoxStudies = true;
+#       DisableTelemetry = true;
+#       DisplayBookmarksToolbar = "never";
+#       DisplayMenuBar = "never";
+#       OverrideFirstRunPage = "";
+#       HardwareAcceleration = true;
+#       TranslateEnabled = true;
+#       PromptForDownloadLocation = false;
+#       PictureInPicture.Enabled = false;
+#       GenerativeAI.Enabled = false;
+#       Homepage.StartPage = "previous-session";
 
         UserMessaging = {
-          SkipOnboarding = true;
-          UrlbarInterventions = false;
+#         SkipOnboarding = true;
+#         UrlbarInterventions = false;
         };
 
         FirefoxSuggest = {
-          ImproveSuggest = false;
-          SponsoredSuggestions = false;
-          WebSuggestions = false;
-        };
+#         ImproveSuggest = false;
+#         SponsoredSuggestions = false;
+#         WebSuggestions = false;
+       };
 
         EnableTrackingProtection = {
-          Value = true;
-          Cryptomining = true;
-          Fingerprinting = true;
-          EmailTracking = true;
+#         Value = true;
+#         Cryptomining = true;
+#         Fingerprinting = true;
+#         EmailTracking = true;
         };
 
         FirefoxHome = {
-          Search = true;
-          TopSites = false;
-          SponsoredTopSites = false;
-          Highlights = false;
-          Pocket = false;
-          SponsoredPocket = false;
-          Stories = false;
-          SponsoredStories = false;
-          Snippets = false;
+ #        Search = true;
+ #        TopSites = false;
+ #        SponsoredTopSites = false;
+ #        Highlights = false;
+ #        Pocket = false;
+ #        SponsoredPocket = false;
+ #        Stories = false;
+ #        SponsoredStories = false;
+ #        Snippets = false;
         };
 
         # --- Preferences (about:config) ---
         Preferences = {
-          "privacy.globalprivacycontrol.enabled" = true;
-          "media.eme.enabled" = true;
-          "browser.aboutConfig.showWarning" = false;
-          "browser.warnOnQuitShortcut" = false;
-          "browser.link.open_newwindow.override.external" = 7;
-          "media.webspeech.synth.dont_notify_on_error" = true;
-          "browser.urlbar.suggest.calculator" = true;
-          "browser.urlbar.unitConversion.enabled" = true;
-          "browser.urlbar.trimHttps" = true;
-          "browser.urlbar.suggest.searches" = true;
-          "browser.toolbars.bookmarks.visibility" = "never";
-          "services.sync.engine.tabs" = false;
-          "media.ffmpeg.vaapi.enabled" = true;
-          "layers.acceleration.force-enabled" = true;
-          "gfx.webrender.all" = true;
-          "browser.in-content.dark-mode" = true;
-          "ui.systemUsesDarkTheme" = true;
-          "widget.use-xdg-desktop-portal.file-picker" = 1;
-          "extensions.autoDisableScopes" = 0;
-          "extensions.update.enabled" = false;
+  #       "privacy.globalprivacycontrol.enabled" = true;
+  #       "media.eme.enabled" = true;
+  #       "browser.aboutConfig.showWarning" = false;
+  #       "browser.warnOnQuitShortcut" = false;
+  #       "browser.link.open_newwindow.override.external" = 7;
+  #       "media.webspeech.synth.dont_notify_on_error" = true;
+  #       "browser.urlbar.suggest.calculator" = true;
+  #       "browser.urlbar.unitConversion.enabled" = true;
+  #       "browser.urlbar.trimHttps" = true;
+  #       "browser.urlbar.suggest.searches" = true;
+  #       "browser.toolbars.bookmarks.visibility" = "never";
+  #       "services.sync.engine.tabs" = false;
+  #       "media.ffmpeg.vaapi.enabled" = true;
+  #       "layers.acceleration.force-enabled" = true;
+  #       "gfx.webrender.all" = true;
+  #       "browser.in-content.dark-mode" = true;
+  #       "ui.systemUsesDarkTheme" = true;
+  #       "widget.use-xdg-desktop-portal.file-picker" = 1;
+  #       "extensions.autoDisableScopes" = 0;
+  #       "extensions.update.enabled" = false;
         };
 
         # --- Extensions ---
