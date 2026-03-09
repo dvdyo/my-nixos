@@ -30,8 +30,8 @@ in
      DisableTelemetry = true;
      DisplayBookmarksToolbar = "never";
      DisplayMenuBar = "never";
-#     OverrideFirstRunPage = "";
-#     HardwareAcceleration = true;
+     OverrideFirstRunPage = "";
+     HardwareAcceleration = true;
 #     TranslateEnabled = true;
 #     PromptForDownloadLocation = false;
 #     PictureInPicture.Enabled = false;
