@@ -24,21 +24,20 @@ in
 
       policies = {
         # --- General ---
-#      DontCheckDefaultBrowser = true;
-#      DisableFirefoxScreenshots = true;
-#      DisableFirefoxStudies = true;
-#      DisableTelemetry = true;
-#      DisplayBookmarksToolbar = "never";
-#      DisplayMenuBar = "never";
-#      OverrideFirstRunPage = "";
-#      HardwareAcceleration = true;
-#      TranslateEnabled = true;
-#      PromptForDownloadLocation = false;
-#      PictureInPicture.Enabled = false;
-#      GenerativeAI.Enabled = false;
-#      Homepage.StartPage = "previous-session";
-
-        UserMessaging = {
+      DontCheckDefaultBrowser = true;
+      DisableFirefoxScreenshots = true;
+      DisableFirefoxStudies = true;
+      DisableTelemetry = true;
+      DisplayBookmarksToolbar = "never";
+      DisplayMenuBar = "never";
+      OverrideFirstRunPage = "";
+      HardwareAcceleration = true;
+      TranslateEnabled = true;
+      PromptForDownloadLocation = false;
+      PictureInPicture.Enabled = false;
+      GenerativeAI.Enabled = false;
+      Homepage.StartPage = "previous-session";
+#        UserMessaging = {
 #         SkipOnboarding = true;
 #         UrlbarInterventions = false;
         };
