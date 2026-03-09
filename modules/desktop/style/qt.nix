@@ -49,9 +49,6 @@ in {
         [General]
         theme=Gruvbox-Dark-Brown
       '';
-    };
-    # Tell Kvantum which theme to use
-    custom.hjem.cfg.files = {
       ".config/Kvantum/kvantum.kvconfig".text = ''
         [General]
         theme=Gruvbox-Dark-Blue
