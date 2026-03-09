@@ -49,9 +49,5 @@ in {
         [General]
         theme=Gruvbox-Dark-Brown
       '';
-      ".config/Kvantum/kvantum.kvconfig".text = ''
-        [General]
-        theme=Gruvbox-Dark-Blue
-      '';
     };
 }
