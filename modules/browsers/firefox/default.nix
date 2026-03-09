@@ -36,7 +36,7 @@ in
      PromptForDownloadLocation = false;
      PictureInPicture.Enabled = false;
      GenerativeAI.Enabled = false;
-     Homepage.StartPage = "previous-session";
+#     Homepage.StartPage = "previous-session";
 #        UserMessaging = {
 #         SkipOnboarding = true;
 #         UrlbarInterventions = false;
