@@ -18,8 +18,13 @@ in
     programs.firefox = {
       enable = true;
 
-      autoConfigFiles = [ ./autoConfig.js ];
-
+      preferences = {
+        "services.sync.declinedEngines" = "";
+        "sidebar.verticalTabs" = true;
+        "sidebar.main.tools" = "";
+        "browser.bookmarks.file" = "/home/${username}/.mozilla/firefox/${username}/bookmarks.html";
+        "browser.places.importBookmarksHTML" = true;
+      };
       policies =
         (builtins.fromJSON (builtins.readFile ./policies/extensions.json))
         // (builtins.fromJSON (builtins.readFile ./policies/policies.json))
