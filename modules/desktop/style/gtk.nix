@@ -36,10 +36,6 @@ in {
         xft-hintstyle = "hintslight";
         xft-rgba = "rgb";
       };
-    environment.sessionVariables = {
-        GTK_CSD = "0";
-        SAL_USE_VCLPLUGIN = "gtk3"
-    };
       css.gtk3 = ''
         scrollbar {
             -GtkScrollbar-has-backward-stepper: 0;
@@ -58,6 +54,8 @@ in {
     environment.sessionVariables = {
       XCURSOR_THEME = "Bibata-Modern-Classic";
       XCURSOR_SIZE = "24";
+      GTK_CSD = "0";
+      SAL_USE_VCLPLUGIN = "gtk3"
     };
 
     custom.hjem.cfg.files = {
