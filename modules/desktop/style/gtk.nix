@@ -19,7 +19,7 @@ in {
     custom.hjem.cfg.rum.misc.gtk = {
       enable = true;
       settings = {
-        theme-name = "Gruvbox-Dark";           # or "Gruvbox-Dark-BL" (borderless)
+        theme-name = "Gruvbox-Material-Dark";           # or "Gruvbox-Dark-BL" (borderless)
         icon-theme-name = "Gruvbox-Plus-Dark"; # from gruvbox-plus-icon-theme
         cursor-theme-name = "Bibata-Modern-Classic";
         font-name = "JetBrainsMono Nerd Font 11";
