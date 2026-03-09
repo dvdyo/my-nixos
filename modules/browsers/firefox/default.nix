@@ -32,9 +32,9 @@ in
      DisplayMenuBar = "never";
      OverrideFirstRunPage = "";
      HardwareAcceleration = true;
-#     TranslateEnabled = true;
-#     PromptForDownloadLocation = false;
-#     PictureInPicture.Enabled = false;
+     TranslateEnabled = true;
+     PromptForDownloadLocation = false;
+     PictureInPicture.Enabled = false;
 #     GenerativeAI.Enabled = false;
 #     Homepage.StartPage = "previous-session";
 #        UserMessaging = {
