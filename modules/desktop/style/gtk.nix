@@ -36,7 +36,10 @@ in {
         xft-hintstyle = "hintslight";
         xft-rgba = "rgb";
       };
-
+    environment.sessionVariables = {
+        GTK_CSD = "0";
+        SAL_USE_VCLPLUGIN = "gtk3"
+    };
       css.gtk3 = ''
         scrollbar {
             -GtkScrollbar-has-backward-stepper: 0;
