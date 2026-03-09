@@ -29,7 +29,7 @@ in
       DisableFirefoxStudies = true;
       DisableTelemetry = true;
       DisplayBookmarksToolbar = "never";
-      DisplayMenuBar = "never";
+#      DisplayMenuBar = "never";
       OverrideFirstRunPage = "";
       HardwareAcceleration = true;
       TranslateEnabled = true;
