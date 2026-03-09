@@ -28,8 +28,8 @@ in
      DisableFirefoxScreenshots = true;
      DisableFirefoxStudies = true;
      DisableTelemetry = true;
-#     DisplayBookmarksToolbar = "never";
-#     DisplayMenuBar = "never";
+     DisplayBookmarksToolbar = "never";
+     DisplayMenuBar = "never";
 #     OverrideFirstRunPage = "";
 #     HardwareAcceleration = true;
 #     TranslateEnabled = true;
