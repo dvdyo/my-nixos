@@ -50,4 +50,5 @@ in {
         theme=Gruvbox-Dark-Brown
       '';
     };
+  };
 }
