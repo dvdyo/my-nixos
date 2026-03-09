@@ -17,9 +17,9 @@ in
       enable = true;
 
       preferences = {
-#        "services.sync.declinedEngines" = "";
-#        "sidebar.verticalTabs" = true;
-#        "sidebar.main.tools" = "";
+        "services.sync.declinedEngines" = "";
+        "sidebar.verticalTabs" = true;
+        "sidebar.main.tools" = "";
       };
 
       policies = {
