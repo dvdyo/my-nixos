@@ -19,8 +19,8 @@ in
 
   config = mkIf cfg.enable {
     custom.browsers = {
-      zen.enable = mkDefault true;
-      ungoogled-chromium.enable = true;
+      firefox.enable = mkDefault true;
+      ungoogled-chromium.enable = mkDefault true;
     };
   };
 }
