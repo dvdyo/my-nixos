@@ -21,6 +21,7 @@ in
     ./zoxide.nix
     ./tealdeer.nix
     ./tree.nix
+    ./devenv.nix
   ];
 
   options.custom.shell = {
@@ -41,6 +42,7 @@ in
       nh.enable = mkDefault true;
       tealdeer.enable = mkDefault true;
       tree.enable = mkDefault true;
+      devenv.enable = mkDefault true;
     };
   };
 }
