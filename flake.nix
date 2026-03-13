@@ -39,14 +39,12 @@
         url = "git+https://codeberg.org/LGFae/awww";
         inputs.nixpkgs.follows = "nixpkgs";
     };
-    {
-    inputs = {
-      hjem-impure = {
-        url = "github:Rexcrazy804/hjem-impure";
-        inputs.nixpkgs.follows = "";
-        inputs.hjem.follows = "";
-      };
+    hjem-impure = {
+      url = "github:Rexcrazy804/hjem-impure";
+      inputs.nixpkgs.follows = "";
+      inputs.hjem.follows = "";
     };
+    
   }
   };
 
