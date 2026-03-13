@@ -32,7 +32,7 @@ in
         mouse = {
           hide-when-typing = "yes";
         };
-        colors = {
+        colors-dark = {
           alpha = 0.95;
           
           # Gruvbox Material Dark (Medium)
