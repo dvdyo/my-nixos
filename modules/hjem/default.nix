@@ -3,6 +3,7 @@
   lib,
   inputs,
   options,
+  username,
   ...
 }:
 let
@@ -47,7 +48,7 @@ in
       clobberByDefault = true;
       # The "Magic" alias: maps our custom.hjem.cfg to the actual hjem user path
       users.${cfg.user} = mkAliasDefinitions options.custom.hjem.cfg;
-      users.${cfg.user}.impure.enable = true;
+      users.${username}.impure.enable = true;
     };
 
     # Baseline settings for the user
