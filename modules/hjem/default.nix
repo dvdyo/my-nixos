@@ -42,10 +42,12 @@ in
     hjem = {
       extraModules = [
         inputs.hjem-rum.hjemModules.default
+        inputs.hjem-impure.hjemModules.default
       ];
       clobberByDefault = true;
       # The "Magic" alias: maps our custom.hjem.cfg to the actual hjem user path
       users.${cfg.user} = mkAliasDefinitions options.custom.hjem.cfg;
+      users.${cfg.user}.impure.enable = true;
     };
 
     # Baseline settings for the user
@@ -53,5 +55,9 @@ in
       user = cfg.user;
       directory = "/home/${cfg.user}";
     };
+      hjem.extraModules = [inputs.hjem-impure.hjemModules.default];
+      # enable hjem-impure
+      hjem.users.${myUserName}.impure.enable = true;
+    }
   };
 }
