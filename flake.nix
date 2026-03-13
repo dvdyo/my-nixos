@@ -45,7 +45,7 @@
       inputs.hjem.follows = "";
     };
     
-  }
+  
   };
 
   outputs =
