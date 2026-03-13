@@ -55,9 +55,5 @@ in
       user = cfg.user;
       directory = "/home/${cfg.user}";
     };
-      hjem.extraModules = [inputs.hjem-impure.hjemModules.default];
-      # enable hjem-impure
-      hjem.users.${myUserName}.impure.enable = true;
-    }
   };
 }
