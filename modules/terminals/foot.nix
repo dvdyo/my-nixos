@@ -12,10 +12,8 @@ in
   options.custom.terminals.foot.enable = mkEnableOption "Enable Foot Terminal";
 
   config = mkIf cfg.enable {
-    # 1. System Packages (Manual install since we aren't using programs.foot system module)
     environment.systemPackages = [ pkgs.foot ];
 
-    # 2. Enable Hjem Rum Foot module (Provides User Config)
     custom.hjem.cfg.rum.programs.foot = {
       enable = true;
       package = null; # Use system package
@@ -59,14 +57,13 @@ in
           bright6 = "89b482";   # bright cyan
           bright7 = "e2cca9";   # bright white
 
-          # Misc UI colors (Quoted because of the hyphen)
           "selection-foreground" = "d4be98";
           "selection-background" = "504945";
           urls = "d8a657";
         };
       };
     };    
-    # 3. Systemd User Service for foot-server
+    # Systemd User Service for foot-server
     systemd.user.services.foot-server = {
       description = "Foot Terminal Server";
       wantedBy = [ "graphical-session.target" ];
