@@ -48,13 +48,13 @@ in
       clobberByDefault = true;
       # The "Magic" alias: maps our custom.hjem.cfg to the actual hjem user path
       users.${cfg.user} = mkAliasDefinitions options.custom.hjem.cfg;
-      users.dvd.impure.enable = true;
     };
 
     # Baseline settings for the user
     custom.hjem.cfg = {
       user = cfg.user;
       directory = "/home/${cfg.user}";
+      impure.enable = true;
     };
   };
 }
