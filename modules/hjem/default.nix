@@ -30,7 +30,7 @@ in
     user = mkOption {
       type = nullOr str;
       description = "User to manage via hjem";
-      default = config.custom.core.user.name;
+      default = usermame;
     };
     cfg = mkOption {
       type = attrs;
