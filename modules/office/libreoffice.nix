@@ -17,7 +17,7 @@ in
     environment.systemPackages = [
       # Standard fresh version (GTK-based backend by default on Wayland)
       # Switch to 'libreoffice-qt6-fresh' later if Qt theming is preferred.
-      pkgs.libreoffice-fresh
+      pkgs.libreoffice-qt6-fresh
     ];
   };
 }
