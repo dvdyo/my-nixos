@@ -17,6 +17,7 @@ in
       launchers.vicinae.enable = true;
       wallpapers.awww.enable = true;
       fonts.enable = true;
+      screenLockers.gtklock.enable = true;
     };
 
     # 2. Environment Configuration

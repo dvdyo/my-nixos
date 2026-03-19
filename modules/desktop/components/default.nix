@@ -9,5 +9,6 @@
   ./wallpapers
   ./polkitAgents
   ./notifications
+  ./screenLockers
   ];
 }
