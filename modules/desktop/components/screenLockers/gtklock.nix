@@ -5,7 +5,7 @@
   ...
 }:
 let
-  cfg = config.custom.desktop.components.screenLockers.gtkclock.enablei;
+  cfg = config.custom.desktop.components.screenLockers.gtkclock.enable;
   inherit (lib) mkEnableOption mkIf;
 in
 {
