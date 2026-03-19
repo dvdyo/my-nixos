@@ -5,15 +5,13 @@
   ...
 }:
 let
-  cfg = config.custom.desktop.components.screenLockers.gtkclock.enable;
+  cfg = config.custom.desktop.components.screenLockers.gtklock;
   inherit (lib) mkEnableOption mkIf;
 in
 {
-  custom.desktop.components.screenLockers.gtkclock.enable = mkEnableOption "Enable gtklock";
+  options.custom.desktop.components.screenLockers.gtklock.enable = mkEnableOption "Enable gtklock";
 
   config = mkIf cfg.enable {
-      programs.gtklock.enable = true;
-      };
-    };
+    programs.gtklock.enable = true;
   };
 }
