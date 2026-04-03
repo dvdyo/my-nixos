@@ -14,7 +14,7 @@ in
   config = mkIf cfg.enable {
     # System-wide activation (required for login shell)
     programs.fish.enable = true;
-    environment.systemPackages = [ fishPlugins.bass  ]
+    environment.systemPackages = [ fishPlugins.bass ];
     
     # User configuration via Hjem Rum
     custom.hjem.cfg.rum.programs.fish = {
