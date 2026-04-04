@@ -10,6 +10,13 @@ layout {
         proportion 0.5
         proportion 0.66667
     }
+    preset-window-heights {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+        fixed 720
+    }
+
 
     // Terminals and new windows start at 1/2 width
     default-column-width { proportion 0.5; }
