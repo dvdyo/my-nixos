@@ -16,7 +16,7 @@ in
   config = mkIf cfg.enable {
     networking.networkmanager = {
       enable = true;
-      dns = "none";
+      dns = "systemd-resolved";
       wifi.backend = "iwd";
     };
 
