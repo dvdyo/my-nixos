@@ -16,18 +16,8 @@ in
   config = mkIf cfg.enable {
     networking.networkmanager = {
       enable = true;
-      dns = "systemd-resolved";
+      dns = "none";
       wifi.backend = "iwd";
-      ensureProfiles.profiles = {
-        ipv4 = {
-          method = "auto";
-          ignore-auto-dns = true;
-        };
-        ipv6 = {
-          method = "auto";
-          ignore-auto-dns = true;
-        };
-      };
     };
 
     # Enable systemd-resolved for DNS caching and better integration
