@@ -18,8 +18,14 @@ in
       enable = true;
       dns = "systemd-resolved";
       wifi.backend = "iwd";
-      "ipv4.ignore-auto-dns" = 1;
-      "ipv6.ignore-auto-dns" = 1;
+      ensureProfiles.profiles = {
+        ipv4 = {
+          ignore-auto-dns = true;
+        };
+        ipv6 = {
+          ignore-auto-dns = true;
+        };
+      };
     };
 
     # Enable systemd-resolved for DNS caching and better integration
