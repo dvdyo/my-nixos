@@ -20,9 +20,11 @@ in
       wifi.backend = "iwd";
       ensureProfiles.profiles = {
         ipv4 = {
+          method = "auto";
           ignore-auto-dns = true;
         };
         ipv6 = {
+          method = "auto";
           ignore-auto-dns = true;
         };
       };
