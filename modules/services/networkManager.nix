@@ -26,7 +26,8 @@ in
       settings.Resolve = {
         DNSSEC = "false";
         Domains = [ "~." ];
-        FallbackDNS = [ "1.1.1.1" "8.8.8.8" ];
+        DNS = [ "1.1.1.1" ];
+        FallbackDNS = [ "8.8.8.8" ];
       };
     };
 
