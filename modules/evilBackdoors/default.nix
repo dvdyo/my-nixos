@@ -10,6 +10,8 @@ in
 {
   imports = [
     ./gemini-cli.nix
+    ./codex.nix
+    
   ];
 
   options.custom.evilBackdoors = {
@@ -18,7 +20,8 @@ in
 
   config = mkIf cfg.enable {
     custom.evilBackdoors = {
-      gemini-cli.enable = mkDefault true;
+      gemini-cli.enable = mkDefault false;
+      codex.enable = mkDefault true;
     };
   };
 }
