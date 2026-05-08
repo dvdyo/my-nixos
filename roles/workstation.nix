@@ -47,4 +47,6 @@
   custom.sysmons.enable = true;
   
   custom.evilBackdoors.enable = true;
+
+  custom.gaming.enable = true;
 }
