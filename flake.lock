@@ -185,6 +185,22 @@
         "type": "github"
       }
     },
+    "libnbtplusplus": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1772016279,
+        "narHash": "sha256-7itkptyjoRcXfGLwg1/jxajetZ3a4mDc66+w4X6yW8s=",
+        "owner": "PrismLauncher",
+        "repo": "libnbtplusplus",
+        "rev": "687e43031df0dc641984b4256bcca50d5b3f7de3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "PrismLauncher",
+        "repo": "libnbtplusplus",
+        "type": "github"
+      }
+    },
     "ndg": {
       "inputs": {
         "nixpkgs": "nixpkgs_2"
@@ -291,6 +307,27 @@
         "type": "github"
       }
     },
+    "pineconemc": {
+      "inputs": {
+        "libnbtplusplus": "libnbtplusplus",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1778080210,
+        "narHash": "sha256-X0el2om8NixVDfzSiUtjpbyuDv9zgmRbZYGebl0VCes=",
+        "owner": "ElyPrismLauncher",
+        "repo": "Launcher",
+        "rev": "d947c44c0142387dd3a69d41163939abe9c83447",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ElyPrismLauncher",
+        "repo": "Launcher",
+        "type": "github"
+      }
+    },
     "quickshell": {
       "inputs": {
         "nixpkgs": [
@@ -320,6 +357,7 @@
         "hjem-rum": "hjem-rum",
         "impermanence": "impermanence",
         "nixpkgs": "nixpkgs_3",
+        "pineconemc": "pineconemc",
         "quickshell": "quickshell",
         "zen-browser": "zen-browser"
       }

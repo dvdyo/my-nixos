@@ -9,6 +9,7 @@ let
 in
 {
   imports = [
+    ./pineconemc.nix
     ./steam.nix
   ];
 
@@ -18,6 +19,7 @@ in
 
   config = mkIf cfg.enable {
     custom.gaming = {
+      pineconemc.enable = mkDefault true;
       steam.enable = mkDefault true;
     };
   };

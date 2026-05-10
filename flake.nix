@@ -44,6 +44,10 @@
       inputs.nixpkgs.follows = "";
       inputs.hjem.follows = "";
     };
+    pineconemc = {
+      url = "github:ElyPrismLauncher/Launcher";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     
   
   };
