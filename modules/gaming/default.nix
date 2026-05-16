@@ -11,6 +11,7 @@ in
   imports = [
     ./pineconemc.nix
     ./steam.nix
+    ./lutris.nix
   ];
 
   options.custom.gaming = {
