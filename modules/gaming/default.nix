@@ -20,7 +20,7 @@ in
 
   config = mkIf cfg.enable {
     custom.gaming = {
-      pineconemc.enable = mkDefault true;
+      pineconemc.enable = mkDefault false;
       steam.enable = mkDefault true;
       lutris.enable = mkDefault true;
     };
