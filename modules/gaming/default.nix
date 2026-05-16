@@ -21,6 +21,7 @@ in
     custom.gaming = {
       pineconemc.enable = mkDefault true;
       steam.enable = mkDefault true;
+      lutris.enable = mkDefault true;
     };
   };
 }
