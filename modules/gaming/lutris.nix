@@ -12,9 +12,13 @@ in
   options.custom.gaming.lutris.enable = mkEnableOption "Enable lutris";
 
   config = mkIf cfg.enable {
-    openldap = prev.openldap.overrideAttrs {
-      doCheck = !prev.stdenv.hostPlatform.isi686;
-    };
+    nixpkgs.overlays = [
+      (final: prev: {
+        openldap = prev.openldap.overrideAttrs (_: {
+          doCheck = false;
+        });
+      })
+    ];
     environment.systemPackages = [ pkgs.lutris ];
   };
 }
