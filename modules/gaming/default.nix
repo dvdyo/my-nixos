@@ -12,6 +12,7 @@ in
     ./pineconemc.nix
     ./steam.nix
     ./lutris.nix
+    ./rimsort.nix
   ];
 
   options.custom.gaming = {
@@ -23,6 +24,7 @@ in
       pineconemc.enable = mkDefault false;
       steam.enable = mkDefault true;
       lutris.enable = mkDefault true;
+      rimsort.enable = mkDefault true;
     };
   };
 }
