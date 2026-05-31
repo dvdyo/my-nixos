@@ -16,6 +16,7 @@ in
     ./gammastep.nix
     ./printing.nix
     ./sunshine.nix
+    ./tailscale.nix
   ];
 
   options.custom.services = {
@@ -31,6 +32,7 @@ in
       gammastep.enable = mkDefault true;
       printing.enable = mkDefault true;
       sunshine.enable = mkDefault true;
+      tailscale.enable = mkDefault.true;
     };
   };
 }

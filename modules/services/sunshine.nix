@@ -17,7 +17,7 @@ in
     enable = true;
     autoStart = true;
     capSysAdmin = true;
-    openFirewall = true;
+    openFirewall = false;
     };
 
     users.users.${username}.extraGroups = [ "uinput" ];
