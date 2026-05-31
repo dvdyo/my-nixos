@@ -24,7 +24,7 @@ in
             name = "Umineko";
             command = "sudo -u dvd steam-run /home/dvd/Games/Umineko/onscripter-ru";
           }
-        ]:
+        ];
       }  
     };
 
