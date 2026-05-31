@@ -21,7 +21,7 @@ in
         apps = [
           {
             name = "Umineko";
-            command = "sudo -u dvd steam-run /home/dvd/Games/Umineko/onscripter-ru";
+            command = "steam-run /home/dvd/Games/Umineko/onscripter-ru";
           }
         ];
       };
