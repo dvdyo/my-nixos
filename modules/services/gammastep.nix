@@ -1,0 +1,42 @@
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+let
+  cfg = config.custom.services.gammastep;
+  inherit (lib) mkEnableOption mkIf;
+in
+{
+  options.custom.services.gammastep.enable = mkEnableOption "Enable gammastep";
+
+  config = mkIf cfg.enable {
+    custom.hjem.cfg.rum.programs.gammastep = {
+      enable = true;
+      settings = {
+        general = {
+          location-provider = "manual";
+          temp-day = 6000;
+          temp-night = 3200;
+        };
+        manual = {
+          lat = 48.34;
+          lon = 39.19;
+        };
+      };
+    };
+    systemd.user.services.gammastep = {
+        description = "Gammastep screen color temperature adjuster";
+        wantedBy = [ "graphical-session.target" ];
+        partOf = [ "graphical-session.target" ];
+        after = [ "graphical-session.target" ];
+        
+        serviceConfig = {
+          ExecStart = "${lib.getExe pkgs.gammastep}";
+          Restart = "on-failure";
+          RestartSec = 3;
+        };
+   };
+  };
+}
