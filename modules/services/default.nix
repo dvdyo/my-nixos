@@ -32,7 +32,7 @@ in
       gammastep.enable = mkDefault true;
       printing.enable = mkDefault true;
       sunshine.enable = mkDefault true;
-      tailscale.enable = mkDefault.true;
+      tailscale.enable = mkDefault true;
     };
   };
 }
