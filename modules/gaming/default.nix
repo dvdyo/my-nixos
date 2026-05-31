@@ -23,7 +23,7 @@ in
     custom.gaming = {
       pineconemc.enable = mkDefault false;
       steam.enable = mkDefault true;
-      lutris.enable = mkDefault true;
+      lutris.enable = mkDefault false;
       rimsort.enable = mkDefault false;
     };
   };
