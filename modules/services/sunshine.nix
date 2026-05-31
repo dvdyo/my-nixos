@@ -18,6 +18,14 @@ in
     autoStart = true;
     capSysAdmin = true;
     openFirewall = false;
+    appilications = {
+        apps = [
+          {
+            name = "Umineko";
+            command = "sudo -u dvd steam-run /home/dvd/Games/Umineko/onscripter-ru";
+          }
+        ]:
+      }  
     };
 
     users.users.${username}.extraGroups = [ "uinput" ];
