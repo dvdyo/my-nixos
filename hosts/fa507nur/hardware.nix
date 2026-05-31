@@ -56,6 +56,10 @@
     # prime = ...
   };
 
+  # Reduce swapiness
+  boot.kernel.sysctl = {
+  "vm.swappiness" = 10;
+  };
   # 3. ASUS Specifics
   services.asusd = {
     enable = true;
