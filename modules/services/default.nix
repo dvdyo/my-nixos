@@ -15,6 +15,7 @@ in
     ./networkManager.nix
     ./gammastep.nix
     ./printing.nix
+    ./sunshine.nix
   ];
 
   options.custom.services = {
@@ -29,6 +30,7 @@ in
       networkManager.enable = mkDefault true;
       gammastep.enable = mkDefault true;
       printing.enable = mkDefault true;
+      sunshine.enable = mkDefault true;
     };
   };
 }
