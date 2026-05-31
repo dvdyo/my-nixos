@@ -11,23 +11,21 @@ let
 in
 {
   options.custom.services.sunshine.enable = mkEnableOption "Enable sunshine";
-
   config = mkIf cfg.enable {
-  services.sunshine = {
-    enable = true;
-    autoStart = true;
-    capSysAdmin = true;
-    openFirewall = false;
-    appilications = {
+    services.sunshine = {
+      enable = true;
+      autoStart = true;
+      capSysAdmin = true;
+      openFirewall = false;
+      applications = {
         apps = [
           {
             name = "Umineko";
             command = "sudo -u dvd steam-run /home/dvd/Games/Umineko/onscripter-ru";
           }
         ];
-      };  
+      };
     };
-
     users.users.${username}.extraGroups = [ "uinput" ];
-    };
+  };
 }
