@@ -17,14 +17,6 @@ in
       autoStart = true;
       capSysAdmin = true;
       openFirewall = false;
-      applications = {
-        apps = [
-          {
-            name = "Umineko";
-            command = "steam-run /home/dvd/Games/Umineko/onscripter-ru";
-          }
-        ];
-      };
     };
     users.users.${username}.extraGroups = [ "uinput" ];
   };
