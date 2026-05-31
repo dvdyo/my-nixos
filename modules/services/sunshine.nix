@@ -19,5 +19,6 @@ in
       openFirewall = false;
     };
     users.users.${username}.extraGroups = [ "uinput" ];
+    services.logind.lidSwitch = "ignore";
   };
 }
