@@ -25,7 +25,7 @@ in
             command = "sudo -u dvd steam-run /home/dvd/Games/Umineko/onscripter-ru";
           }
         ];
-      }  
+      };  
     };
 
     users.users.${username}.extraGroups = [ "uinput" ];
