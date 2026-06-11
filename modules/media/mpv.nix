@@ -55,11 +55,11 @@ in
         sub-auto = "fuzzy";
         slang = "eng,en";
         sub-font = "JetBrainsMono Nerd Font";
-        sub-font-size = 44;
+        sub-font-size = 36;
         sub-shadow-offset = 1;
         sub-bold = true;
         video-sync = "display-resample";
-        override-display-fps = 144;
+        display-fps-override = 144;
       };
     };
   };
