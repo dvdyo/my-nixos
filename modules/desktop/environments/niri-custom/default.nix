@@ -33,6 +33,7 @@ in
         (builtins.readFile ./animations.kdl)
         (builtins.readFile ./overview.kdl)
         (builtins.readFile ./cursor.kdl)
+        (builtins.readFile ./windowrules.kdl)
       ];
     };
   };

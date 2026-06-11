@@ -1,0 +1,9 @@
+window-rule {
+	match is-active=false
+	background-effect {
+		xray true
+		blur true
+		noise 0.05
+		saturtion 3
+	}
+}
