@@ -31,9 +31,9 @@ in
 
         # Scaling
         scale = "ewa_lanczos";
-        cscale = "ewa_lanczossoft";
+        cscale = "ewa_lanczos";
         dscale = "mitchell";
-
+        
         # Debanding
         deband = true;
         deband-iterations = 4;
@@ -56,11 +56,10 @@ in
         slang = "eng,en";
         sub-font = "JetBrainsMono Nerd Font";
         sub-font-size = 44;
-        sub-color = "#FFFFFFFF";
-        sub-border-size = 2;
-        sub-border-color = "#FF000000";
+        sub-color = "#FFFFFF";
+        sub-border-color = "#000000";
+        sub-shadow-color = "#000000";
         sub-shadow-offset = 1;
-        sub-shadow-color = "#33000000";
         sub-bold = true;
       };
     };
