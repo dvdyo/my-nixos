@@ -56,9 +56,6 @@ in
         slang = "eng,en";
         sub-font = "JetBrainsMono Nerd Font";
         sub-font-size = 44;
-        sub-color = "#FFFFFF";
-        sub-border-color = "#000000";
-        sub-shadow-color = "#000000";
         sub-shadow-offset = 1;
         sub-bold = true;
       };
