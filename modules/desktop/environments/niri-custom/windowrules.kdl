@@ -1,9 +1,168 @@
+workspace "task"
+workspace "project"
+workspace "main"
+workspace "static"
+workspace "help"
+
 window-rule {
-	match is-active=false
-	background-effect {
-		xray true
-		blur true
-		noise 0.05
-		saturiation 3
-	}
+    draw-border-with-background false
+    clip-to-geometry true
+    open-floating false
+    open-maximized false
+    // popups {
+    //     background-effect {
+    //         blur true
+    //     }
+    // }
+}
+layer-rule {
+    background-effect {
+        blur true
+    }
+}
+window-rule {
+    exclude app-id="^foot"
+    background-effect {
+        blur true
+    }
+}
+window-rule {
+    exclude app-id="^swayimg"
+    exclude app-id="^foot"
+    opacity 0.96
+}
+window-rule {
+    match is-floating=true
+    geometry-corner-radius 16
+}
+
+// ------------------------stateful-------------------------
+window-rule {
+    match app-id="firefox$" title="^Picture-in-Picture$"
+    match app-id="swayfloat"
+    match app-id="^foot" title="^floating"
+    open-floating true
+}
+window-rule {
+    match app-id="Minecraft" title="^Minecraft"
+    open-fullscreen true
+}
+window-rule {
+    match app-id="waybar"
+    match app-id="^foot" title="^review$"
+    match app-id="anki" at-startup=true
+    match app-id="Todoist" at-startup=true
+    match app-id="todoist" at-startup=true
+    open-focused false
+}
+
+// -------------------------column--------------------------
+window-rule {
+    match app-id="^foot" title="^voe$"
+    default-column-width { proportion 0.85; }
+}
+window-rule {
+    match app-id="^foot" title="^anki-card$"
+    default-column-width { proportion 0.5; }
+}
+window-rule {
+    match app-id="^foot" title="^bluetui$"
+    default-column-width { proportion 0.40; }
+}
+window-rule {
+    match app-id="^foot" title="^hardware-monitor$"
+    default-column-width { proportion 0.35; }
+}
+window-rule {
+    match app-id="^foot" title="^finances$"
+    default-column-width { proportion 0.2; }
+}
+window-rule {
+    match app-id="^foot" title="^palabra$"
+    match app-id="^foot" title="^earnings$"
+    match app-id="^foot" title="^loago-tracker$"
+    default-column-width { proportion 0.15; }
+}
+window-rule {
+    match app-id="anki"
+    default-column-width {}
+}
+
+// ------------------------workspace------------------------
+window-rule {
+    match app-id="^foot" title="^loago-tracker$"
+    match app-id="^foot" title="^calcure$"
+    match app-id="^foot" title="^finances$"
+    match app-id="^foot" title="^earnings$"
+    match app-id="^foot" title="^voe$"
+    match app-id="anki"
+    match app-id="Todoist"
+    match app-id="todoist"
+    open-on-workspace "static"
+}
+
+window-rule {
+    match app-id="^foot" title="^toggleterm$"
+    match app-id="^foot" title="^review$"
+    open-on-workspace "main"
+}
+
+window-rule {
+    match app-id="steam"
+    match app-id="^foot" title="^nushell"
+    match app-id="^foot" title="^man"
+    match app-id="^foot" title="^help"
+    match app-id="^foot" title="^bluetui$"
+    match app-id="^foot" title="^tewi$"
+    open-on-workspace "help"
+}
+
+window-rule {
+    match app-id="^foot" title="^pueue-interact$"
+    match app-id="^foot" title="^receiver$"
+    match app-id="^foot" title="^uboot$"
+    match app-id="^foot" title="^aurupdate$"
+    open-on-workspace "task"
+}
+
+// ----------------------app-specific-----------------------
+window-rule {
+    match app-id="org.kde.kruler"
+    geometry-corner-radius 0
+    clip-to-geometry false
+    open-floating true
+}
+window-rule {
+    match app-id="wlclock"
+    default-column-width { fixed 1005; }
+}
+window-rule {
+    match app-id="^foot" title="floating"
+    default-column-width { proportion 0.45; }
+    default-window-height { proportion 0.25; }
+}
+window-rule {
+    match app-id="^foot" title="^floating-calculator$"
+    default-column-width { proportion 0.35; }
+    default-window-height { proportion 0.16; }
+    default-floating-position x=0 y=10 relative-to="top"
+}
+window-rule {
+    match app-id="ripdrag"
+    open-focused false
+    open-floating true
+    default-floating-position x=50 y=30 relative-to="bottom-right"
+}
+
+layer-rule {
+    match namespace="^awww-daemon$"
+    place-within-backdrop true
+}
+layer-rule {
+    match namespace="^launcher$"
+    geometry-corner-radius 20
+}
+layer-rule {
+    match namespace="^notifications$"
+    geometry-corner-radius 10
 }
