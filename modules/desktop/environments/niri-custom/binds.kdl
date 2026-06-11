@@ -101,8 +101,8 @@ binds {
     "XF86MonBrightnessDown" allow-when-locked=true { spawn "brightnessctl" "set" "5%-"; }
     
     // Screenshots
-    "Mod+Shift+S" { spawn-sh "grim -t ppm -g \"$(slurp -o )\" - | satty --filename - --copy-command=wl-copy --output-filename=\"$(xdg-user-dir PICTURES)/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png\" --actions-on-enter=\"save-to-clipboard,exit\" --disable-notifications --no-window-decoration"; }
-    "Mod+Shift+Alt+S" { spawn "niri" "msg" "action" "screenshot"; }
+    // "Mod+Shift+S" { spawn-sh "grim -t ppm -g \"$(slurp -o )\" - | satty --filename - --copy-command=wl-copy --output-filename=\"$(xdg-user-dir PICTURES)/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png\" --actions-on-enter=\"save-to-clipboard,exit\" --disable-notifications --no-window-decoration"; }
+    "Mod+Shift+S" { spawn "niri" "msg" "action" "screenshot"; }
     // Screen locking
     "Mod+Alt+L" { spawn "gtklock" "-d"; }
 }
