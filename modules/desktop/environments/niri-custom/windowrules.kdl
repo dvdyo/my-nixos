@@ -21,14 +21,14 @@ layer-rule {
     }
 }
 window-rule {
-    exclude app-id="^foot"
+    exclude app-id="^footclient"
     background-effect {
         blur true
     }
 }
 window-rule {
     exclude app-id="^swayimg"
-    exclude app-id="^foot"
+    exclude app-id="^footclient"
     opacity 0.96
 }
 window-rule {
@@ -40,7 +40,7 @@ window-rule {
 window-rule {
     match app-id="firefox$" title="^Picture-in-Picture$"
     match app-id="swayfloat"
-    match app-id="^foot" title="^floating"
+    match app-id="^footclient" title="^floating"
     open-floating true
 }
 window-rule {
@@ -49,7 +49,7 @@ window-rule {
 }
 window-rule {
     match app-id="waybar"
-    match app-id="^foot" title="^review$"
+    match app-id="^footclient" title="^review$"
     match app-id="anki" at-startup=true
     match app-id="Todoist" at-startup=true
     match app-id="todoist" at-startup=true
@@ -58,29 +58,29 @@ window-rule {
 
 // -------------------------column--------------------------
 window-rule {
-    match app-id="^foot" title="^voe$"
+    match app-id="^footclient" title="^voe$"
     default-column-width { proportion 0.85; }
 }
 window-rule {
-    match app-id="^foot" title="^anki-card$"
+    match app-id="^footclient" title="^anki-card$"
     default-column-width { proportion 0.5; }
 }
 window-rule {
-    match app-id="^foot" title="^bluetui$"
+    match app-id="^footclient" title="^bluetui$"
     default-column-width { proportion 0.40; }
 }
 window-rule {
-    match app-id="^foot" title="^hardware-monitor$"
+    match app-id="^footclient" title="^hardware-monitor$"
     default-column-width { proportion 0.35; }
 }
 window-rule {
-    match app-id="^foot" title="^finances$"
+    match app-id="^footclient" title="^finances$"
     default-column-width { proportion 0.2; }
 }
 window-rule {
-    match app-id="^foot" title="^palabra$"
-    match app-id="^foot" title="^earnings$"
-    match app-id="^foot" title="^loago-tracker$"
+    match app-id="^footclient" title="^palabra$"
+    match app-id="^footclient" title="^earnings$"
+    match app-id="^footclient" title="^loago-tracker$"
     default-column-width { proportion 0.15; }
 }
 window-rule {
@@ -90,11 +90,11 @@ window-rule {
 
 // ------------------------workspace------------------------
 window-rule {
-    match app-id="^foot" title="^loago-tracker$"
-    match app-id="^foot" title="^calcure$"
-    match app-id="^foot" title="^finances$"
-    match app-id="^foot" title="^earnings$"
-    match app-id="^foot" title="^voe$"
+    match app-id="^footclient" title="^loago-tracker$"
+    match app-id="^footclient" title="^calcure$"
+    match app-id="^footclient" title="^finances$"
+    match app-id="^footclient" title="^earnings$"
+    match app-id="^footclient" title="^voe$"
     match app-id="anki"
     match app-id="Todoist"
     match app-id="todoist"
@@ -102,26 +102,26 @@ window-rule {
 }
 
 window-rule {
-    match app-id="^foot" title="^toggleterm$"
-    match app-id="^foot" title="^review$"
+    match app-id="^footclient" title="^toggleterm$"
+    match app-id="^footclient" title="^review$"
     open-on-workspace "main"
 }
 
 window-rule {
     match app-id="steam"
-    match app-id="^foot" title="^nushell"
-    match app-id="^foot" title="^man"
-    match app-id="^foot" title="^help"
-    match app-id="^foot" title="^bluetui$"
-    match app-id="^foot" title="^tewi$"
+    match app-id="^footclient" title="^nushell"
+    match app-id="^footclient" title="^man"
+    match app-id="^footclient" title="^help"
+    match app-id="^footclient" title="^bluetui$"
+    match app-id="^footclient" title="^tewi$"
     open-on-workspace "help"
 }
 
 window-rule {
-    match app-id="^foot" title="^pueue-interact$"
-    match app-id="^foot" title="^receiver$"
-    match app-id="^foot" title="^uboot$"
-    match app-id="^foot" title="^aurupdate$"
+    match app-id="^footclient" title="^pueue-interact$"
+    match app-id="^footclient" title="^receiver$"
+    match app-id="^footclient" title="^uboot$"
+    match app-id="^footclient" title="^aurupdate$"
     open-on-workspace "task"
 }
 
@@ -137,12 +137,12 @@ window-rule {
     default-column-width { fixed 1005; }
 }
 window-rule {
-    match app-id="^foot" title="floating"
+    match app-id="^footclient" title="floating"
     default-column-width { proportion 0.45; }
     default-window-height { proportion 0.25; }
 }
 window-rule {
-    match app-id="^foot" title="^floating-calculator$"
+    match app-id="^footclient" title="^floating-calculator$"
     default-column-width { proportion 0.35; }
     default-window-height { proportion 0.16; }
     default-floating-position x=0 y=10 relative-to="top"
