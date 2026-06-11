@@ -58,6 +58,8 @@ in
         sub-font-size = 44;
         sub-shadow-offset = 1;
         sub-bold = true;
+        video-sync = "display-resample";
+        override-display-fps = 144;
       };
     };
   };
