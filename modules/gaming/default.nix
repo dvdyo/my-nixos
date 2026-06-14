@@ -21,9 +21,9 @@ in
 
   config = mkIf cfg.enable {
     custom.gaming = {
-      pineconemc.enable = mkDefault false;
+      pineconemc.enable = mkDefault true;
       steam.enable = mkDefault true;
-      lutris.enable = mkDefault false;
+      lutris.enable = mkDefault true;
       rimsort.enable = mkDefault false;
     };
   };
