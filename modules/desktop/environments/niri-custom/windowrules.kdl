@@ -158,14 +158,6 @@ layer-rule {
     match namespace="^awww-daemon$"
     place-within-backdrop true
 }
-layer-rule {
-    match namespace="^launcher$"
-    geometry-corner-radius 20
-}
-layer-rule {
-    match namespace="^notifications$"
-    geometry-corner-radius 10
-}
 
 window-rule {
     match app-id="^mpv"
