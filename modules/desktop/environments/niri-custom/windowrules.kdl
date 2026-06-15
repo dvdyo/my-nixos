@@ -88,42 +88,6 @@ window-rule {
     default-column-width {}
 }
 
-// ------------------------workspace------------------------
-window-rule {
-    match app-id="^footclient" title="^loago-tracker$"
-    match app-id="^footclient" title="^calcure$"
-    match app-id="^footclient" title="^finances$"
-    match app-id="^footclient" title="^earnings$"
-    match app-id="^footclient" title="^voe$"
-    match app-id="anki"
-    match app-id="Todoist"
-    match app-id="todoist"
-    open-on-workspace "static"
-}
-
-window-rule {
-    match app-id="^footclient" title="^toggleterm$"
-    match app-id="^footclient" title="^review$"
-    open-on-workspace "main"
-}
-
-window-rule {
-    match app-id="steam"
-    match app-id="^footclient" title="^nushell"
-    match app-id="^footclient" title="^man"
-    match app-id="^footclient" title="^help"
-    match app-id="^footclient" title="^bluetui$"
-    match app-id="^footclient" title="^tewi$"
-    open-on-workspace "help"
-}
-
-window-rule {
-    match app-id="^footclient" title="^pueue-interact$"
-    match app-id="^footclient" title="^receiver$"
-    match app-id="^footclient" title="^uboot$"
-    match app-id="^footclient" title="^aurupdate$"
-    open-on-workspace "task"
-}
 
 // ----------------------app-specific-----------------------
 window-rule {
