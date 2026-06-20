@@ -6,7 +6,7 @@ binds {
 
     // === Applications ===
     "Mod+T" { spawn "footclient"; }
-    "Mod+Alt+T" { spawn "footclient" "--title=footclient-floating"; }
+    "Mod+Alt+T" { spawn "footclient" "--app-id=footclient-floating"; }
     "Mod+D" repeat=false { spawn "vicinae" "toggle"; }
     "Mod+B" { spawn "firefox"; }
     "Mod+M" { spawn "footclient" "--app-id" "ncmpcpp-floating" "ncmpcpp"; }
