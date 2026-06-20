@@ -2,8 +2,6 @@
 window-rule {
     draw-border-with-background false
     clip-to-geometry true
-    open-floating false
-    open-maximized false
     // popups {
     //     background-effect {
     //         blur true
@@ -22,13 +20,8 @@ window-rule {
     }
 }
 window-rule {
-    exclude app-id="^swayimg"
     exclude app-id="^footclient"
     opacity 0.96
-}
-window-rule {
-    match is-floating=true
-    geometry-corner-radius 16
 }
 
 // ------------------------stateful-------------------------
@@ -42,70 +35,14 @@ window-rule {
     match app-id="Minecraft" title="^Minecraft"
     open-fullscreen true
 }
-window-rule {
-    match app-id="waybar"
-    match app-id="^footclient" title="^review$"
-    match app-id="anki" at-startup=true
-    match app-id="Todoist" at-startup=true
-    match app-id="todoist" at-startup=true
-    open-focused false
-}
-
-// -------------------------column--------------------------
-window-rule {
-    match app-id="^footclient" title="^voe$"
-    default-column-width { proportion 0.85; }
-}
-window-rule {
-    match app-id="^footclient" title="^anki-card$"
-    default-column-width { proportion 0.5; }
-}
-window-rule {
-    match app-id="^footclient" title="^bluetui$"
-    default-column-width { proportion 0.40; }
-}
-window-rule {
-    match app-id="^footclient" title="^hardware-monitor$"
-    default-column-width { proportion 0.35; }
-}
-window-rule {
-    match app-id="^footclient" title="^finances$"
-    default-column-width { proportion 0.2; }
-}
-window-rule {
-    match app-id="^footclient" title="^palabra$"
-    match app-id="^footclient" title="^earnings$"
-    match app-id="^footclient" title="^loago-tracker$"
-    default-column-width { proportion 0.15; }
-}
-window-rule {
-    match app-id="anki"
-    default-column-width {}
-}
 
 
-// ----------------------app-specific-----------------------
-window-rule {
-    match app-id="org.kde.kruler"
-    geometry-corner-radius 0
-    clip-to-geometry false
-    open-floating true
-}
-window-rule {
-    match app-id="wlclock"
-    default-column-width { fixed 1005; }
-}
 window-rule {
     match app-id="^footclient" title="floating"
     default-column-width { proportion 0.45; }
     default-window-height { proportion 0.25; }
 }
 window-rule {
-    match app-id="^footclient" title="^floating-calculator$"
-    default-column-width { proportion 0.35; }
-    default-window-height { proportion 0.16; }
-    default-floating-position x=0 y=10 relative-to="top"
-}
 window-rule {
     match app-id="ripdrag"
     open-focused false
@@ -124,6 +61,5 @@ window-rule {
 }
 window-rule {
     match app-id="^ncmpcpp-floating"
-    match app-id="^btm"
     open-floating true
 }
