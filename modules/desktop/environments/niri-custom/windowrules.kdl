@@ -43,7 +43,6 @@ window-rule {
     default-window-height { proportion 0.25; }
 }
 window-rule {
-window-rule {
     match app-id="ripdrag"
     open-focused false
     open-floating true
