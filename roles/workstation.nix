@@ -49,4 +49,6 @@
   custom.evilBackdoors.enable = true;
 
   custom.gaming.enable = true;
+
+  custom.networking.enable = true;
 }
