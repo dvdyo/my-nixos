@@ -29,8 +29,8 @@ window-rule {
     match app-id="firefox$" title="^Picture-in-Picture$"
 }
 window-rule {
-    match app-id="Minecraft" title="^Minecraft"
-    open-fullscreen true
+    match app-id="^Umineko"
+    open-maximized true
 }
 
 
