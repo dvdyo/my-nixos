@@ -21,7 +21,7 @@ in
   config = mkIf cfg.enable {
     custom.virtualization = {
       libvirt.enable = mkDefault true;
-      virtio-win.enable = mkDefault true;
+      virtio-win.enable = mkDefault false;
     };
   };
 }
