@@ -27,9 +27,6 @@ window-rule {
 // ------------------------stateful-------------------------
 window-rule {
     match app-id="firefox$" title="^Picture-in-Picture$"
-    match app-id="swayfloat"
-    match app-id="^footclient" title="^floating"
-    open-floating true
 }
 window-rule {
     match app-id="Minecraft" title="^Minecraft"
@@ -38,9 +35,10 @@ window-rule {
 
 
 window-rule {
-    match app-id="^footclient" title="floating"
+    match app-id="^footclient" title="^floating"
     default-column-width { proportion 0.45; }
     default-window-height { proportion 0.25; }
+    open-floating true
 }
 window-rule {
     match app-id="ripdrag"
