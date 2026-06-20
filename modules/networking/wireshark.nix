@@ -20,6 +20,8 @@ in
     users.users.${username}.extraGroups = [
       "wireshark"
     ];
-
+    environment.systemPackages = [
+      pkgs.termshark
+    ];
   };
 }
