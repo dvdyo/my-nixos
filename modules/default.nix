@@ -24,5 +24,6 @@
     ./recording
     ./evilBackdoors
     ./sysmons
+    ./networking
   ];
 }
