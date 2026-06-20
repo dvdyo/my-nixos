@@ -37,7 +37,8 @@ window-rule {
 window-rule {
     match app-id="^footclient-floating"
     default-column-width { proportion 0.45; }
-    default-window-height { proportion 0.25; }
+    default-window-height { proportion 0.35; }
+    default-floating-position x=0 y=0 relative-to="bottom-right"
     open-floating true
 }
 window-rule {
