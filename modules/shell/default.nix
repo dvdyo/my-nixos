@@ -22,6 +22,7 @@ in
     ./tealdeer.nix
     ./tree.nix
     ./devenv.nix
+    ./chafa.nix
   ];
 
   options.custom.shell = {
@@ -43,6 +44,7 @@ in
       tealdeer.enable = mkDefault true;
       tree.enable = mkDefault true;
       devenv.enable = mkDefault true;
+      chafa.enable = mkDefault true;
     };
   };
 }
