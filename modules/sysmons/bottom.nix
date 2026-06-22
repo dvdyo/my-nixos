@@ -28,7 +28,7 @@ in
           current_usage = true;
           hide_k_threads = true;
           process_command = false;
-        }
+        };
         colors = {
           table_header_color = "LightBlue";
           all_cpu_color = "LightCyan";
