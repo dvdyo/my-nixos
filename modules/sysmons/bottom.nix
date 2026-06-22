@@ -24,7 +24,6 @@ in
           show_full_command = false;
           group_processes = true;
           regex_filter = true;
-          hide_table_gap = true;
           basic = true;
           
         };
