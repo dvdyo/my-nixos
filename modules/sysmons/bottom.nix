@@ -26,6 +26,7 @@ in
           processes.current_usage = true;
           processes.hide_k_threads = true;
           processes.process_command = false;
+          rate = 50;
         };
         colors = {
           table_header_color = "LightBlue";
