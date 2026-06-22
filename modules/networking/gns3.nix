@@ -5,13 +5,16 @@
   ...
 }:
 let
-  cfg = config.custom.networking.gns3-gui;
+  cfg = config.custom.networking.gns3;
   inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.networking.gns3-gui.enable = mkEnableOption "Enable gns3-gui";
+  options.custom.networking.gns3.enable = mkEnableOption "Enable gns3";
 
   config = mkIf cfg.enable {
-    packages = with pkgs; [ gns3-gui ];
+    environment.systemPackages =  [ pkgs.gns3-gui ];
+    services.gns3-server = {
+      enable = true;
+    };
   };
 }

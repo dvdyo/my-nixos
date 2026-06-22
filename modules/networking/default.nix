@@ -19,7 +19,7 @@ in
 
   config = mkIf cfg.enable {
     custom.networking = {
-      gns3-gui.enable = mkDefault true;
+      gns3.enable = mkDefault true;
       wireshark.enable = mkDefault true;
     };
   };
