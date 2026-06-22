@@ -19,14 +19,16 @@ in
         flags = {
           table_gap = "none";
           battery = true;
-          processes.regex = true;
-          processes.default_tree = true;
-          processes.default_grouped = true;
-          processes.default_memory_value = true;
-          processes.current_usage = true;
-          processes.hide_k_threads = true;
-          processes.process_command = false;
         };
+        processes = {
+          regex = true;
+          default_tree = true;
+          default_grouped = true;
+          default_memory_value = true;
+          current_usage = true;
+          hide_k_threads = true;
+          process_command = false;
+        }
         colors = {
           table_header_color = "LightBlue";
           all_cpu_color = "LightCyan";
