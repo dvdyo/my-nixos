@@ -24,8 +24,8 @@ in
           show_full_command = false;
           group_processes = true;
           regex_filter = true;
-          basic = true;
-          
+          mem_as_value = true;
+          current_usage = true;
         };
         colors = {
           table_header_color = "LightBlue";
