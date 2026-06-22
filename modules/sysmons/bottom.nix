@@ -21,6 +21,12 @@ in
           battery = true;
           tree = true;
           process_command = true;
+          show_full_command = false;
+          group_processes = true;
+          regex_filter = true;
+          hide_table_gap = true;
+          basic = true;
+          
         };
         colors = {
           table_header_color = "LightBlue";
