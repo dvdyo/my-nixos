@@ -17,15 +17,15 @@ in
       enable = true;
       settings = {
         flags = {
-          hide_table_gap = true;
+          table_gap = "none";
           battery = true;
-          tree = true;
-          process_command = true;
-          show_full_command = false;
-          group_processes = true;
-          regex_filter = true;
-          mem_as_value = true;
-          current_usage = true;
+          processes.regex = true;
+          processes.default_tree = true;
+          processes.default_grouped = true;
+          processes.default_memory_value = true;
+          processes.current_usage = true;
+          processes.hide_k_threads = true;
+          processes.process_command = false;
         };
         colors = {
           table_header_color = "LightBlue";
