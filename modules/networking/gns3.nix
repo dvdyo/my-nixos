@@ -15,6 +15,9 @@ in
     environment.systemPackages =  [ pkgs.gns3-gui ];
     services.gns3-server = {
       enable = true;
+      vpcs.enable = true;
+      dynamips.enable = true;
+      ubridge.enable = true;
     };
   };
 }
