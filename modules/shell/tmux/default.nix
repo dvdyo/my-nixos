@@ -19,7 +19,7 @@ in
       source = ./tmux.conf;
     };
     custom.hjem.cfg.xdg.config.files."tmux/tmux.conf.local" = {
-      source = ./tmux.conf.local
+      source = ./tmux.conf.local;
     };
   };
 }
