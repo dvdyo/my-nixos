@@ -14,13 +14,13 @@ layer-rule {
     }
 }
 window-rule {
-    exclude app-id="^footclient"
+    exclude app-id="^mpv|^firefox|^mpv"
     background-effect {
         blur true
     }
 }
 window-rule {
-    exclude app-id="^footclient"
+    match app-id="^footclient"
     opacity 0.96
 }
 
@@ -66,5 +66,5 @@ window-rule {
     match app-id="^btm"
     open-floating true
     default-column-width { proportion 0.65; }
-    default-column-height { proportion 0.55; }
+    default-window-height { proportion 0.55; }
 }
