@@ -7,5 +7,6 @@
     ./components
     ./style
     ./screencap
+    ./xdg.mime.nix
   ];
 }
