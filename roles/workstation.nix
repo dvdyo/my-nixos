@@ -51,4 +51,6 @@
   custom.gaming.enable = true;
 
   custom.networking.enable = true;
+
+  custom.toys.eanble = true;
 }
