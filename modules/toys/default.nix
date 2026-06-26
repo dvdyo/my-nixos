@@ -18,7 +18,7 @@ in
 
   config = mkIf cfg.enable {
     custom.toys = {
-      network-pentesting = mkDefault true;
+      network-pentesting.enable = mkDefault true;
     };
   };
 }
