@@ -9,7 +9,8 @@ let
 in
 {
   imports = [
-
+    ./network-pentesting.nix
+    ./password-cracking.nix
   ];
 
   options.custom.toys = {
@@ -19,6 +20,7 @@ in
   config = mkIf cfg.enable {
     custom.toys = {
       network-pentesting.enable = mkDefault true;
+      password-cracking.enable = mkDefault true;
     };
   };
 }

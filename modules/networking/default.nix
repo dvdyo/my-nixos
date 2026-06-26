@@ -11,7 +11,7 @@ in
   imports = [
     ./gns3.nix
     ./wireshark.nix
-    ./aircrack-ng.nix
+    ./iw.nix
   ];
 
   options.custom.networking = {
@@ -22,7 +22,7 @@ in
     custom.networking = {
       gns3.enable = mkDefault true;
       wireshark.enable = mkDefault true;
-      aircrack-ng.enable = mkDefault true;
+      iw.eanble = mkDefault true;
     };
   };
 }
