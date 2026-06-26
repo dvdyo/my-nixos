@@ -12,6 +12,7 @@ in
     ./mpv.nix
     ./ncmpcpp.nix
     ./mpd.nix
+    ./zathura.nix
   ];
 
   options.custom.media = {
@@ -23,6 +24,7 @@ in
       mpv.enable = mkDefault true;
       ncmpcpp.enable = mkDefault true;
       mpd.enable = mkDefault true;
+      zathura.enable = mkDefault true;
     };
   };
 }
