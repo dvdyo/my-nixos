@@ -22,6 +22,7 @@ in
     custom.networking = {
       gns3.enable = mkDefault true;
       wireshark.enable = mkDefault true;
+      aircrak-ng.enable = mkDefault true;
     };
   };
 }
