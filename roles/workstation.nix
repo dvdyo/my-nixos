@@ -52,5 +52,5 @@
 
   custom.networking.enable = true;
 
-  custom.toys.eanble = true;
+  custom.toys.enable = true;
 }
