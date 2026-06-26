@@ -11,6 +11,7 @@ in
   imports = [
     ./gns3.nix
     ./wireshark.nix
+    ./aircrack-ng.nix
   ];
 
   options.custom.networking = {
