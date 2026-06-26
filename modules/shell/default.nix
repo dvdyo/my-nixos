@@ -9,6 +9,7 @@ let
 in
 {
   imports = [
+    ./fzf.nix
     ./tmux
     ./bat.nix
     ./direnv.nix
@@ -32,6 +33,7 @@ in
 
   config = mkIf cfg.enable {
     custom.shell = {
+      fzf.enable = mkDefault true;
       tmux.enable = mkDefault true;
       fish.enable = mkDefault true;
       starship.enable = mkDefault true;
