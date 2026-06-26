@@ -5,12 +5,12 @@
   ...
 }:
 let
-  cfg = config.custom.media.zatura;
+  cfg = config.custom.media.zathura;
   inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.media.zatura = {
-    enable = mkEnableOption "Enable zatura pdf reader";
+  options.custom.media.zathura = {
+    enable = mkEnableOption "Enable zathura pdf reader";
   };
   config = mkIf cfg.enable {
     environment.systemPackages = [ pkgs.zathura ];
