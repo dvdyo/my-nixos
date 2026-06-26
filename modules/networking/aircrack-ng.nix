@@ -5,13 +5,13 @@
   ...
 }:
 let
-  cfg = config.custom.networking.aricrack-ng;
+  cfg = config.custom.networking.aircrack-ng;
   inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.networking.aricrack-ng.enable = mkEnableOption "Enable aricrack-ng";
+  options.custom.networking.aircrack-ng.enable = mkEnableOption "Enable aircrack-ng";
 
   config = mkIf cfg.enable {
-    environment.systemPackages =  [ pkgs.aricrack-ng ];
+    environment.systemPackages =  [ pkgs.aircrack-ng ];
   };
 }
