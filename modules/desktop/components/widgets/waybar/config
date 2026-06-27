@@ -23,9 +23,11 @@
 
     "niri/workspaces": {
       "format": "{icon}",
-      "defaut": "",
+      "format-icons" : {
+      "default": "",
       "focused": "",
-      "urgent": "",
+      "urgent": ""
+      }
     },
 
     "niri/language": {
