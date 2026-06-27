@@ -9,13 +9,15 @@ let
   inherit (lib) mkEnableOption mkIf;
 in
 {
+
+  imports = [
+  inputs.niri.nixosModules.niri
+  inputs.inir.nixosModules.inir
+  ];
+
   options.custom.desktop.environments.niri-custom.enable = mkEnableOption "Enable Custom Niri Environment";
 
   config = mkIf cfg.enable {
-    imports = [
-    inputs.niri.nixosModules.niri
-    inputs.inir.nixosModules.inir
-    ];
     programs.niri.enable = true;
 
     programs.inir = {
