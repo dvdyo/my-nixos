@@ -1,12 +1,12 @@
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 0
-    struts {
-        left 0
-        right 0
-        top 0
-        bottom 0
-    }
+    gaps 12
+  // struts {
+  //      left 0
+  //      right 0
+  //      top 0
+  //      bottom 0
+  //  }
     always-center-single-column
     background-color "transparent"
     // When to center a column when changing focus.
@@ -22,7 +22,6 @@ layout {
         proportion 0.5
         proportion 0.66667
         proportion 1.0
-        fixed 720
     }
 
 
