@@ -2,6 +2,7 @@
   lib,
   config,
   pkgs,
+  inputs,
   ...}:
 let
   cfg = config.custom.desktop.environments.niri-custom;
