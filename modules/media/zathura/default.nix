@@ -15,5 +15,9 @@ in
   config = mkIf cfg.enable {
     environment.systemPackages = [ pkgs.zathura ];
 
+    custom.hjem.cfg.xdg.config.files."zathura/zathurarc" = {
+      (builtins.readFile ./zathurarc)
+    };
+
   };
 }
