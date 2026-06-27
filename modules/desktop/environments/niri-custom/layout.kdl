@@ -27,10 +27,10 @@ layout {
     default-column-width { proportion 0.5; }
 
     focus-ring {
-        width 1
-        active-gradient from="#80c8ff" to="#bbddff" angle=90
-        inactive-gradient from="#505050" to="#808080" angle=90 relative-to="workspace-view"
-    }
+    width 1
+    active-gradient from="#665c54" to="#7c6f64" angle=90
+    inactive-gradient from="#32302f" to="#3c3836" angle=90 relative-to="workspace-view"
+}
 
     border {
         off
