@@ -12,7 +12,7 @@ in
     ./mpv.nix
     ./ncmpcpp.nix
     ./mpd.nix
-    ./zathura.nix
+    ./zathura
   ];
 
   options.custom.media = {
