@@ -1,0 +1,91 @@
+[
+  {
+    // "height": 30,
+    "position": "top",
+    "layer": "top",
+
+    "modules-left": [
+      "niri/workspaces"
+    ],
+
+    "modules-center": [
+      "niri/window"
+    ],
+
+    "modules-right": [
+      "niri/language",
+      "custom/weather",
+      "pulseaudio",
+      "battery",
+      "clock",
+      "tray"
+    ],
+
+    "niri/workspaces": {
+      "format": "{icon}",
+      "format-icons": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": "",
+        "magic": ""
+      },
+      "persistent-workspaces": {
+        "*": 9
+      },
+      "show-special": true,
+      "special-visible-only": true
+    },
+
+    "niri/language": {
+      "format-en": "EN",
+      "format-ua": "UA",
+      "min-length": 5
+    },
+
+    "custom/weather": {
+      "class": "weather",
+      "exec": "curl -s 'wttr.in/Kyiv?format=%c%t'",
+      "format": " {} ",
+      "interval": 300
+    },
+
+    "wireplumber": {
+	"format": "{volume}%",
+	"format-muted": "",
+	"on-click": "helvum"
+},
+    "battery": {
+      "format": "{icon} {capacity}%",
+      "format-alt": "{time} {icon}",
+      "format-charging": " {capacity}%",
+      "format-icons": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "states": {
+        "critical": 5,
+        "warning": 30
+      }
+    },
+
+    "clock": {
+      "format": "{:%d.%m.%Y - %H:%M}",
+      "format-alt": "{:%A, %B %d at %R}"
+    },
+
+    "tray": {
+      "icon-size": 14,
+      "spacing": 1
+    }
+  }
+]
+
