@@ -27,10 +27,9 @@ layout {
     default-column-width { proportion 0.5; }
 
     focus-ring {
-        width 0
-        active-color   "#cba6f7" // Catppuccin Mauve
-        inactive-color "#585b70" // Surface 2
-        urgent-color   "#f38ba8" // Red
+        width 1
+        active-gradient from="#80c8ff" to="#bbddff" angle=90
+        inactive-gradient from="#505050" to="#808080" angle=90 relative-to="workspace-view
     }
 
     border {
