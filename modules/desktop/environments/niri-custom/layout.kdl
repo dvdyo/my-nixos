@@ -1,6 +1,6 @@
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 12
+    gaps 4
   // struts {
   //      left 0
   //      right 0
@@ -27,6 +27,7 @@ layout {
 
     // Terminals and new windows start at 1/2 width
     default-column-width { proportion 0.5; }
+    default-window-height { proportion 1.0; }
 
     focus-ring {
         width 0
@@ -40,7 +41,7 @@ layout {
     }
 
     shadow {
-        on
+        off
         softness 30
         spread 5
         offset x=0 y=5
