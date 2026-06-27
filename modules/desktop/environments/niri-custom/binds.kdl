@@ -8,7 +8,7 @@ binds {
     "Mod+T" { spawn "footclient"; }
     "Mod+Alt+T" { spawn "footclient" "--app-id=footclient-floating"; }
     "Mod+D" repeat=false { spawn "vicinae" "toggle"; }
-    "Mod+B" { spawn "firefox"; }
+    "Mod+B" { spawn "qutebrowser"; }
     "Mod+M" { spawn "footclient" "--app-id" "ncmpcpp-floating" "ncmpcpp"; }
     "Mod+E" { spawn "footclient" "--app-id"  "yazi" "yazi"; }
     "Mod+Shift+T" { spawn "footclient" "--app-id"  "btm" "btm"; }
