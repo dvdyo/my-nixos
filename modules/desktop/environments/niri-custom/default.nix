@@ -18,11 +18,7 @@ in
       wallpapers.awww.enable = true;
       fonts.enable = true;
       screenLockers.gtklock.enable = true;
-    };
-    programs.inir = {
-      enable = true;
-      service.compositor = "niri";
-      extraPackages = [ config.programs.niri.package ];
+      widgets.waybar.enable = true;
     };
 
     # 2. Environment Configuration

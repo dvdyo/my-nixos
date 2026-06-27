@@ -49,10 +49,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    niri.url = "github:sodiboo/niri-flake";
-    inir.url = "github:snowarch/inir";
-}
-    
   
   };
 
