@@ -16,7 +16,7 @@ in
     environment.systemPackages = [ pkgs.zathura ];
 
     custom.hjem.cfg.xdg.config.files."zathura/zathurarc" = {
-      (builtins.readFile ./zathurarc)
+      source = ./zathurarc;
     };
 
   };
