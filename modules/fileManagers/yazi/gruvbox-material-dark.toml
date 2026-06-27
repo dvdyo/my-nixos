@@ -1,0 +1,222 @@
+# Gruvbox Material Dark theme for Yazi
+# Converted from https://github.com/bennyyip/gruvbox-dark.yazi
+
+# vim:fileencoding=utf-8:foldmethod=marker
+
+# : Manager {{{
+
+[mgr]
+cwd = { fg = "#7daea3" }
+
+# Find
+find_keyword  = { fg = "#a9b665", bold = true, italic = true, underline = true }
+find_position = { fg = "#e78a4e", bg = "reset", bold = true, italic = true }
+
+# Symlink
+symlink_target = { italic = true }
+
+# Marker
+marker_copied   = { fg = "#89b482", bg = "#89b482" }
+marker_cut      = { fg = "#c78bca", bg = "#c78bca" }
+marker_marked   = { fg = "#7daea3", bg = "#7daea3" }
+marker_selected = { fg = "#ddc7a1", bg = "#ddc7a1" }
+
+# Count
+count_copied   = { fg = "#1d2021", bg = "#89b482" }
+count_cut      = { fg = "#1d2021", bg = "#c78bca" }
+count_selected = { fg = "#1d2021", bg = "#ddc7a1" }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#5a524c" }
+# : }}}
+
+
+# : Tabs {{{
+
+[tabs]
+active   = { fg = "#1d2021", bg = "#7c6f64" }
+inactive = { fg = "#7c6f64", bg = "#3c3836" }
+
+# Separator
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+# : }}}
+
+
+# : Mode {{{
+
+[mode]
+normal_main = { fg = "#1d2021", bg = "#7c6f64", bold = true }
+normal_alt  = { fg = "#7c6f64", bg = "#3c3836" }
+
+# Select mode
+select_main = { fg = "#1d2021", bg = "#e78a4e", bold = true }
+select_alt  = { fg = "#7c6f64", bg = "#3c3836" }
+
+# Unset mode
+unset_main = { fg = "#1d2021", bg = "#a9b665", bold = true }
+unset_alt  = { fg = "#7c6f64", bg = "#3c3836" }
+
+# : }}}
+
+
+# : Indicator of hovered file {{{
+
+[indicator]
+parent  = { reversed = true }
+current = { reversed = true }
+preview = { underline = true }
+padding = { open = "█", close = "█" }
+
+# : }}}
+
+
+# : Status {{{
+
+[status]
+overall = { }
+sep_left = { open = "\ue0be", close = "\ue0b8" }
+sep_right = { open = "\ue0be", close = "\ue0b8" }
+# Permissions
+perm_sep   = { fg = "#5a524c" }
+perm_type  = { fg = "#504945" }
+perm_read  = { fg = "#a9b665" }
+perm_write = { fg = "#ea6962" }
+perm_exec  = { fg = "#a9b665" }
+
+# Progress
+progress_label  = { fg = "#d4be98", bold = true }
+progress_normal = { fg = "#504945", bg   = "#32302f" }
+progress_error  = { fg = "#ea6962", bg   = "#32302f" }
+
+# : }}}
+
+
+# : Which {{{
+
+[which]
+cols            = 3
+mask            = { bg = "#32302f" }
+cand            = { fg = "#7daea3" }
+rest            = { fg = "#8b7e6b" }
+desc            = { fg = "#e78a4e" }
+separator       = "  "
+separator_style = { fg = "#504945" }
+
+# : }}}
+
+
+# : Confirmation {{{
+
+[confirm]
+border     = { fg = "#7c6f64" }
+title      = { fg = "#7daea3" }
+body       = { fg = "#ddc7a1" }
+list       = { fg = "#d4be98" }
+btn_yes    = { reversed = true, fg = "#d4be98" }
+btn_no     = {}
+btn_labels = [ "  [Y]es  ", "  (N)o  " ]
+
+# : }}}
+
+
+# : Spotter {{{
+
+[spot]
+border = { fg = "#7daea3" }
+title  = { fg = "#7daea3" }
+
+# Table
+tbl_col  = { fg = "#7daea3" }
+tbl_cell = { fg = "#d8b565", reversed = true }
+
+# : }}}
+
+
+# : Notification {{{
+
+[notify]
+title_info  = { fg = "#89b482" }
+title_warn  = { fg = "#ddc7a1" }
+title_error = { fg = "#c78bca" }
+
+# : }}}
+
+
+# : Picker {{{
+
+[pick]
+border   = { fg = "#7daea3" }
+active   = { fg = "#c78bca", bold = true }
+inactive = {}
+
+# : }}}
+
+
+# : Input {{{
+
+[input]
+border   = { fg = "#d4be98" }
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+# : }}}
+
+
+# : Completion {{{
+
+[cmp]
+border   = { fg = "#7c6f64" }
+active   = { reversed = true, fg = "#7daea3" }
+inactive = { fg = "#d4be98" }
+
+
+
+# : Task manager {{{
+
+[tasks]
+border  = { fg = "#504945" }
+title   = {}
+hovered = { underline = true }
+
+# : }}}
+
+
+# : Help {{{
+
+[help]
+on      = { fg = "#7daea3" }
+run     = { fg = "#c78bca" }
+desc    = {}
+hovered = { reversed = true, bold = true }
+footer  = { fg = "#32302f", bg = "#7c6f64" }
+
+# : }}}
+
+
+# : File-specific styles {{{
+
+[filetype]
+rules = [
+  # Images
+  { mime = "image/*", fg = "#c78bca" },
+
+  # Media
+  { mime = "{audio,video}/*", fg = "#d8b565" },
+
+  # Archives
+  { mime = "application/*zip", fg = "#ea6962" },
+  { mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "#ea6962" },
+
+  # Documents
+  { mime = "application/{pdf,doc,rtf,vnd.*}", fg = "#89b482" },
+
+  # Fallback
+  { url = "*", fg = "#d4be98" },
+  { url = "*/", fg = "#7daea3" },
+]
+
+# : }}}

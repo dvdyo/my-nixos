@@ -44,7 +44,7 @@ in
 
     # Directly link our local TOML file 
     custom.hjem.cfg.xdg.config.files."yazi/theme.toml" = {
-      source = ./gruvbox-dark.toml;
+      source = ./gruvbox-material-dark.toml;
     };
   };
 }
