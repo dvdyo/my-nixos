@@ -7,6 +7,7 @@
 
 config.load_autoconfig(False)
 c.colors.webpage.darkmode.enabled = True
+config.bind(',v', 'spawn --detach mpv {url}')
 bg0_hard = "#1d2021"
 bg0_soft = '#32302f'
 bg0_normal = '#282828'
