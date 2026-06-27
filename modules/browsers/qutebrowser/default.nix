@@ -18,4 +18,5 @@ in
       custom.hjem.cfg.xdg.config.files."qutebrowser/config.py" = {      
       source = ./config.py;
     };
+    };
 }
