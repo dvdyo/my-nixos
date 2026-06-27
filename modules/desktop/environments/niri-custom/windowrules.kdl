@@ -21,7 +21,7 @@ window-rule {
 }
 window-rule {
     match app-id="^footclient"
-    opacity 0.85
+    opacity 0.89
 }
 
 // ------------------------stateful-------------------------

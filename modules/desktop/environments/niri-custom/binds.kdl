@@ -23,6 +23,9 @@ binds {
     "Mod+C" { center-column; }
     "Mod+R" { switch-preset-column-width; }
     "Mod+W" { toggle-column-tabbed-display; }
+    "Mod+BracketLeft"  { consume-or-expel-window-left; }
+    "Mod+BracketRight" { consume-or-expel-window-right; }
+
 
     // === Focus Navigation (Vim + Arrows) ===
     "Mod+Left"  { focus-column-left; }
