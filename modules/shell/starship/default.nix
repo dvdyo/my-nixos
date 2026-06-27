@@ -14,7 +14,7 @@ in
     custom.hjem.cfg.rum.programs.starship = {
       enable = true;
       integrations.fish.enable = true;
-      settings = builtins.fromTOML (builtins.readFile ./starship.toml);
+      # settings = builtins.fromTOML (builtins.readFile ./starship.toml);
     };
   };
 }
