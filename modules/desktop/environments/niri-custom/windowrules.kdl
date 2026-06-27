@@ -9,6 +9,7 @@ window-rule {
     // }
 }
 layer-rule {
+    match namespace="^waybar$"
     background-effect {
         blur true
     }
