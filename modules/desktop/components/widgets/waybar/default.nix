@@ -15,5 +15,4 @@ in
     programs.waybar.enable = true;
     programs.waybar.target = true;
     };
-  };
 }
