@@ -4,5 +4,6 @@
 {
   imports = [
     ./waybar
+    ./kurukubar.nix
   ];
 }
