@@ -18,7 +18,7 @@ in
       wallpapers.awww.enable = true;
       fonts.enable = true;
       screenLockers.gtklock.enable = true;
-      widgets.waybar.enable = true;
+      widgets.kurukubar.enable = true;
     };
 
     # 2. Environment Configuration

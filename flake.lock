@@ -198,6 +198,21 @@
         "type": "github"
       }
     },
+    "mnw": {
+      "locked": {
+        "lastModified": 1780772958,
+        "narHash": "sha256-VKKe8r4pwCGWZ3Yr9CPN129R4S3CKLSrlYqdYz3vKpM=",
+        "owner": "Gerg-L",
+        "repo": "mnw",
+        "rev": "0871dbf63a53610c95db04439ed8ea4d6ec9c160",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Gerg-L",
+        "repo": "mnw",
+        "type": "github"
+      }
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -216,6 +231,30 @@
       "original": {
         "owner": "nix-darwin",
         "repo": "nix-darwin",
+        "type": "github"
+      }
+    },
+    "nixos-wsl": {
+      "inputs": {
+        "flake-compat": [
+          "zaphkiel"
+        ],
+        "nixpkgs": [
+          "zaphkiel",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1781182279,
+        "narHash": "sha256-V5EQQbDnmdiXGQXrEF1PEL7QYsFqfH8N1E89Z5ONwFk=",
+        "owner": "nix-community",
+        "repo": "nixos-wsl",
+        "rev": "5675822ba756e6e56f8f6a5a76e90e0da2ece94d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixos-wsl",
         "type": "github"
       }
     },
@@ -289,6 +328,21 @@
         "url": "https://git.outfoxxed.me/quickshell/quickshell"
       }
     },
+    "rexies-nix-templates": {
+      "locked": {
+        "lastModified": 1782032888,
+        "narHash": "sha256-LgOxRkIj3gz5q8e0w5+956bq6kza8opb3BtyY2IBnmg=",
+        "ref": "refs/heads/main",
+        "rev": "cc377b3f6631314ea6ad9fe5cccd9169287ef8e3",
+        "revCount": 5,
+        "type": "git",
+        "url": "https://knot1.tangled.sh/did:plc:wt3htnckfbtguzsme2riaxoh"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://knot1.tangled.sh/did:plc:wt3htnckfbtguzsme2riaxoh"
+      }
+    },
     "root": {
       "inputs": {
         "awww": "awww",
@@ -300,6 +354,7 @@
         "nixpkgs": "nixpkgs_2",
         "pineconemc": "pineconemc",
         "quickshell": "quickshell",
+        "zaphkiel": "zaphkiel",
         "zen-browser": "zen-browser"
       }
     },
@@ -321,6 +376,52 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1680978846,
+        "narHash": "sha256-Gtqg8b/v49BFDpDetjclCYXm8mAnTrUzR0JnE2nv5aw=",
+        "owner": "nix-systems",
+        "repo": "x86_64-linux",
+        "rev": "2ecfcac5e15790ba6ce360ceccddb15ad16d08a8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "x86_64-linux",
+        "type": "github"
+      }
+    },
+    "zaphkiel": {
+      "inputs": {
+        "agenix": [],
+        "booru-hs": [],
+        "crane": [],
+        "hjem": [],
+        "hjem-impure": [],
+        "hs-todo": [],
+        "mnw": "mnw",
+        "nixos-wsl": "nixos-wsl",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rexies-nix-templates": "rexies-nix-templates",
+        "stash": [],
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1782034703,
+        "narHash": "sha256-ASEQ9L+7NSBoLFmE4w5vqveDtxdkO6WjxE9NaHOqiL0=",
+        "owner": "Rexcrazy804",
+        "repo": "Zaphkiel",
+        "rev": "e537d845920e6503b4b0eb785de5c8386ea5c478",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Rexcrazy804",
+        "repo": "Zaphkiel",
         "type": "github"
       }
     },
