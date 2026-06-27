@@ -1,7 +1,7 @@
 window-rule {
     draw-border-with-background false
     clip-to-geometry true
-    geometry-corner-radius 12
+    geometry-corner-radius 0
     // popups {
     //     background-effect {
     //         blur true
