@@ -116,6 +116,8 @@ in
           "{c2c003ee-bd69-42a2-b0e9-6f34222cb046}".install_url = "https://addons.mozilla.org/en-US/firefox/downloads/latest/auto-tab-discard/latest.xpi";
           "{cb31ec5d-c49a-4e5a-b240-16c767444f62}".installation_mode = "force_installed";
           "{cb31ec5d-c49a-4e5a-b240-16c767444f62}".install_url = "https://addons.mozilla.org/en-US/firefox/downloads/latest/indie-wiki-buddy/latest.xpi";
+          "{eb8c4a94-e603-49ef-8e81-73d3c4cc04ff}".installation_mode = "force_installed";
+          "{eb8c4a94-e603-49ef-8e81-73d3c4cc04ff}".install_url = "https://addons.mozilla.org/firefox/downloads/latest/gruvbox-dark-theme/latest.xpi";
         };
 
 
