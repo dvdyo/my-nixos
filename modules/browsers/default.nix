@@ -12,6 +12,7 @@ in
     ./zen
     ./ungoogled-chromium
     ./firefox
+    ./qutebrowser
   ];
 
   options.custom.browsers = {
@@ -22,6 +23,7 @@ in
     custom.browsers = {
       firefox.enable = mkDefault true;
       ungoogled-chromium.enable = mkDefault true;
+      qutebrowser.enable = mkDefault true;
     };
   };
 }
