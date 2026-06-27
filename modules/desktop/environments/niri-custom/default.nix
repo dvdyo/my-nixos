@@ -20,7 +20,7 @@ in
       fonts.enable = true;
       screenLockers.gtklock.enable = true;
     };
-    inputs.programs.inir = {
+    programs.inir = {
       enable = true;
       service.compositor = "niri";
       extraPackages = [ config.programs.niri.package ];
