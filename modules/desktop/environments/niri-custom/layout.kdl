@@ -29,7 +29,7 @@ layout {
     focus-ring {
         width 1
         active-gradient from="#80c8ff" to="#bbddff" angle=90
-        inactive-gradient from="#505050" to="#808080" angle=90 relative-to="workspace-view
+        inactive-gradient from="#505050" to="#808080" angle=90 relative-to="workspace-view"
     }
 
     border {
