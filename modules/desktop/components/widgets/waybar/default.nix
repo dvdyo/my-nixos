@@ -13,6 +13,6 @@ in
 
   config = mkIf cfg.enable {
     programs.waybar.enable = true;
-    programs.waybar.systemd.target = true;
+    programs.waybar.systemd.target = "graphical-session.target";
     };
 }
