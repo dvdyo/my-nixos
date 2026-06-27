@@ -5,6 +5,8 @@
 #   Base16 qutebrowser template by theova and Daniel Mulford
 #   Gruvbox dark, hard scheme by Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 
+config.load_autoconfig(False)
+
 bg0_hard = "#1d2021"
 bg0_soft = '#32302f'
 bg0_normal = '#282828'
