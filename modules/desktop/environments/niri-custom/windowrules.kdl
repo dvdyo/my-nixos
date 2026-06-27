@@ -30,7 +30,6 @@ layer-rule {
 
     geometry-corner-radius 12
     place-within-backdrop true
-    baba-is-float true
 
     background-effect {
         xray true
