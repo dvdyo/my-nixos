@@ -10,6 +10,5 @@
   ./polkitAgents
   ./notifications
   ./screenLockers
-  ./widgets
   ];
 }
