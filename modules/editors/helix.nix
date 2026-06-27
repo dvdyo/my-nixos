@@ -14,9 +14,7 @@ in
   config = mkIf cfg.enable {
     # 1. System-wide Install
     environment.systemPackages = [ pkgs.helix ];
-    environment.sessionVariables = {
-      EDITOR = "hx";
-    };
+
     # 2. User Config (Managed via Hjem Rum)
     custom.hjem.cfg.rum.programs.helix = {
       enable = true;
