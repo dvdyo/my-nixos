@@ -14,7 +14,7 @@ layer-rule {
     match layer="top"
 
     // Properties that apply continuously.
-    opacity 0.5
+    opacity 0.75
     // block-out-from "screen-capture"
 
     shadow {
@@ -39,14 +39,12 @@ layer-rule {
     }
 
     popups {
-        opacity 0.5
+        opacity 0.8
         geometry-corner-radius 6
 
         background-effect {
-            xray true
-            blur true
-            noise 0.05
-            saturation 3
+            xray false
+            blur false
         }
     }
 }
