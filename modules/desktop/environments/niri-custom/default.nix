@@ -12,24 +12,18 @@ in
   options.custom.desktop.environments.niri-custom.enable = mkEnableOption "Enable Custom Niri Environment";
 
   config = mkIf cfg.enable {
-    imports = [
-    inputs.niri.nixosModules.niri
-    inputs.inir.nixosModules.inir
-    ];
-    programs.niri.enable = true;
-
-    programs.inir = {
-      enable = true;
-      service.compositor = "niri";
-      extraPackages = [ config.programs.niri.package ];
-    };
     # 1. Enable Infrastructure & Components
     custom.desktop.components = {
-      # compositors.niri.enable = true;
+      compositors.niri.enable = true;
       launchers.vicinae.enable = true;
       wallpapers.awww.enable = true;
       fonts.enable = true;
       screenLockers.gtklock.enable = true;
+    };
+    inputs.programs.inir = {
+      enable = true;
+      service.compositor = "niri";
+      extraPackages = [ config.programs.niri.package ];
     };
 
     # 2. Environment Configuration
