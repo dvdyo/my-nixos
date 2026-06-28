@@ -3,6 +3,7 @@
 }:
 {
   imports = [
+    ./notes
     ./core
     ./hjem
     ./desktop

@@ -22,7 +22,6 @@
     ],
 
     "niri/workspaces": {
-      "icon-size": "18",
       "format": "{icon}",
       "format-icons" : {
       "default": "",
