@@ -66,7 +66,7 @@ in
     };
 
     custom.hjem.cfg.files = {
-      ".icons/default".source = "${pkgs.bibata-cursors}/share/icons/Bibata-Modern-Classic";
+      ".icons/default".source = "${pkgs.phinger-cursors}/share/icons/phiger-cursors-dark";
     };
   };
 }
