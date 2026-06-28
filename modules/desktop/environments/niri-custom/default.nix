@@ -19,6 +19,7 @@ in
       fonts.enable = true;
       screenLockers.gtklock.enable = true;
       widgets.waybar.enable = true;
+      widgets.audio-widgets.enable = true;
     };
 
     # 2. Environment Configuration
