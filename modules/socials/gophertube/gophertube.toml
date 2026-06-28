@@ -1,0 +1,5 @@
+search_limit = 30
+quality = "1080p"           # default: 1080p (options: 1080p, 720p, 480p, 360p, Audio)
+downloads_path = "/home/$USER/Downloads/GopherTube"  # where to save downloads
+theme = "Gruvbox"                                 # default: Minimal (options: Minimal, Gopher, Gruvbox, etc)
+fullscreen = true                                 # default: true; set to false for windowed mpv (tiling WMs)

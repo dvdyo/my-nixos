@@ -12,6 +12,7 @@ in
     ./vesktop.nix
     ./ayugram.nix
     ./equibop.nix
+    ./gophertube
   ];
 
   options.custom.socials = {
@@ -22,6 +23,7 @@ in
     custom.socials = {
       vesktop.enable = mkDefault true;
       ayugram.enable = mkDefault true;
+      gophertube.enable = mkDefault true;
     };
   };
 }
