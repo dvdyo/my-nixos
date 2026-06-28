@@ -1,5 +1,5 @@
 cursor {
-    xcursor-theme "phinger-cursors-dark"
+    xcursor-theme "phinger-cursors-light"
     xcursor-size 24
 
     hide-when-typing
