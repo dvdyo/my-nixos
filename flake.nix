@@ -47,6 +47,10 @@
       url = "github:ElyPrismLauncher/Launcher";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hexecute = {
+      url = "github:m31-galaxy/Hexecute";
+      inputs.nixpkgs.follows = "nixpkgs";
+      };
 
   };
 

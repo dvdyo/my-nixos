@@ -16,12 +16,14 @@ in
     custom.desktop.components = {
       compositors.niri.enable = true;
       launchers.vicinae.enable = true;
+      launchers.hexecute.enable = true;
       wallpapers.awww.enable = true;
       fonts.enable = true;
       screenLockers.gtklock.enable = true;
       widgets.waybar.enable = true;
       widgets.audio-widgets.enable = true;
       cursors.phinger.enable = true;
+      
     };
 
     # 2. Environment Configuration
