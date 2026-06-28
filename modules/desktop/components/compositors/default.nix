@@ -2,8 +2,8 @@
   ...
 }:
 {
-    imports = [
-      ./niri.nix
-      ./xwayland-satellite.nix
-    ];
-  }
+  imports = [
+    ./niri.nix
+    ./xwayland-satellite.nix
+  ];
+}

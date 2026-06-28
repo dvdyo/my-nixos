@@ -18,7 +18,7 @@ in
       enable = true;
       package = pkgs.wrapOBS {
         plugins = with pkgs.obs-studio-plugins; [
-          wlrobs # Wayland capture 
+          wlrobs # Wayland capture
           obs-vaapi # Hardware acceleration
           obs-vkcapture # Vulkan game capture
           obs-pipewire-audio-capture # Direct PipeWire capture

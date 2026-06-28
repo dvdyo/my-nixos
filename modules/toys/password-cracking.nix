@@ -12,8 +12,7 @@ in
   options.custom.toys.password-cracking.enable = mkEnableOption "Enable password cracking suite";
 
   config = mkIf cfg.enable {
-    environment.systemPackages =
-    [
+    environment.systemPackages = [
       pkgs.crunch
       pkgs.hashcat
       pkgs.hashcat-utils

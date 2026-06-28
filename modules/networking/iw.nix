@@ -12,8 +12,7 @@ in
   options.custom.networking.iw.enable = mkEnableOption "Enable iw";
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs;
-    [
+    environment.systemPackages = with pkgs; [
       iw
     ];
   };

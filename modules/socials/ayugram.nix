@@ -14,7 +14,7 @@ in
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = [ 
+    environment.systemPackages = [
       # Using Ayugram (Ghost Mode client) from Nixpkgs
       pkgs.ayugram-desktop
     ];

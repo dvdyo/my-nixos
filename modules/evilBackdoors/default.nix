@@ -11,7 +11,7 @@ in
   imports = [
     ./gemini-cli.nix
     ./codex.nix
-    
+
   ];
 
   options.custom.evilBackdoors = {

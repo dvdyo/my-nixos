@@ -12,7 +12,10 @@ in
   options.custom.desktop.components.widgets.audio-widgets.enable = mkEnableOption "audio-widgets";
 
   config = mkIf cfg.enable {
-      environment.systemPackages = [ pkgs.helvum pkgs.pavucontrol ];
-    };
-     
- }
+    environment.systemPackages = [
+      pkgs.helvum
+      pkgs.pavucontrol
+    ];
+  };
+
+}

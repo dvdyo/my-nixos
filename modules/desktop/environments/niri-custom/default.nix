@@ -2,13 +2,15 @@
   lib,
   config,
   pkgs,
-  ...}:
+  ...
+}:
 let
   cfg = config.custom.desktop.environments.niri-custom;
   inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.desktop.environments.niri-custom.enable = mkEnableOption "Enable Custom Niri Environment";
+  options.custom.desktop.environments.niri-custom.enable =
+    mkEnableOption "Enable Custom Niri Environment";
 
   config = mkIf cfg.enable {
     # 1. Enable Infrastructure & Components
@@ -40,4 +42,3 @@ in
     };
   };
 }
-

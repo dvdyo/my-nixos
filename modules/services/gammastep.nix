@@ -27,16 +27,16 @@ in
       };
     };
     systemd.user.services.gammastep = {
-        description = "Gammastep screen color temperature adjuster";
-        wantedBy = [ "graphical-session.target" ];
-        partOf = [ "graphical-session.target" ];
-        after = [ "graphical-session.target" ];
-        
-        serviceConfig = {
-          ExecStart = "${lib.getExe pkgs.gammastep}";
-          Restart = "on-failure";
-          RestartSec = 3;
-        };
-   };
+      description = "Gammastep screen color temperature adjuster";
+      wantedBy = [ "graphical-session.target" ];
+      partOf = [ "graphical-session.target" ];
+      after = [ "graphical-session.target" ];
+
+      serviceConfig = {
+        ExecStart = "${lib.getExe pkgs.gammastep}";
+        Restart = "on-failure";
+        RestartSec = 3;
+      };
+    };
   };
 }

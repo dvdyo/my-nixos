@@ -16,7 +16,7 @@ in
       enable = true;
       # Optimized for TUI greeters (TTY handling)
       useTextGreeter = true;
-      
+
       settings = {
         default_session = {
           # --time: shows clock

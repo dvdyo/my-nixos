@@ -9,7 +9,8 @@ let
   inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.desktop.components.polkitAgents.gnome.enable = mkEnableOption "Enable GNOME Polkit Authentication Agent";
+  options.custom.desktop.components.polkitAgents.gnome.enable =
+    mkEnableOption "Enable GNOME Polkit Authentication Agent";
 
   config = mkIf cfg.enable {
     # Install the package so the binary is available (and icons etc)

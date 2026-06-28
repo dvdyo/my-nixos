@@ -12,7 +12,7 @@ in
   options.custom.networking.gns3.enable = mkEnableOption "Enable gns3";
 
   config = mkIf cfg.enable {
-    environment.systemPackages =  [ pkgs.gns3-gui ];
+    environment.systemPackages = [ pkgs.gns3-gui ];
     services.gns3-server = {
       enable = true;
       vpcs.enable = true;

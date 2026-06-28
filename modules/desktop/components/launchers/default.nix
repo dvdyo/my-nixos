@@ -3,6 +3,6 @@
 }:
 {
   imports = [
-  ./vicinae.nix
+    ./vicinae.nix
   ];
 }

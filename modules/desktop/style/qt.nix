@@ -1,8 +1,14 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 let
   cfg = config.custom.desktop.style.qt;
   inherit (lib) mkEnableOption mkIf;
-in {
+in
+{
   options.custom.desktop.style.qt = {
     enable = mkEnableOption "Enable Qt theming (Gruvbox/Kvantum)";
   };
@@ -15,14 +21,14 @@ in {
       style = "kvantum";
     };
     environment.sessionVariables = {
-      QT_QPA_PLATFORM = "wayland";  # force Qt apps onto Wayland
+      QT_QPA_PLATFORM = "wayland"; # force Qt apps onto Wayland
       QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     };
     # Gruvbox Kvantum theme package
     environment.systemPackages = [
       (pkgs.gruvbox-kvantum.override { variant = "Gruvbox-Dark-Blue"; })
     ];
-     custom.hjem.cfg.files = {
+    custom.hjem.cfg.files = {
       # Tell qt5ct to use kvantum as its style engine
       ".config/qt5ct/qt5ct.conf".text = ''
         [Appearance]

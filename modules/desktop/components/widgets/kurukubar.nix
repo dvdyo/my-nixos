@@ -13,8 +13,8 @@ in
   options.custom.desktop.components.widgets.kurukubar.enable = mkEnableOption "kurukubar";
 
   config = mkIf cfg.enable {
-        environment.systemPackages = [
-        inputs.zaphkiel.packages.${pkgs.system}.kurukurubar
+    environment.systemPackages = [
+      inputs.zaphkiel.packages.${pkgs.system}.kurukurubar
     ];
-    };
+  };
 }

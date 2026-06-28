@@ -9,7 +9,8 @@ let
   inherit (lib) mkEnableOption mkIf;
 in
 {
-  options.custom.desktop.components.compositors.niri.enable = mkEnableOption "Enable Niri Wayland Compositor (Infrastructure)";
+  options.custom.desktop.components.compositors.niri.enable =
+    mkEnableOption "Enable Niri Wayland Compositor (Infrastructure)";
 
   config = mkIf cfg.enable {
     # 1. Enable Official Niri Module (Handles Session, Systemd, Portals)
@@ -19,7 +20,7 @@ in
     };
 
     # 2. Additional Tools (Brightness control)
-    environment.systemPackages = [ 
+    environment.systemPackages = [
       pkgs.brightnessctl
     ];
 

@@ -22,7 +22,7 @@ in
       enable = true;
       package = null; # Use system package
       settings = {
-       theme = mkDefault "gruvbox-material";
+        theme = mkDefault "gruvbox-material";
         editor = {
           line-number = "relative";
           cursorline = true;

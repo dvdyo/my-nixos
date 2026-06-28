@@ -22,7 +22,7 @@
   custom.desktop.components.notifications.mako.enable = true;
 
   custom.editors.enable = true;
-  
+
   custom.virtualization.enable = true;
   custom.virtualization.qemu-guest.enable = false;
 
@@ -45,7 +45,7 @@
   custom.recording.enable = true;
 
   custom.sysmons.enable = true;
-  
+
   custom.evilBackdoors.enable = true;
 
   custom.gaming.enable = true;

@@ -12,8 +12,7 @@ in
   options.custom.notes.obsidian.enable = mkEnableOption "Enable obsidian editor";
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs;
-    [
+    environment.systemPackages = with pkgs; [
       obsidian
     ];
   };

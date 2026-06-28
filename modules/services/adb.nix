@@ -14,7 +14,7 @@ in
     mkEnableOption "Enable Android System Prerequisites (KVM + ADB)";
 
   config = mkIf cfg.enable {
-    # Systemd 258+ handles uaccess rules automatically. 
+    # Systemd 258+ handles uaccess rules automatically.
     # We just need the tools and the group for some legacy software.
     environment.systemPackages = [ pkgs.android-tools ];
 

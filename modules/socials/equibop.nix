@@ -14,9 +14,9 @@ in
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = [ 
-      # Equibop (A client for discord, fork of vesktop) 
+    environment.systemPackages = [
+      # Equibop (A client for discord, fork of vesktop)
       pkgs.equibop
-	];
+    ];
   };
 }

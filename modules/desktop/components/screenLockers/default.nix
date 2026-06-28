@@ -3,6 +3,6 @@
 }:
 {
   imports = [
-  ./gtklock.nix
+    ./gtklock.nix
   ];
 }

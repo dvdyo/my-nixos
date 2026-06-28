@@ -1,8 +1,14 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 let
   cfg = config.custom.desktop.style.gtk;
   inherit (lib) mkEnableOption mkIf;
-in {
+in
+{
   options.custom.desktop.style.gtk = {
     enable = mkEnableOption "Enable centralized desktop styling (Gruvbox)";
   };
@@ -10,16 +16,16 @@ in {
   config = mkIf cfg.enable {
     # System-wide Theme Packages
     environment.systemPackages = [
-      pkgs.gruvbox-material-gtk-theme          
-      pkgs.gruvbox-plus-icons  
-      pkgs.bibata-cursors              
+      pkgs.gruvbox-material-gtk-theme
+      pkgs.gruvbox-plus-icons
+      pkgs.bibata-cursors
     ];
 
     # GTK Configuration via Hjem Rum
     custom.hjem.cfg.rum.misc.gtk = {
       enable = true;
       settings = {
-        theme-name = "Gruvbox-Material-Dark";           # or "Gruvbox-Dark-BL" (borderless)
+        theme-name = "Gruvbox-Material-Dark"; # or "Gruvbox-Dark-BL" (borderless)
         icon-theme-name = "Gruvbox-Plus-Dark"; # from gruvbox-plus-icon-theme
         cursor-theme-name = "Bibata-Modern-Classic";
         font-name = "JetBrainsMono Nerd Font 11";

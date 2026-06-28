@@ -7,7 +7,7 @@
 let
   cfg = config.custom.desktop.components.cursors.phinger;
   inherit (lib) mkEnableOption mkIf;
- in
+in
 {
   options.custom.desktop.components.cursors.phinger = {
     enable = mkEnableOption "Enable phinger cursor";

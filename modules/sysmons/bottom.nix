@@ -33,7 +33,16 @@ in
           table_header_color = "LightBlue";
           all_cpu_color = "LightCyan";
           avg_cpu_color = "Red";
-          cpu_core_colors = ["LightMagenta" "LightYellow" "LightCyan" "LightGreen" "LightBlue" "Red" "Cyan" "Magenta"];
+          cpu_core_colors = [
+            "LightMagenta"
+            "LightYellow"
+            "LightCyan"
+            "LightGreen"
+            "LightBlue"
+            "Red"
+            "Cyan"
+            "Magenta"
+          ];
           ram_color = "LightMagenta";
           swap_color = "LightYellow";
           rx_color = "LightCyan";

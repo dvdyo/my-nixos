@@ -14,7 +14,7 @@ in
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = [ 
+    environment.systemPackages = [
       pkgs.satty
       pkgs.wl-clipboard # Required for "Copy to Clipboard" action in Satty
     ];

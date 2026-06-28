@@ -49,7 +49,11 @@ in
 
     systemd.user.services.mpd = {
       description = "Music Player Daemon";
-      after = [ "network.target" "sound.target" "pipewire.service" ];
+      after = [
+        "network.target"
+        "sound.target"
+        "pipewire.service"
+      ];
       wantedBy = [ "default.target" ];
       serviceConfig = {
         ExecStart = "${lib.getExe pkgs.mpd} --no-daemon /home/${username}/.config/mpd/mpd.conf";

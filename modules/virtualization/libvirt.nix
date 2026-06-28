@@ -23,15 +23,15 @@ in
   config = mkIf cfg.enable {
     # Core Services
     virtualisation.libvirtd = {
-			enable = true;
-			qemu.swtpm.enable = true;
-			};
+      enable = true;
+      qemu.swtpm.enable = true;
+    };
     # Optional GUI
     programs.virt-manager.enable = cfg.gui.enable;
 
     # Add user to virtualization groups
-    users.users.${username}.extraGroups = [ 
-      "libvirtd" 
+    users.users.${username}.extraGroups = [
+      "libvirtd"
       "kvm"
     ];
   };

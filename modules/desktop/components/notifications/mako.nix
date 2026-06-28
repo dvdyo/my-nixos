@@ -7,13 +7,13 @@
 let
   cfg = config.custom.desktop.components.notifications.mako;
   inherit (lib) mkEnableOption mkIf;
-  
+
   # Configuration parameters (Hardcoded theme for now, can be option-ized later)
   colors = {
     background = "#1e1e2e"; # Base
-    text = "#cdd6f4";       # Text
-    border = "#89b4fa";     # Blue
-    urgent = "#f38ba8";     # Red
+    text = "#cdd6f4"; # Text
+    border = "#89b4fa"; # Blue
+    urgent = "#f38ba8"; # Red
   };
 in
 {

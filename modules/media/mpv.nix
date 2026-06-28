@@ -33,7 +33,7 @@ in
         scale = "ewa_lanczos";
         cscale = "ewa_lanczos";
         dscale = "mitchell";
-        
+
         # Debanding
         deband = true;
         deband-iterations = 4;

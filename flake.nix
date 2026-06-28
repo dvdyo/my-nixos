@@ -12,10 +12,10 @@
 
     # Impermanence -- persistent root storage
     impermanence = {
-      url =  "github:nix-community/impermanence";
+      url = "github:nix-community/impermanence";
       inputs.nixpkgs.follows = "nixpkgs";
-      };
-      
+    };
+
     # Hjem -- home file management
     hjem.url = "github:feel-co/hjem";
     hjem-rum = {
@@ -27,7 +27,7 @@
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
-      };
+    };
 
     quickshell = {
       url = "git+https://git.outfoxxed.me/quickshell/quickshell";
@@ -35,8 +35,8 @@
     };
     # Wallpaper Daemon
     awww = {
-        url = "git+https://codeberg.org/LGFae/awww";
-        inputs.nixpkgs.follows = "nixpkgs";
+      url = "git+https://codeberg.org/LGFae/awww";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     hjem-impure = {
       url = "github:Rexcrazy804/hjem-impure";
@@ -47,8 +47,7 @@
       url = "github:ElyPrismLauncher/Launcher";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
-  
+
   };
 
   outputs =

@@ -13,10 +13,9 @@ in
   options.custom.browsers.qutebrowser.enable = mkEnableOption "Enable qutebrowser";
 
   config = mkIf cfg.enable {
-      environment.systemPackages = with pkgs;
-      [ qutebrowser ];
-      custom.hjem.cfg.xdg.config.files."qutebrowser/config.py" = {      
+    environment.systemPackages = with pkgs; [ qutebrowser ];
+    custom.hjem.cfg.xdg.config.files."qutebrowser/config.py" = {
       source = ./config.py;
     };
-    };
+  };
 }

@@ -42,7 +42,7 @@ in
       # Leave theme = {} so hjem-rum doesn't generate a theme.toml
     };
 
-    # Directly link our local TOML file 
+    # Directly link our local TOML file
     custom.hjem.cfg.xdg.config.files."yazi/theme.toml" = {
       source = ./gruvbox-material-dark.toml;
     };
