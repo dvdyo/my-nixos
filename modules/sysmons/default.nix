@@ -10,6 +10,7 @@ in
 {
   imports = [
     ./bottom.nix
+    ./btop
   ];
 
   options.custom.sysmons = {
@@ -18,7 +19,7 @@ in
 
   config = mkIf cfg.enable {
     custom.sysmons = {
-      bottom.enable = mkDefault true;
+      btop.enable = mkDefault true;
     };
   };
 }
