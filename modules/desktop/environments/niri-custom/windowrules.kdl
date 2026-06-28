@@ -39,7 +39,7 @@ layer-rule {
     }
 
     popups {
-        opacity 0.8
+        opacity 0.89
         geometry-corner-radius 6
 
         background-effect {
@@ -49,9 +49,10 @@ layer-rule {
     }
 }
 window-rule {
-    exclude app-id="^mpv|^firefox|^ncmpcpp"
+    exclude app-id="^mpv|^btop|^firefox|^qutebroser|^ncmpcpp"
     background-effect {
         blur true
+        opacity 0.95
     }
 }
 window-rule {
@@ -75,6 +76,9 @@ window-rule {
     default-window-height { proportion 0.35; }
     default-floating-position x=0 y=0 relative-to="bottom-right"
     open-floating true
+    backgroynd-effect {
+        blur false
+    }
 }
 window-rule {
     match app-id="ripdrag"
@@ -100,6 +104,6 @@ window-rule {
 window-rule {
     match app-id="^btop"
     open-floating true
-    default-column-width { proportion 0.65; }
+    default-column-width { proportion 0.60; }
     default-window-height { proportion 0.65; }
 }
