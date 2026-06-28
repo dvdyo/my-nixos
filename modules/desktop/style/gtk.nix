@@ -59,7 +59,7 @@ in
     };
 
     environment.sessionVariables = {
-      XCURSOR_THEME = "Bibata-Modern-Classic";
+      XCURSOR_THEME = "phinger-cursors-dark";
       XCURSOR_SIZE = "24";
       GTK_CSD = "0";
       SAL_USE_VCLPLUGIN = "gtk3";
