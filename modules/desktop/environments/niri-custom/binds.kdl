@@ -14,6 +14,7 @@ binds {
     "Mod+Z" { spawn "footclient" "--app-id"  "btm" "btm"; }
     "Mod+V" { spawn "vicinae" "deeplink" "vicinae://launch/clipboard/history"; }
     "Mod+Period" { spawn "vicinae" "deeplink" "vicinae://launch/core/search-emojis"; }
+    "Mod+Tab" { spawn "hexecute"; }
     
     // === Window Management ===
     "Mod+Q" { close-window; }

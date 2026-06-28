@@ -16,7 +16,7 @@ in
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs;
     [
-      inputs.hexecute.packages.${pkgs.system}.default
+      inputs.hexecute.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
           
     };

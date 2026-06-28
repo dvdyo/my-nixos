@@ -58,6 +58,26 @@
         "type": "github"
       }
     },
+    "hexecute": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1782142426,
+        "narHash": "sha256-8003XFGgXUGE47ttuAVXT0MtIXrbggTppzTcnMHZDxA=",
+        "owner": "m31-galaxy",
+        "repo": "Hexecute",
+        "rev": "80dbfa930a3fd0a3b08a6cad154b0173c94db64d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "m31-galaxy",
+        "repo": "Hexecute",
+        "type": "github"
+      }
+    },
     "hjem": {
       "inputs": {
         "nixpkgs": "nixpkgs"
@@ -293,6 +313,7 @@
       "inputs": {
         "awww": "awww",
         "disko": "disko",
+        "hexecute": "hexecute",
         "hjem": "hjem",
         "hjem-impure": "hjem-impure",
         "hjem-rum": "hjem-rum",
