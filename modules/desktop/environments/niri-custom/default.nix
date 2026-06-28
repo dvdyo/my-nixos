@@ -1,7 +1,6 @@
 {
   lib,
   config,
-  pkgs,
   ...
 }:
 let
@@ -22,6 +21,7 @@ in
       screenLockers.gtklock.enable = true;
       widgets.waybar.enable = true;
       widgets.audio-widgets.enable = true;
+      cursors.phinger.enable = true;
     };
 
     # 2. Environment Configuration

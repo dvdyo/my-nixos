@@ -3,6 +3,7 @@
 }:
 {
   imports = [
+    ./cursors
     ./fonts
     ./compositors
     ./launchers
