@@ -53,4 +53,6 @@
   custom.networking.enable = true;
 
   custom.toys.enable = true;
+
+  custom.notes.enable = true;
 }
