@@ -12,6 +12,7 @@ in
     ./grim.nix
     ./slurp.nix
     ./satty.nix
+    ./tesseract.nix
   ];
 
   options.custom.desktop.screencap = {
@@ -23,6 +24,7 @@ in
       grim.enable = mkDefault true;
       slurp.enable = mkDefault true;
       satty.enable = mkDefault true;
+      tesseract.enable = mkDefault true;
     };
   };
 }
