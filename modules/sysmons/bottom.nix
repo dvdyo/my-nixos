@@ -1,7 +1,6 @@
 {
   lib,
   config,
-  pkgs,
   ...
 }:
 let
@@ -10,7 +9,6 @@ let
 in
 {
   options.custom.sysmons.bottom.enable = mkEnableOption "Enable bottom sysmon";
-
   config = mkIf cfg.enable {
     # Configure Bottom via Hjem Rum
     custom.hjem.cfg.rum.programs.bottom = {
@@ -30,34 +28,34 @@ in
           process_command = false;
         };
         colors = {
-          table_header_color = "LightBlue";
-          all_cpu_color = "LightCyan";
-          avg_cpu_color = "Red";
+          table_header_color = "#a9b665"; # green
+          all_cpu_color = "#7daea3"; # blue
+          avg_cpu_color = "#ea6962"; # red
           cpu_core_colors = [
-            "LightMagenta"
-            "LightYellow"
-            "LightCyan"
-            "LightGreen"
-            "LightBlue"
-            "Red"
-            "Cyan"
-            "Magenta"
+            "#d3869b" # magenta
+            "#d8a657" # yellow
+            "#89b482" # aqua
+            "#a9b665" # green
+            "#7daea3" # blue
+            "#e78a4e" # orange
+            "#ea6962" # red
+            "#bdae93" # fg2 (filler since palette only has 7 accents)
           ];
-          ram_color = "LightMagenta";
-          swap_color = "LightYellow";
-          rx_color = "LightCyan";
-          tx_color = "LightGreen";
-          widget_title_color = "Gray";
-          border_color = "Gray";
-          highlighted_border_color = "LightBlue";
-          text_color = "Gray";
-          graph_color = "Gray";
-          cursor_color = "LightCyan";
-          selected_text_color = "Black";
-          selected_bg_color = "LightBlue";
-          high_battery_color = "Green";
-          medium_battery_color = "Yellow";
-          low_battery_color = "Red";
+          ram_color = "#d3869b"; # magenta
+          swap_color = "#d8a657"; # yellow
+          rx_color = "#89b482"; # aqua
+          tx_color = "#a9b665"; # green
+          widget_title_color = "#bdae93"; # fg2
+          border_color = "#504945"; # bg2
+          highlighted_border_color = "#7daea3"; # blue
+          text_color = "#d4be98"; # fg1
+          graph_color = "#bdae93"; # fg2
+          cursor_color = "#89b482"; # aqua
+          selected_text_color = "#282828"; # bg0
+          selected_bg_color = "#7daea3"; # blue
+          high_battery_color = "#a9b665"; # green
+          medium_battery_color = "#d8a657"; # yellow
+          low_battery_color = "#ea6962"; # red
         };
       };
     };
