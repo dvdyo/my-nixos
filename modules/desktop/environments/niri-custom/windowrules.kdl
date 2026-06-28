@@ -94,7 +94,7 @@ layer-rule {
 
 window-rule {
     match app-id="^mpv"
-    open-maximized true
+    open-fullscreen true
 }
 window-rule {
     match app-id="^ncmpcpp-floating"
