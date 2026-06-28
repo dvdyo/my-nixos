@@ -19,6 +19,7 @@ in
       pkgs.gruvbox-material-gtk-theme
       pkgs.gruvbox-plus-icons
       pkgs.bibata-cursors
+      pkgs.phinger-cursors
     ];
 
     # GTK Configuration via Hjem Rum
@@ -27,7 +28,7 @@ in
       settings = {
         theme-name = "Gruvbox-Material-Dark"; # or "Gruvbox-Dark-BL" (borderless)
         icon-theme-name = "Gruvbox-Plus-Dark"; # from gruvbox-plus-icon-theme
-        cursor-theme-name = "Bibata-Modern-Classic";
+        cursor-theme-name = "phinger-cursors-dark";
         font-name = "JetBrainsMono Nerd Font 11";
         application-prefer-dark-theme = true;
         cursor-theme-size = 24;
