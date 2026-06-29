@@ -58,6 +58,9 @@ layer-rule {
 window-rule {
     match app-id="^footclient"
     opacity 0.89
+    background-effect {
+        blur true
+    }
 }
 
 // ------------------------stateful-------------------------
