@@ -57,6 +57,7 @@ layer-rule {
 // }
 window-rule {
     match app-id="^footclient"
+    match app-id="^yazi"
     opacity 0.89
     background-effect {
         blur true
