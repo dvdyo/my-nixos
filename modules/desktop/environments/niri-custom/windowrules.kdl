@@ -48,13 +48,13 @@ layer-rule {
         }
     }
 }
-window-rule {
-    exclude app-id="^mpv|^btop|^firefox|^qutebroser|^ncmpcpp"
-    opacity 0.95
-    background-effect {
-        blur true
-    }
-}
+// window-rule {
+//     exclude app-id="^mpv|^btop|^firefox|^qutebroser|^ncmpcpp"
+//     opacity 0.95
+//     background-effect {
+//         blur true
+//     }
+// }
 window-rule {
     match app-id="^footclient"
     opacity 0.89
