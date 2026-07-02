@@ -16,7 +16,7 @@ in
     custom.desktop.components = {
       compositors.niri.enable = true;
       launchers.vicinae.enable = true;
-      launchers.hexecute.enable = true;
+      launchers.hexecute.enable = false;
       wallpapers.awww.enable = true;
       fonts.enable = true;
       screenLockers.gtklock.enable = true;
