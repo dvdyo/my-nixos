@@ -65,8 +65,8 @@ in
       SAL_USE_VCLPLUGIN = "gtk3";
     };
 
-    custom.hjem.cfg.files = {
-      ".icons/default".source = "${pkgs.phinger-cursors}/share/icons/phiger-cursors-dark";
-    };
+ #   custom.hjem.cfg.files = {
+ #     ".icons/default".source = "${pkgs.phinger-cursors}/share/icons/phiger-cursors-dark";
+ #   };
   };
 }
