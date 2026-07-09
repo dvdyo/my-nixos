@@ -20,7 +20,7 @@ in
 
   config = mkIf cfg.enable {
     custom.networking = {
-      gns3.enable = mkDefault true;
+      gns3.enable = mkDefault false;
       wireshark.enable = mkDefault true;
       iw.enable = mkDefault true;
     };
