@@ -72,8 +72,6 @@
       ];
     in
     {
-      # Set default formatter to nixfmt-rfc-style
-      formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt-rfc-style;
 
       # Function to build nixosConfigurations for each host
       nixosConfigurations = lib.genAttrs hosts (
@@ -93,5 +91,17 @@
           ];
         }
       );
+      devShells.${system}.default =
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+        in
+        pkgs.mkShell {
+          packages = with pkgs; [
+            nil
+            nixpkgs-fmt
+            statix
+            deadnix
+          ];
+        };
     };
 }

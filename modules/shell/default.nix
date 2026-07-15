@@ -47,7 +47,6 @@ in
       nh.enable = mkDefault true;
       tealdeer.enable = mkDefault true;
       tree.enable = mkDefault true;
-      devenv.enable = mkDefault true;
       chafa.enable = mkDefault true;
     };
   };
