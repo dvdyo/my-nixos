@@ -19,7 +19,7 @@ in
     };
     userEmail = mkOption {
       type = str;
-      default = "dvd@example.com";
+      default = "deevidee@proton.me";
       description = "Git user email";
     };
   };
