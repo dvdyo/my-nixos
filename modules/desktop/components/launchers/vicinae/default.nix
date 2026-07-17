@@ -16,7 +16,9 @@ in
     environment.systemPackages = [ pkgs.vicinae ];
     # Register implementation
     # custom.interface.launcher.command = "vicinae toggle";
-
+    custom.hjem.cfg.xdg.config.files."vicinae/settings.json" = {
+      source = ./settings.json;
+    };
     # Systemd User Service for vicinae-server
     systemd.user.services.vicinae-server = {
       description = "Vicinae Launcher Daemon";

@@ -25,6 +25,7 @@ window#waybar {
   color: @bg;
 }
 
+
 #workspaces button:hover {
   background: @hover_bg;
 }
@@ -33,13 +34,13 @@ window#waybar {
   background: @orange;
 }
 
-#clock, #battery, #pulseaudio, #tray, #language, #weather {
+#clock, #battery, #wireplumber, #tray, #language, #weather {
   padding: 0 10px;
 }
 
 #language {
-  color: @yellow;
-  border-bottom: 5px solid @yellow;
+  color: @orange;
+  border-bottom: 5px solid @orange;
 }
 
 #custom-weather {
@@ -47,15 +48,20 @@ window#waybar {
   border-bottom: 5px solid @green;
 }
 
-#pulseaudio {
+#wireplumber {
   color: @aqua;
   border-bottom: 5px solid @aqua;
 }
 
-#pulseaudio.muted {
+#backlight {
+  color: @yellow;
+  border-bottom: 5px solid @yellow;
+}
+
+#wireplumber.muted {
   padding: 0 20px;
   color: @red;
-  border-bottom: 5px solid @red;
+  border-bottom: 5px solid @aqua;
 }
 
 #battery {
@@ -69,6 +75,6 @@ window#waybar {
 }
 
 #tray {
-  color: @orange;
-  border-bottom: 5px solid @orange;
+  color: @red;
+  border-bottom: 5px solid @red;
 }

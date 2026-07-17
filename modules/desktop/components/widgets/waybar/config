@@ -14,8 +14,8 @@
 
     "modules-right": [
       "niri/language",
-      "custom/weather",
-      "pulseaudio",
+      "backlight",
+      "wireplumber",
       "battery",
       "clock",
       "tray"
@@ -36,22 +36,19 @@
       "min-length": 5
     },
 
-    "custom/weather": {
-      "class": "weather",
-      "exec": "curl -s 'wttr.in/Kyiv?format=%c%t'",
-      "format": " {} ",
-      "interval": 300
-    },
 
     "wireplumber": {
-	"format": "{volume}%",
-	"format-muted": "",
+	"format": "{volume}% {icon}",
+    "format-icons": ["", "", ""],
+	"format-muted": "",
 	"on-click": "helvum"
-},
+    },
+    "backlight": {
+      "format": "{percent}% {icon} ",
+      "format-icons": ["󰃞", "󰃟", "󰃝", "󰃠"]
+    },
     "battery": {
-      "format": "{icon} {capacity}%",
-      "format-alt": "{time} {icon}",
-      "format-charging": " {capacity}%",
+      "format": "{capacity}% {icon}",
       "format-icons": [
         "",
         "",
@@ -62,6 +59,10 @@
       "states": {
         "critical": 5,
         "warning": 30
+      },
+      "events": {
+        "on-discharging-warning": "notify-send -u normal 'Low Battery'",
+        "on-discharging-critical": "notify-send -u critical 'Very Low Battery'"
       }
     },
 
@@ -71,7 +72,7 @@
     },
 
     "tray": {
-      "icon-size": 14,
+      "icon-size": 18,
       "spacing": 1
     }
   }

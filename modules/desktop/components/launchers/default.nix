@@ -3,7 +3,7 @@
 }:
 {
   imports = [
-    ./vicinae.nix
+    ./vicinae
     ./hexecute.nix
   ];
 }
