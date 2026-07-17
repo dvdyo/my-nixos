@@ -7,7 +7,7 @@
 
 config.load_autoconfig(False)
 c.colors.webpage.darkmode.enabled = True
-config.bind(',v', 'spawn --detach mpv {url}')
+config.bind(',v', 'spawn --detach mpv {url} ;; spawn notify-send "qutebrowser" "sent {url} to mpv"')
 bg0_hard = "#1d2021"
 bg0_soft = '#32302f'
 bg0_normal = '#282828'

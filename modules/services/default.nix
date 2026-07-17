@@ -31,7 +31,7 @@ in
       networkManager.enable = mkDefault true;
       gammastep.enable = mkDefault true;
       printing.enable = mkDefault true;
-      sunshine.enable = mkDefault true;
+      sunshine.enable = mkDefault false;
       tailscale.enable = mkDefault true;
     };
   };

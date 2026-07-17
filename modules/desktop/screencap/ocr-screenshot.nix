@@ -41,7 +41,6 @@ let
       preview="$(printf "%s" "$content" | cut -c1-200 | escape)"
 
       notify-send \
-        -h string:x-canonical-private-synchronous:ocr \
         -h string:markup-body:1 \
         "OCR copied" \
         "<tt>$preview</tt>"

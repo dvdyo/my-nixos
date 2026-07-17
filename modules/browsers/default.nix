@@ -21,7 +21,7 @@ in
 
   config = mkIf cfg.enable {
     custom.browsers = {
-      firefox.enable = mkDefault true;
+      firefox.enable = mkDefault false;
       ungoogled-chromium.enable = mkDefault true;
       qutebrowser.enable = mkDefault true;
     };

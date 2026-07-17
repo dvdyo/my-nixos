@@ -26,6 +26,5 @@
     ./evilBackdoors
     ./sysmons
     ./networking
-    ./toys
   ];
 }

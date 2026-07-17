@@ -19,7 +19,7 @@ in
 
   config = mkIf cfg.enable {
     custom.terminals = {
-      ghostty.enable = mkDefault true;
+      ghostty.enable = mkDefault false;
       foot.enable = mkDefault true;
     };
   };

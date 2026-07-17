@@ -4,55 +4,33 @@
     ./base.nix
   ];
 
-  custom.desktop.environments.niri-custom.enable = true;
-  custom.desktop.components.compositors.xwayland-satellite.enable = true;
-  custom.desktop.style.enable = true;
-  custom.desktop.components.fonts.enable = true;
-
-  custom.desktop.screencap.enable = true;
-
-  custom.browsers.enable = true;
-  custom.terminals.enable = true;
-  custom.terminals.ghostty.enable = false;
-
-  custom.desktop.components.wallpapers.awww.enable = true;
-
-  custom.desktop.components.polkitAgents.gnome.enable = true;
-
-  custom.desktop.components.notifications.mako.enable = true;
-
-  custom.editors.enable = true;
-
-  custom.virtualization.enable = true;
-  custom.virtualization.qemu-guest.enable = false;
-
-  custom.services.enable = true;
-
-  custom.office.enable = true;
-
-  custom.studying.enable = true;
-
-  custom.socials.enable = true;
-
-  custom.security.enable = true;
-
-  custom.p2p.enable = true;
-
-  custom.media.enable = true;
-
-  custom.fileManagers.enable = true;
-
-  custom.recording.enable = true;
-
-  custom.sysmons.enable = true;
-
-  custom.evilBackdoors.enable = true;
-
-  custom.gaming.enable = true;
-
-  custom.networking.enable = true;
-
-  custom.toys.enable = true;
-
-  custom.notes.enable = true;
+  custom = {
+    desktop = {
+      environments.niri-custom.enable = true;
+      components.compositors.xwayland-satellite.enable = true;
+      style.enable = true;
+      components.fonts.enable = true;
+      screencap.enable = true;
+      components.wallpapers.awww.enable = true;
+      components.polkitAgents.gnome.enable = true;
+      components.notifications.mako.enable = true;
+    };
+    browsers.enable = true;
+    terminals.enable = true;
+    editors.enable = true;
+    virtualization.enable = true;
+    services.enable = true;
+    office.enable = true;
+    studying.enable = true;
+    socials.enable = true;
+    security.enable = true;
+    p2p.enable = true;
+    media.enable = true;
+    fileManagers.enable = true;
+    recording.enable = true;
+    sysmons.enable = true;
+    gaming.enable = true;
+    networking.enable = true;
+    notes.enable = true;
+  };
 }
