@@ -2,6 +2,7 @@
   lib,
   config,
   pkgs,
+  username,
   ...
 }:
 let
@@ -17,7 +18,9 @@ in
     # Register implementation
     # custom.interface.launcher.command = "vicinae toggle";
     custom.hjem.cfg.xdg.config.files."vicinae/settings.json" = {
-      source = ./settings.json;
+      source = pkgs.replaceVars ./settings.json {
+        inherit username;
+      };
     };
     # Systemd User Service for vicinae-server
     systemd.user.services.vicinae-server = {

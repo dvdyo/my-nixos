@@ -45,15 +45,15 @@
    "providers": {
       "@sovereign/store.vicinae.awww-switcher": {
          "preferences": {
-            "wallpaperPath": "/home/dvd/Pictures/Wallpapers/"
+            "wallpaperPath": "/home/@username@/Pictures/Wallpapers/"
          }
       },
       "applications": {
          "preferences": {
             "launchPrefix": "niri msg action spawn -- ",
             "paths": [
-               "/home/dvd/.local/share/applications",
-               "/etc/profiles/per-user/dvd/share/applications",
+               "/home/@username@/.local/share/applications",
+               "/etc/profiles/per-user/@username@/share/applications",
                "/run/current-system/sw/share/applications"
             ]
          }
@@ -69,7 +69,7 @@
             "autoIndexing": false,
             "excludedIndexingPaths": [],
             "indexingPaths": [
-               "/home/dvd"
+               "/home/@username@"
             ]
          },
          "entrypoints": {

@@ -2,6 +2,7 @@
   lib,
   config,
   pkgs,
+  username,
   ...
 }:
 let
@@ -14,7 +15,7 @@ in
     enable = mkEnableOption "Enable Git";
     userName = mkOption {
       type = str;
-      default = "dvd";
+      default = username;
       description = "Git user name";
     };
     userEmail = mkOption {

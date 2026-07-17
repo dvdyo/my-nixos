@@ -13,7 +13,7 @@ in
     enable = mkEnableOption "Enable main user";
     name = lib.mkOption {
       type = lib.types.str;
-      default = "dvd";
+      default = "dvd"; # change 'tis to your desired username'
       description = "The username of the main user";
     };
   };

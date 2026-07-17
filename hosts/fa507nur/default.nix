@@ -1,7 +1,6 @@
 {
-  pkgs,
-  lib,
   inputs,
+  username,
   ...
 }:
 {
@@ -13,5 +12,5 @@
   system.stateVersion = "26.05";
   networking.hostName = "fa507nur";
   # Change this after first login
-  users.users.dvd.initialPassword = "password";
+  users.users.${username}.initialPassword = "password";
 }
