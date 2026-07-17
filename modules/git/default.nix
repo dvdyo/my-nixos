@@ -26,13 +26,15 @@ in
   };
 
   config = mkIf cfg.enable {
-    # 1. System-wide Install (Available to root and all users)
-    environment.systemPackages = [ pkgs.git ];
+    environment.systemPackages = with pkgs;
+    [
+      git
+      lazygit
+    ];
 
-    # 2. User Config (Managed via Hjem Rum)
     custom.hjem.cfg.rum.programs.git = {
       enable = true;
-      package = null; # Prevent double installation in user profile
+      package = null;
       settings = {
         user = {
           name = cfg.userName;
