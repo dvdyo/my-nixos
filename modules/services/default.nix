@@ -17,7 +17,7 @@ in
     ./printing.nix
     ./sunshine.nix
     ./tailscale.nix
-    ./openssh.nix
+    ./openssh
   ];
 
   options.custom.services = {

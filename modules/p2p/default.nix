@@ -11,6 +11,7 @@ in
   imports = [
     ./qbittorrent.nix
     ./nicotine-plus.nix
+    ./localsend.nix
   ];
 
   options.custom.p2p = {
@@ -21,6 +22,7 @@ in
     custom.p2p = {
       qbittorrent.enable = mkDefault true;
       nicotine-plus.enable = mkDefault true;
+      localsend.enable = mkDefault true;
     };
   };
 }

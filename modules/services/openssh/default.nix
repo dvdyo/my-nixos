@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  username,
   ...
 }:
 let
@@ -13,12 +14,18 @@ in
     services.sshguard.enable = true;
     services.openssh = {
       enable = true;
-      startWhenNeeded = true;
+      startWhenNeeded = false;
       openFirewall = true;
       settings = {
         PermitRootLogin = "no";
         PasswordAuthentication = false;
+        KbdInteractiveAuthentication = false;
+        AllowUsers = [ "${username}" ];
+        
       };
     };
+    users.users.${username}.openssh.authorizedKeys.keyFiles = [
+      ./authorized_keys
+    ];
   };
 }

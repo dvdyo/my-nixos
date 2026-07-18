@@ -15,7 +15,7 @@ in
     # 1. Enable Infrastructure & Components
     custom.desktop.components = {
       compositors.niri.enable = true;
-      launchers.vicinae.enable = true;
+      launchers.fuzzel.enable = true;
       launchers.hexecute.enable = false;
       wallpapers.awww.enable = true;
       fonts.enable = true;
@@ -23,8 +23,14 @@ in
       widgets.waybar.enable = true;
       widgets.audio-widgets.enable = true;
       cursors.phinger.enable = true;
+      launchers.dmenus = {
+        nhSearch.enable = true;
+        vmMenu.enable = true;
+      };
+      
       
     };
+    custom.desktop.clipboard.enable = true;
 
     # 2. Environment Configuration
     custom.hjem.cfg.rum.desktops.niri = {

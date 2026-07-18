@@ -8,5 +8,6 @@
     ./style
     ./screencap
     ./xdg.mime.nix
+    ./clipboard
   ];
 }
