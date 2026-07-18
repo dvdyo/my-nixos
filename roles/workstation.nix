@@ -32,5 +32,6 @@
     gaming.enable = true;
     networking.enable = true;
     notes.enable = true;
+    services.openssh.enable = true;
   };
 }

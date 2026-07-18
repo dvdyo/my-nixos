@@ -17,6 +17,7 @@ in
     ./printing.nix
     ./sunshine.nix
     ./tailscale.nix
+    ./openssh.nix
   ];
 
   options.custom.services = {
@@ -33,6 +34,7 @@ in
       printing.enable = mkDefault true;
       sunshine.enable = mkDefault false;
       tailscale.enable = mkDefault true;
+      openssh.enable = mkDefault false;
     };
   };
 }

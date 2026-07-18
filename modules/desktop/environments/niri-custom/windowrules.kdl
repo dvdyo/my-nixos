@@ -9,6 +9,15 @@ window-rule {
     // }
 }
 layer-rule {
+    match namespace="vicinae"
+    match at-startup=true
+    match layer="overlay"
+    background-effect {
+        xray false
+        blur false
+    }
+}
+layer-rule {
     match namespace="waybar"
     match at-startup=true
     match layer="top"
@@ -39,7 +48,7 @@ layer-rule {
     }
 
     popups {
-        opacity 0.95
+        opacity 0.98
         geometry-corner-radius 6
 
         background-effect {

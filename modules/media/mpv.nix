@@ -42,6 +42,7 @@ in
 
         # Streaming
         ytdl-format = "bestvideo+bestaudio";
+        ytdl-raw-options = "cookies-from-browser=chromium:~/.local/share/qutebrowser";
 
         # OSD — replaced by uosc
         osd-bar = false;
