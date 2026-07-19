@@ -2,4 +2,5 @@ output "eDP-1" {
     mode "1920x1080@143.998"
     variable-refresh-rate
     focus-at-startup
+    scale 1.15
 }

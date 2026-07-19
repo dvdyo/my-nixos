@@ -5,13 +5,13 @@
 
 # Prompt for free-text input. $1: placeholder text.
 nh_search_prompt() {
-    fuzzel --dmenu --lines 0 --placeholder "$1"
+    fuzzel --dmenu --lines 0 --width 50 --placeholder "$1"
 }
 
 # Read TSV lines (attr\tdisplay) from stdin, show column 2 only.
 # $1: placeholder text.
 nh_search_pick() {
-    fuzzel --dmenu --width 70 --with-nth 2 --placeholder "$1"
+    fuzzel --dmenu --width 75 --with-nth 2 --placeholder "$1"
 }
 
 # Single-column action menu. Reads newline-separated options from stdin.
