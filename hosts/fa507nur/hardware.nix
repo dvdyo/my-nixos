@@ -56,6 +56,7 @@
     # Prime Offload options - DISABLED (No iGPU)
     # prime = ...
   };
+  hardware.bluetooth.enable = true;
 
   # Reduce swapiness
   boot.kernel.sysctl = {
