@@ -8,7 +8,21 @@ notify() {
 }
 
 pick_vm() {
-    virsh --connect "$CONNECT" list --all --name | sed '/^$/d' | fuzzel --dmenu --prompt="VM: "
+    local names selected
+    names=$(virsh --connect "$CONNECT" list --all --name | sed '/^$/d')
+
+    # Build "name (state)" lines, then let fuzzel show them.
+    # printf %-24s pads the name so states line up in a column.
+    selected=$(
+        while IFS= read -r n; do
+            local state
+            state=$(virsh --connect "$CONNECT" domstate "$n" 2>/dev/null || echo "unknown")
+            printf '%-24s (%s)\n' "$n" "$state"
+        done <<< "$names" | fuzzel --dmenu --prompt="VM: "
+    )
+
+    # Strip everything from " (" onward to recover the bare name.
+    printf '%s\n' "$selected" | sed -E 's/ +\([^()]*\)$//'
 }
 
 pick_action() {

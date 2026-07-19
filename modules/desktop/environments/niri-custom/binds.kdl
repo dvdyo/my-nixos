@@ -13,7 +13,7 @@ binds {
     "Mod+E" repeat=false { spawn "footclient" "--app-id"  "yazi" "yazi"; }
     "Mod+Z" repeat=false { spawn "footclient" "--app-id"  "btop" "btop"; }
     
-    "Mod+Period" { spawn "vicinae" "deeplink" "vicinae://launch/core/search-emojis"; }
+    // "Mod+Period" { spawn "vicinae" "deeplink" "vicinae://launch/core/search-emojis"; }
     "Mod+Tab" repeat=false { spawn "hexecute"; }
     
     // === Window Management ===
@@ -112,6 +112,7 @@ binds {
     "Mod+Alt+S" { spawn "ocr-screenshot"; }
     "Mod+V" { spawn-sh "cliphist list | fuzzel --dmenu --with-nth 2 | cliphist decode | wl-copy"; }
     "Mod+Shift+V" { spawn-sh "cliphist list | fuzzel --dmenu --with-nth 2 | cliphist delete"; }
+    "Mod+Period" { spawn "rofimoji" "--prompt" " " "--files" "nerd_font" "kaomoji" "gothic" "--selector" "fuzzel" "--clipboarder" "wl-copy" "--action" "copy"; }
     // Screen locking
     "Mod+Alt+L" { spawn "gtklock" "-d"; }
 }

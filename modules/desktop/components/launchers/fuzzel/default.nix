@@ -14,12 +14,9 @@ in
 
   config = mkIf cfg.enable {
     environment.systemPackages = [ pkgs.fuzzel ];
-   #  custom.hjem.cfg.xdg.config.files."fuzzel/settings.json" = {
-   #    source = pkgs.replaceVars ./settings.json {
-   #      inherit username;
-   #    };
-   #  };
-    custom.desktop.components.launchers.dmenus.nhSearch.enable = true;    
+    custom.hjem.cfg.xdg.config.files."fuzzel/fuzzel.ini" = {
+      source = ./fuzzel.ini;
+    };
     
   };
 }

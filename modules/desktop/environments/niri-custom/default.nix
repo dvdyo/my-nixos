@@ -26,6 +26,13 @@ in
       launchers.dmenus = {
         nhSearch.enable = true;
         vmMenu.enable = true;
+        rofimoji.enable = true;
+        keepassMenu = {
+          enable = true;
+          database = "/home/dvd/.local/share/PasswordDB/Passwords.kdbx";
+        };
+        powerMenu.enable = true;
+        bluetoothMenu.enable = true;
       };
       
       
