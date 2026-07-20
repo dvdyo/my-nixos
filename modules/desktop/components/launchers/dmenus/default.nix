@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./networkmanager-dmenu
     ./nh-search
     ./rofimoji.nix
     ./vm-menu

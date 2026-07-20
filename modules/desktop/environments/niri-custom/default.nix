@@ -31,6 +31,7 @@ in
           enable = true;
           database = "/home/dvd/.local/share/PasswordDB/Passwords.kdbx";
         };
+        networkmanagerDmenu.enable = true;
         powerMenu.enable = true;
         bluetoothMenu.enable = true;
       };
