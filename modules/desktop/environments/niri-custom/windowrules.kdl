@@ -2,16 +2,8 @@ window-rule {
     draw-border-with-background false
     clip-to-geometry true
     geometry-corner-radius 8
-    // popups {
-    //     background-effect {
-    //         blur true
-    //     }
-    // }
 }
 layer-rule {
-    match namespace="vicinae"
-    match at-startup=true
-    match layer="overlay"
     background-effect {
         xray false
         blur false
@@ -40,12 +32,6 @@ layer-rule {
     geometry-corner-radius 12
     place-within-backdrop true
 
-    background-effect {
-        xray true
-        blur true
-        noise 0.05
-        saturation 3
-    }
 
     popups {
         opacity 0.98
@@ -64,19 +50,15 @@ layer-rule {
 //         blur true
 //     }
 // }
-window-rule {
-    match app-id="^footclient"
-    match app-id="^yazi"
-    opacity 0.89
-    background-effect {
-        blur true
-    }
-}
+// window-rule {
+//     match app-id="^footclient"
+//     match app-id="^yazi"
+//     opacity 0.95
+//     background-effect {
+//         blur false
+//     }
+// }
 
-// ------------------------stateful-------------------------
-window-rule {
-    match app-id="firefox$" title="^Picture-in-Picture$"
-}
 window-rule {
     match app-id="^onscripter-ru"
     open-maximized true
@@ -89,9 +71,6 @@ window-rule {
     default-window-height { proportion 0.35; }
     default-floating-position x=0 y=0 relative-to="bottom-right"
     open-floating true
-    background-effect {
-        blur false
-    }
 }
 window-rule {
     match app-id="ripdrag"
