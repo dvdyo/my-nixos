@@ -18,6 +18,7 @@ in
     ./sunshine.nix
     ./tailscale.nix
     ./openssh
+    ./freerdp.nix
   ];
 
   options.custom.services = {

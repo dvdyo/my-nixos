@@ -33,5 +33,7 @@
     networking.enable = true;
     notes.enable = true;
     services.openssh.enable = true;
+    services.sunshine.enable = true;
+    services.freerdp.enable = true;
   };
 }
