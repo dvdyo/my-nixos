@@ -15,7 +15,7 @@ in
       enable = true;
       autoStart = false;
       capSysAdmin = true;
-      openFirewall = false;
+      openFirewall = true;
     };
     users.users.${username}.extraGroups = [ "uinput" ];
     services.logind.settings.Login.HandleLidSwitch = "ignore";

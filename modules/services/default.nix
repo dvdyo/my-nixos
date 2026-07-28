@@ -19,6 +19,7 @@ in
     ./tailscale.nix
     ./openssh
     ./freerdp.nix
+    ./iperf.nix
   ];
 
   options.custom.services = {
