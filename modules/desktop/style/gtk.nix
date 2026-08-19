@@ -16,7 +16,7 @@ in
   config = mkIf cfg.enable {
     # System-wide Theme Packages
     environment.systemPackages = [
-      pkgs.gruvbox-material-gtk-theme
+      pkgs.gruvbox-dark-gtk
       pkgs.gruvbox-plus-icons
       pkgs.bibata-cursors
       pkgs.phinger-cursors
