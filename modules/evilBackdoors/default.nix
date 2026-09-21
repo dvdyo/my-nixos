@@ -21,7 +21,7 @@ in
   config = mkIf cfg.enable {
     custom.evilBackdoors = {
       gemini-cli.enable = mkDefault false;
-      codex.enable = mkDefault false;
+      codex.enable = mkDefault true;
     };
   };
 }

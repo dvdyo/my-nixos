@@ -13,6 +13,7 @@ in
     ./ncmpcpp.nix
     ./mpd.nix
     ./zathura
+    ./easyeffects.nix
   ];
 
   options.custom.media = {
@@ -25,6 +26,7 @@ in
       ncmpcpp.enable = mkDefault true;
       mpd.enable = mkDefault true;
       zathura.enable = mkDefault true;
+      easyeffects.enable = mkDefault true;
     };
   };
 }
