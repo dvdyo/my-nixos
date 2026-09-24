@@ -35,5 +35,6 @@
     services.openssh.enable = true;
     services.sunshine.enable = true;
     services.freerdp.enable = true;
+    evilBackdoors.enable = true;
   };
 }
