@@ -11,6 +11,7 @@ in
   imports = [
     ./ciscoPacketTracer
     ./anki.nix
+    ./docling.nix
   ];
 
   options.custom.studying = {
@@ -21,6 +22,7 @@ in
     custom.studying = {
       ciscoPacketTracer.enable = mkDefault true;
       anki.enable = mkDefault true;
+      docling.enable = mkDefault true;
     };
   };
 }
