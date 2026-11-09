@@ -11,19 +11,20 @@
     ./disko.nix
   ];
 
-  # 1. CPU & Kernel
+  # CPU & Kernel
   boot.initrd.availableKernelModules = [
     "nvme"
     "xhci_pci"
     "usb_storage"
     "sd_mod"
+    "msr" # for ryzenadj
   ];
   boot.initrd.kernelModules = [ ];
   boot.blacklistedKernelModules = [ "thunderbolt" ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-  # 2. Graphics (Nvidia Only - No iGPU)
+  # Graphics (Nvidia Only - No iGPU)
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -77,7 +78,6 @@
     hybrid-sleep.enable = false;
   };
   # --- CPU thermal management ---
-boot.kernelModules = [ "msr" ];          # needed by ryzenadj
 environment.systemPackages = [ pkgs.ryzenadj ];  # so you can run it manually
 
 systemd.services.ryzen-temp-cap = {
