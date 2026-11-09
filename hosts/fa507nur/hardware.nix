@@ -65,7 +65,7 @@
   boot.kernel.sysctl = {
     "vm.swappiness" = 10;
   };
-  # 3. ASUS Specifics
+  # ASUS Specifics
   services.asusd = {
     enable = true;
   };
@@ -76,4 +76,15 @@
     hibernate.enable = false;
     hybrid-sleep.enable = false;
   };
+  # --- CPU thermal management ---
+boot.kernelModules = [ "msr" ];          # needed by ryzenadj
+environment.systemPackages = [ pkgs.ryzenadj ];  # so you can run it manually
+
+systemd.services.ryzen-temp-cap = {
+  description = "Cap CPU Tctl at 87C";
+  wantedBy = [ "multi-user.target" "suspend.target" ];
+  after = [ "systemd-suspend.service" ];
+  serviceConfig.Type = "oneshot";
+  serviceConfig.ExecStart = "${pkgs.ryzenadj}/bin/ryzenadj --tctl-temp=87";
+};
 }
