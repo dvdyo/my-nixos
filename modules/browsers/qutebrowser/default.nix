@@ -13,9 +13,6 @@ in
 
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [ qutebrowser ];
-    permittedInsecurePackages = [
-      "qutebrowser-3.7.0"
-    ];
 
     custom.hjem.cfg.xdg.config.files."qutebrowser/config.py" = {
       source = ./config.py;
