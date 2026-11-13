@@ -4,6 +4,9 @@
     ./base.nix
   ];
 
+  permittedInsecurePackages = [
+    "qutebrowser-3.7.0"
+  ];
   custom = {
     desktop = {
       environments.niri-custom.enable = true;
@@ -36,9 +39,6 @@
     services.sunshine.enable = true;
     services.freerdp.enable = true;
     evilBackdoors.enable = true;
-    permittedInsecurePackages = [
-      "qutebrowser-3.7.0"
-    ];
 
   };
 }
