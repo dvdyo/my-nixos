@@ -3,10 +3,6 @@
   imports = [
     ./base.nix
   ];
-
-  permittedInsecurePackages = [
-    "qutebrowser-3.7.0"
-  ];
   custom = {
     desktop = {
       environments.niri-custom.enable = true;
